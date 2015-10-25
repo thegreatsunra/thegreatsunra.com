@@ -1,0 +1,9 @@
+{
+  "name": "thegreatsunra-bem",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "~3.4.0",
+    "mocha": "~2.3.3"
+  }
+}
