@@ -27,6 +27,12 @@
 @import "bower_components/inuit-headings/base.headings";
 @import "bower_components/inuit-lists/base.lists";
 @import "bower_components/inuit-images/base.images";
+ /**
+ * #TRUMPS
+ */
+@import "bower_components/inuit-clearfix/trumps.clearfix";
+@import "bower_components/inuit-spacing/trumps.spacing";
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
