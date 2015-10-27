@@ -11,8 +11,14 @@
 @import "bower_components/inuit-defaults/settings.defaults";
 @import "bower_components/inuit-functions/tools.functions";
 @import "bower_components/inuit-mixins/tools.mixins";
+
+/**
+ * #GENERIC
+ */
 @import "bower_components/inuit-normalize.css/generic.normalize";
 @import "bower_components/inuit-reset/generic.reset";
+@import "bower_components/inuit-box-sizing/generic.box-sizing";
+@import "bower_components/inuit-shared/generic.shared";
 
 .browserupgrade {
   margin: 0.2em 0;
