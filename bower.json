@@ -9,6 +9,10 @@
     "inuit-mixins": "~0.2.3",
     "inuit-functions": "~0.2.0",
     "inuit-shared": "~0.1.5",
+    "inuit-page": "~0.2.1",
+    "inuit-headings": "~0.3.1",
+    "inuit-lists": "~0.1.0",
+    "inuit-images": "~0.3.3",
   },
   "devDependencies": {
     "chai": "~3.4.0",

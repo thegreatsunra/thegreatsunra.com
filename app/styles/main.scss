@@ -20,6 +20,13 @@
 @import "bower_components/inuit-box-sizing/generic.box-sizing";
 @import "bower_components/inuit-shared/generic.shared";
 
+/**
+ * #BASE
+ */
+@import "bower_components/inuit-page/base.page";
+@import "bower_components/inuit-headings/base.headings";
+@import "bower_components/inuit-lists/base.lists";
+@import "bower_components/inuit-images/base.images";
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
