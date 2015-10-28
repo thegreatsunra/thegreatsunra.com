@@ -2,55 +2,36 @@
     #GRID
 \*------------------------------------*/
 
-@media screen and (min-width: 768px) {
-    .container {
-        margin-right: auto;
-        margin-left: auto;
-        // padding-left: 15px;
-        // padding-right: 15px;
-    }
-
-    .row {
-        // margin-left: -15px;
-        // margin-right: -15px;
-    }
-
-    // $gridColumnWidth: 60px;
-    // $gridGutterWidth: 20px;
     $gridColumnCount: 12;
     $gridColumnMultiplier: 100% / $gridColumnCount;
 
-    %col-styles {
+    .u-grid {
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }    
+    }
+    .u-grid__row {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+    }
+    .u-grid__item {
         float: left;
         position: relative;
         min-height: 1px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
-
-    @mixin col-x-list {
-      @for $i from 1 through $gridColumnCount {
-      .u-col-md-#{$i} { @extend %col-styles; }
-      }
-    }
-
-    @include col-x-list;
-
-    @for $i from 1 through $gridColumnCount - 1 {
-        .u-col-md-#{$i} {
+    @for $i from 1 through $gridColumnCount {
+        .u-col-sm-#{$i}\/#{$gridColumnCount} {
             width: $i * $gridColumnMultiplier;
         }
     }
-    .u-col-md-#{$gridColumnCount} {
-        width: 100%;
+
+            width: $i * $gridColumnMultiplier;
+        }
+    }
     }
 }
 
-// @for $i from 1 through $gridColumnCount {
-//   .col-#{$i} {
-//     width: (($gridColumnWidth * $i) + ($gridGutterWidth * ($i - 1)));
-//     @if $i == $gridColumnCount {
-//       margin-right: 0;
-//     } 
-//   }
-// }
