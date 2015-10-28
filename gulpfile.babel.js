@@ -169,7 +169,7 @@ gulp.task('gulpsmith', ['clean'], function() {
       gulpsmith()
       .use(layouts({ engine: 'handlebars' }))
   )
-  .pipe(gulp.dest("./build"))
+  .pipe(gulp.dest("./app"))
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
