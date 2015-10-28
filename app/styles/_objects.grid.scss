@@ -6,18 +6,18 @@
     $gridColumnMultiplier: 100% / $gridColumnCount;
 
 @media (min-width: 34em) { // 544px
-    .u-grid {
+    .u-layout {
         &:after {
             content: "";
             display: table;
             clear: both;
         }    
     }
-    .u-grid__row {
+    .u-layout__row {
         margin-left: -0.5rem;
         margin-right: -0.5rem;
     }
-    .u-grid__item {
+    .u-layout__item {
         float: left;
         position: relative;
         min-height: 1px;
