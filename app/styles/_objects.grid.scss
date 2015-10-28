@@ -16,6 +16,11 @@
     .u-layout__row {
         margin-left: -0.5rem;
         margin-right: -0.5rem;
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }   
     }
     .u-layout__item {
         float: left;
