@@ -2,509 +2,55 @@
     #GRID
 \*------------------------------------*/
 
-/**
- * Basic grid
- * Based on the output from Pure CSS' Starter Kit
- * http://purecss.io/start/?cols=12&prefix=.u-col-&sm=35.5em&md=48em&lg=64em&xl=80em
- * 12 columns
- * .u-col prefix
- * sm, md, lg and xl breakpoints
- */
-
-.u-col-1,
-.u-col-1-1,
-.u-col-1-2,
-.u-col-1-3,
-.u-col-2-3,
-.u-col-1-4,
-.u-col-3-4,
-.u-col-1-6,
-.u-col-5-6,
-.u-col-1-12,
-.u-col-2-12,
-.u-col-3-12,
-.u-col-4-12,
-.u-col-5-12,
-.u-col-6-12,
-.u-col-7-12,
-.u-col-8-12,
-.u-col-9-12,
-.u-col-10-12,
-.u-col-11-12,
-.u-col-12-12 {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
-}
-
-.u-col-1-12 {
-    width: 8.3333%;
-    *width: 8.3023%;
-}
-
-.u-col-1-6,
-.u-col-2-12 {
-    width: 16.6667%;
-    *width: 16.6357%;
-}
-
-.u-col-1-4,
-.u-col-3-12 {
-    width: 25%;
-    *width: 24.9690%;
-}
-
-.u-col-1-3,
-.u-col-4-12 {
-    width: 33.3333%;
-    *width: 33.3023%;
-}
-
-.u-col-5-12 {
-    width: 41.6667%;
-    *width: 41.6357%;
-}
-
-.u-col-1-2,
-.u-col-6-12 {
-    width: 50%;
-    *width: 49.9690%;
-}
-
-.u-col-7-12 {
-    width: 58.3333%;
-    *width: 58.3023%;
-}
-
-.u-col-2-3,
-.u-col-8-12 {
-    width: 66.6667%;
-    *width: 66.6357%;
-}
-
-.u-col-3-4,
-.u-col-9-12 {
-    width: 75%;
-    *width: 74.9690%;
-}
-
-.u-col-5-6,
-.u-col-10-12 {
-    width: 83.3333%;
-    *width: 83.3023%;
-}
-
-.u-col-11-12 {
-    width: 91.6667%;
-    *width: 91.6357%;
-}
-
-.u-col-1,
-.u-col-1-1,
-.u-col-12-12 {
-    width: 100%;
-}
-
-@media screen and (min-width: 35.5em) {
-    .u-col-sm-1,
-    .u-col-sm-1-1,
-    .u-col-sm-1-2,
-    .u-col-sm-1-3,
-    .u-col-sm-2-3,
-    .u-col-sm-1-4,
-    .u-col-sm-3-4,
-    .u-col-sm-1-6,
-    .u-col-sm-5-6,
-    .u-col-sm-1-12,
-    .u-col-sm-2-12,
-    .u-col-sm-3-12,
-    .u-col-sm-4-12,
-    .u-col-sm-5-12,
-    .u-col-sm-6-12,
-    .u-col-sm-7-12,
-    .u-col-sm-8-12,
-    .u-col-sm-9-12,
-    .u-col-sm-10-12,
-    .u-col-sm-11-12,
-    .u-col-sm-12-12 {
-        display: inline-block;
-        *display: inline;
-        zoom: 1;
-        letter-spacing: normal;
-        word-spacing: normal;
-        vertical-align: top;
-        text-rendering: auto;
+@media screen and (min-width: 768px) {
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        // padding-left: 15px;
+        // padding-right: 15px;
     }
 
-    .u-col-sm-1-12 {
-        width: 8.3333%;
-        *width: 8.3023%;
+    .row {
+        // margin-left: -15px;
+        // margin-right: -15px;
     }
 
-    .u-col-sm-1-6,
-    .u-col-sm-2-12 {
-        width: 16.6667%;
-        *width: 16.6357%;
+    // $gridColumnWidth: 60px;
+    // $gridGutterWidth: 20px;
+    $gridColumnCount: 12;
+    $gridColumnMultiplier: 100% / $gridColumnCount;
+
+    %col-styles {
+        float: left;
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
-    .u-col-sm-1-4,
-    .u-col-sm-3-12 {
-        width: 25%;
-        *width: 24.9690%;
+    @mixin col-x-list {
+      @for $i from 1 through $gridColumnCount {
+      .u-col-md-#{$i} { @extend %col-styles; }
+      }
     }
 
-    .u-col-sm-1-3,
-    .u-col-sm-4-12 {
-        width: 33.3333%;
-        *width: 33.3023%;
-    }
+    @include col-x-list;
 
-    .u-col-sm-5-12 {
-        width: 41.6667%;
-        *width: 41.6357%;
+    @for $i from 1 through $gridColumnCount - 1 {
+        .u-col-md-#{$i} {
+            width: $i * $gridColumnMultiplier;
+        }
     }
-
-    .u-col-sm-1-2,
-    .u-col-sm-6-12 {
-        width: 50%;
-        *width: 49.9690%;
-    }
-
-    .u-col-sm-7-12 {
-        width: 58.3333%;
-        *width: 58.3023%;
-    }
-
-    .u-col-sm-2-3,
-    .u-col-sm-8-12 {
-        width: 66.6667%;
-        *width: 66.6357%;
-    }
-
-    .u-col-sm-3-4,
-    .u-col-sm-9-12 {
-        width: 75%;
-        *width: 74.9690%;
-    }
-
-    .u-col-sm-5-6,
-    .u-col-sm-10-12 {
-        width: 83.3333%;
-        *width: 83.3023%;
-    }
-
-    .u-col-sm-11-12 {
-        width: 91.6667%;
-        *width: 91.6357%;
-    }
-
-    .u-col-sm-1,
-    .u-col-sm-1-1,
-    .u-col-sm-12-12 {
+    .u-col-md-#{$gridColumnCount} {
         width: 100%;
     }
 }
 
-@media screen and (min-width: 48em) {
-    .u-col-md-1,
-    .u-col-md-1-1,
-    .u-col-md-1-2,
-    .u-col-md-1-3,
-    .u-col-md-2-3,
-    .u-col-md-1-4,
-    .u-col-md-3-4,
-    .u-col-md-1-6,
-    .u-col-md-5-6,
-    .u-col-md-1-12,
-    .u-col-md-2-12,
-    .u-col-md-3-12,
-    .u-col-md-4-12,
-    .u-col-md-5-12,
-    .u-col-md-6-12,
-    .u-col-md-7-12,
-    .u-col-md-8-12,
-    .u-col-md-9-12,
-    .u-col-md-10-12,
-    .u-col-md-11-12,
-    .u-col-md-12-12 {
-        display: inline-block;
-        *display: inline;
-        zoom: 1;
-        letter-spacing: normal;
-        word-spacing: normal;
-        vertical-align: top;
-        text-rendering: auto;
-    }
-
-    .u-col-md-1-12 {
-        width: 8.3333%;
-        *width: 8.3023%;
-    }
-
-    .u-col-md-1-6,
-    .u-col-md-2-12 {
-        width: 16.6667%;
-        *width: 16.6357%;
-    }
-
-    .u-col-md-1-4,
-    .u-col-md-3-12 {
-        width: 25%;
-        *width: 24.9690%;
-    }
-
-    .u-col-md-1-3,
-    .u-col-md-4-12 {
-        width: 33.3333%;
-        *width: 33.3023%;
-    }
-
-    .u-col-md-5-12 {
-        width: 41.6667%;
-        *width: 41.6357%;
-    }
-
-    .u-col-md-1-2,
-    .u-col-md-6-12 {
-        width: 50%;
-        *width: 49.9690%;
-    }
-
-    .u-col-md-7-12 {
-        width: 58.3333%;
-        *width: 58.3023%;
-    }
-
-    .u-col-md-2-3,
-    .u-col-md-8-12 {
-        width: 66.6667%;
-        *width: 66.6357%;
-    }
-
-    .u-col-md-3-4,
-    .u-col-md-9-12 {
-        width: 75%;
-        *width: 74.9690%;
-    }
-
-    .u-col-md-5-6,
-    .u-col-md-10-12 {
-        width: 83.3333%;
-        *width: 83.3023%;
-    }
-
-    .u-col-md-11-12 {
-        width: 91.6667%;
-        *width: 91.6357%;
-    }
-
-    .u-col-md-1,
-    .u-col-md-1-1,
-    .u-col-md-12-12 {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 64em) {
-    .u-col-lg-1,
-    .u-col-lg-1-1,
-    .u-col-lg-1-2,
-    .u-col-lg-1-3,
-    .u-col-lg-2-3,
-    .u-col-lg-1-4,
-    .u-col-lg-3-4,
-    .u-col-lg-1-6,
-    .u-col-lg-5-6,
-    .u-col-lg-1-12,
-    .u-col-lg-2-12,
-    .u-col-lg-3-12,
-    .u-col-lg-4-12,
-    .u-col-lg-5-12,
-    .u-col-lg-6-12,
-    .u-col-lg-7-12,
-    .u-col-lg-8-12,
-    .u-col-lg-9-12,
-    .u-col-lg-10-12,
-    .u-col-lg-11-12,
-    .u-col-lg-12-12 {
-        display: inline-block;
-        *display: inline;
-        zoom: 1;
-        letter-spacing: normal;
-        word-spacing: normal;
-        vertical-align: top;
-        text-rendering: auto;
-    }
-
-    .u-col-lg-1-12 {
-        width: 8.3333%;
-        *width: 8.3023%;
-    }
-
-    .u-col-lg-1-6,
-    .u-col-lg-2-12 {
-        width: 16.6667%;
-        *width: 16.6357%;
-    }
-
-    .u-col-lg-1-4,
-    .u-col-lg-3-12 {
-        width: 25%;
-        *width: 24.9690%;
-    }
-
-    .u-col-lg-1-3,
-    .u-col-lg-4-12 {
-        width: 33.3333%;
-        *width: 33.3023%;
-    }
-
-    .u-col-lg-5-12 {
-        width: 41.6667%;
-        *width: 41.6357%;
-    }
-
-    .u-col-lg-1-2,
-    .u-col-lg-6-12 {
-        width: 50%;
-        *width: 49.9690%;
-    }
-
-    .u-col-lg-7-12 {
-        width: 58.3333%;
-        *width: 58.3023%;
-    }
-
-    .u-col-lg-2-3,
-    .u-col-lg-8-12 {
-        width: 66.6667%;
-        *width: 66.6357%;
-    }
-
-    .u-col-lg-3-4,
-    .u-col-lg-9-12 {
-        width: 75%;
-        *width: 74.9690%;
-    }
-
-    .u-col-lg-5-6,
-    .u-col-lg-10-12 {
-        width: 83.3333%;
-        *width: 83.3023%;
-    }
-
-    .u-col-lg-11-12 {
-        width: 91.6667%;
-        *width: 91.6357%;
-    }
-
-    .u-col-lg-1,
-    .u-col-lg-1-1,
-    .u-col-lg-12-12 {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 80em) {
-    .u-col-xl-1,
-    .u-col-xl-1-1,
-    .u-col-xl-1-2,
-    .u-col-xl-1-3,
-    .u-col-xl-2-3,
-    .u-col-xl-1-4,
-    .u-col-xl-3-4,
-    .u-col-xl-1-6,
-    .u-col-xl-5-6,
-    .u-col-xl-1-12,
-    .u-col-xl-2-12,
-    .u-col-xl-3-12,
-    .u-col-xl-4-12,
-    .u-col-xl-5-12,
-    .u-col-xl-6-12,
-    .u-col-xl-7-12,
-    .u-col-xl-8-12,
-    .u-col-xl-9-12,
-    .u-col-xl-10-12,
-    .u-col-xl-11-12,
-    .u-col-xl-12-12 {
-        display: inline-block;
-        *display: inline;
-        zoom: 1;
-        letter-spacing: normal;
-        word-spacing: normal;
-        vertical-align: top;
-        text-rendering: auto;
-    }
-
-    .u-col-xl-1-12 {
-        width: 8.3333%;
-        *width: 8.3023%;
-    }
-
-    .u-col-xl-1-6,
-    .u-col-xl-2-12 {
-        width: 16.6667%;
-        *width: 16.6357%;
-    }
-
-    .u-col-xl-1-4,
-    .u-col-xl-3-12 {
-        width: 25%;
-        *width: 24.9690%;
-    }
-
-    .u-col-xl-1-3,
-    .u-col-xl-4-12 {
-        width: 33.3333%;
-        *width: 33.3023%;
-    }
-
-    .u-col-xl-5-12 {
-        width: 41.6667%;
-        *width: 41.6357%;
-    }
-
-    .u-col-xl-1-2,
-    .u-col-xl-6-12 {
-        width: 50%;
-        *width: 49.9690%;
-    }
-
-    .u-col-xl-7-12 {
-        width: 58.3333%;
-        *width: 58.3023%;
-    }
-
-    .u-col-xl-2-3,
-    .u-col-xl-8-12 {
-        width: 66.6667%;
-        *width: 66.6357%;
-    }
-
-    .u-col-xl-3-4,
-    .u-col-xl-9-12 {
-        width: 75%;
-        *width: 74.9690%;
-    }
-
-    .u-col-xl-5-6,
-    .u-col-xl-10-12 {
-        width: 83.3333%;
-        *width: 83.3023%;
-    }
-
-    .u-col-xl-11-12 {
-        width: 91.6667%;
-        *width: 91.6357%;
-    }
-
-    .u-col-xl-1,
-    .u-col-xl-1-1,
-    .u-col-xl-12-12 {
-        width: 100%;
-    }
-}
+// @for $i from 1 through $gridColumnCount {
+//   .col-#{$i} {
+//     width: (($gridColumnWidth * $i) + ($gridGutterWidth * ($i - 1)));
+//     @if $i == $gridColumnCount {
+//       margin-right: 0;
+//     } 
+//   }
+// }
