@@ -114,9 +114,31 @@
               </div>
             </div>
           </div>
-          <div class="u-grid">
-            <div class="u-grid__row">
-              <div class="u-grid__item u-col-sm-6/12">
+
+          <h3>Complex layout with push/pull column reordering</h3>
+          <div class="u-layout">
+            <div class="u-layout__row">
+              <div class="u-layout__item u-col-sm-12 u-col-md-3 u-col-md-push-9 u-col-lg-4 u-col-lg-push-8">
+                <div class="u-layout__test">
+                  COL 1
+                </div>
+              </div>
+              <div class="u-layout__item u-col-sm-6 u-col-sm-push-6 u-col-md-3 u-col-md-push-3 u-col-lg-4 u-col-lg-push-0">
+                <div class="u-layout__test">
+                  COL 2
+                </div>
+              </div>
+              <div class="u-layout__item u-col-sm-6 u-col-sm-pull-6 u-col-md-6 u-col-md-pull-6 u-col-lg-4 u-col-lg-pull-8">
+                <div class="u-layout__test">
+                  COL 3
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="u-layout">
+            <div class="u-layout__row">
+              <div class="u-layout__item u-col-sm-6">
                 Lorem ipsum left...
               </div>
               <div class="u-grid__item u-col-sm-6/12">
