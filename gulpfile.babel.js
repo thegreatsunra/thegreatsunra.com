@@ -155,6 +155,12 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
+gulp.task('metalsmith', ['clean'], function() {
+  return gulp.src('src/**').
+    pipe($.metalsmith()).
+    pipe(gulp.dest('build'));
+});
+
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
