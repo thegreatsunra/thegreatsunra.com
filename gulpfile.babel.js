@@ -159,10 +159,17 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('metalsmith', ['clean'], function() {
-  return gulp.src('src/**').
-    pipe($.metalsmith()).
-    pipe(gulp.dest('build'));
+gulp.task('gulpsmith', ['clean'], function() {
+  gulp.src("./src/**/*")
+  .pipe($.frontMatter()).on("data", function(file) {
+    lodash.assign(file, file.frontMatter); 
+    delete file.frontMatter;
+  })
+  .pipe(
+      gulpsmith()
+      .use(layouts({ engine: 'handlebars' }))
+  )
+  .pipe(gulp.dest("./build"))
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
