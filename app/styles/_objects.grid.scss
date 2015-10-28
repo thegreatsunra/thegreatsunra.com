@@ -25,7 +25,7 @@
         padding-right: 0.5rem;
     }
     @for $i from 1 through $gridColumnCount {
-        .u-col-sm-#{$i}\/#{$gridColumnCount} {
+        .u-col-sm-#{$i} {
             width: $i * $gridColumnMultiplier;
         }
     }
@@ -33,7 +33,7 @@
 
 @media (min-width: 48em) { // 768px
     @for $i from 1 through $gridColumnCount {
-        .u-col-md-#{$i}\/#{$gridColumnCount} {
+        .u-col-md-#{$i} {
             width: $i * $gridColumnMultiplier;
         }
     }
@@ -41,7 +41,7 @@
 
 @media (min-width: 62em) { // 992px
     @for $i from 1 through $gridColumnCount {
-        .u-col-lg-#{$i}\/#{$gridColumnCount} {
+        .u-col-lg-#{$i} {
             width: $i * $gridColumnMultiplier;
         }
     }
@@ -49,7 +49,7 @@
 
 @media (min-width: 75em) { // 1200px
     @for $i from 1 through $gridColumnCount {
-        .u-col-xl-#{$i}\/#{$gridColumnCount} {
+        .u-col-xl-#{$i} {
             width: $i * $gridColumnMultiplier;
         }
     }
