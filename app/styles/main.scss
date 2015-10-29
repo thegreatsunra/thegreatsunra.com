@@ -28,24 +28,28 @@
 /**
  * #OBJECTS
  */
-@import "objects.grid";
+$gridColumnCount: 12;
+$gridColumnMultiplier: 100% / $gridColumnCount;
+$gridGutter: 1rem;
+@import "objects.layout";
+
+.o-layout__test {
+	background-color: #fee;
+	font-size: 9px;
+	min-height: 40px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
  /**
  * #TRUMPS
  */
 @import "bower_components/inuit-clearfix/trumps.clearfix";
 @import "bower_components/inuit-spacing/trumps.spacing";
+@import "trumps.widths";
 
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
-}
-
-.u-layout__test {
-	background-color: #fee;
-	font-size: 9px;
-	min-height: 40px;
-	padding: 10px;
-	margin-bottom: 20px;
 }

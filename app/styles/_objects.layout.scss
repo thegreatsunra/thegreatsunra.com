@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+@media (min-width: 34em) { // 544px
+    .o-layout {
+        margin-left: -($gridGutter / 2);
+        margin-right: -($gridGutter / 2);
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }    
+    }
+    .o-layout__item {
+        float: left;
+        position: relative;
+        min-height: 1px;
+        padding-left: $gridGutter / 2;
+        padding-right: $gridGutter / 2;
+    }
+}

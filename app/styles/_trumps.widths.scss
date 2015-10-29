@@ -1,54 +1,28 @@
 /*------------------------------------*\
-    #GRID
+    #WIDTHS
 \*------------------------------------*/
 
-    $gridColumnCount: 12;
-    $gridColumnMultiplier: 100% / $gridColumnCount;
-
 @media (min-width: 34em) { // 544px
-    .u-layout {
-        &:after {
-            content: "";
-            display: table;
-            clear: both;
-        }    
-    }
-    .u-layout__row {
-        margin-left: -0.5rem;
-        margin-right: -0.5rem;
-        &:after {
-            content: "";
-            display: table;
-            clear: both;
-        }   
-    }
-    .u-layout__item {
-        float: left;
-        position: relative;
-        min-height: 1px;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
     @for $i from 0 through $gridColumnCount {
-        .u-col-sm-offset-#{$i} {
+        .u-sm-offset-#{$i}\/#{$gridColumnCount} { 
             margin-left: $i * $gridColumnMultiplier;
         }
         @if $i == 0 {
-            .u-col-sm-pull-#{$i} {
+            .u-sm-pull-#{$i}\/#{$gridColumnCount} { 
                 right: auto;
             }
-            .u-col-sm-push-#{$i} {
+            .u-sm-push-#{$i}\/#{$gridColumnCount} { 
                 left: auto;
             }
         }
         @else {
-            .u-col-sm-#{$i} {
+            .u-sm-#{$i}\/#{$gridColumnCount} { 
                 width: $i * $gridColumnMultiplier;
             }
-            .u-col-sm-pull-#{$i} {
+            .u-sm-pull-#{$i}\/#{$gridColumnCount} { 
                 right: $i * $gridColumnMultiplier;
             }
-            .u-col-sm-push-#{$i} {
+            .u-sm-push-#{$i}\/#{$gridColumnCount} { 
                 left: $i * $gridColumnMultiplier;
             }
         }
@@ -57,25 +31,25 @@
 
 @media (min-width: 48em) { // 768px
     @for $i from 0 through $gridColumnCount {
-        .u-col-md-offset-#{$i} {
+        .u-md-offset-#{$i}\/#{$gridColumnCount} { 
             margin-left: $i * $gridColumnMultiplier;
         }
         @if $i == 0 {
-            .u-col-md-pull-#{$i} {
+            .u-md-pull-#{$i}\/#{$gridColumnCount} { 
                 right: auto;
             }
-            .u-col-md-push-#{$i} {
+            .u-md-push-#{$i}\/#{$gridColumnCount} { 
                 left: auto;
             }
         }
         @else {
-            .u-col-md-#{$i} {
+            .u-md-#{$i}\/#{$gridColumnCount} { 
                 width: $i * $gridColumnMultiplier;
             }
-            .u-col-md-pull-#{$i} {
+            .u-md-pull-#{$i}\/#{$gridColumnCount} { 
                 right: $i * $gridColumnMultiplier;
             }
-            .u-col-md-push-#{$i} {
+            .u-md-push-#{$i}\/#{$gridColumnCount} { 
                 left: $i * $gridColumnMultiplier;
             }
         }
@@ -84,25 +58,25 @@
 
 @media (min-width: 62em) { // 992px
     @for $i from 0 through $gridColumnCount {
-        .u-col-lg-offset-#{$i} {
+        .u-lg-offset-#{$i}\/#{$gridColumnCount} { 
             margin-left: $i * $gridColumnMultiplier;
         }
         @if $i == 0 {
-            .u-col-lg-pull-#{$i} {
+            .u-lg-pull-#{$i}\/#{$gridColumnCount} { 
                 right: auto;
             }
-            .u-col-lg-push-#{$i} {
+            .u-lg-push-#{$i}\/#{$gridColumnCount} { 
                 left: auto;
             }
         }
         @else {
-            .u-col-lg-#{$i} {
+            .u-lg-#{$i}\/#{$gridColumnCount} { 
                 width: $i * $gridColumnMultiplier;
             }
-            .u-col-lg-pull-#{$i} {
+            .u-lg-pull-#{$i}\/#{$gridColumnCount} { 
                 right: $i * $gridColumnMultiplier;
             }
-            .u-col-lg-push-#{$i} {
+            .u-lg-push-#{$i}\/#{$gridColumnCount} { 
                 left: $i * $gridColumnMultiplier;
             }
         }
@@ -111,25 +85,25 @@
 
 @media (min-width: 75em) { // 1200px
     @for $i from 0 through $gridColumnCount {
-        .u-col-xl-offset-#{$i} {
+        .u-xl-offset-#{$i}\/#{$gridColumnCount} { 
             margin-left: $i * $gridColumnMultiplier;
         }
         @if $i == 0 {
-            .u-col-xl-pull-#{$i} {
+            .u-xl-pull-#{$i}\/#{$gridColumnCount} { 
                 right: auto;
             }
-            .u-col-xl-push-#{$i} {
+            .u-xl-push-#{$i}\/#{$gridColumnCount} { 
                 left: auto;
             }
         }
         @else {
-            .u-col-xl-#{$i} {
+            .u-xl-#{$i}\/#{$gridColumnCount} { 
                 width: $i * $gridColumnMultiplier;
             }
-            .u-col-xl-pull-#{$i} {
+            .u-xl-pull-#{$i}\/#{$gridColumnCount} { 
                 right: $i * $gridColumnMultiplier;
             }
-            .u-col-xl-push-#{$i} {
+            .u-xl-push-#{$i}\/#{$gridColumnCount} { 
                 left: $i * $gridColumnMultiplier;
             }
         }
