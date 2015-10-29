@@ -91,7 +91,7 @@ gulp.task('extras', () => {
   }).pipe(gulp.dest('dist'));
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist', 'build']));
+gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', ['styles', 'fonts'], () => {
   browserSync({
@@ -106,12 +106,12 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   });
 
   gulp.watch([
-    'app/*.html',
     'app/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
+  gulp.watch('src/*.html', ['smith']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -159,7 +159,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('gulpsmith', ['clean'], function() {
+gulp.task('smith', function() {
   gulp.src("./src/**/*")
   .pipe($.frontMatter()).on("data", function(file) {
     lodash.assign(file, file.frontMatter); 
@@ -170,6 +170,7 @@ gulp.task('gulpsmith', ['clean'], function() {
       .use(layouts({ engine: 'handlebars' }))
   )
   .pipe(gulp.dest("./app"))
+  .pipe(reload({stream: true}));
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
