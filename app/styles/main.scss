@@ -28,9 +28,6 @@
 /**
  * #OBJECTS
  */
-$gridColumnCount: 12;
-$gridColumnMultiplier: 100% / $gridColumnCount;
-$gridGutter: 1rem;
 $inuit-object-namespace: "o-";
 $inuit-layout-gutter: $inuit-base-spacing-unit / 4;
 @import "objects.layout";
@@ -46,6 +43,7 @@ $inuit-layout-gutter: $inuit-base-spacing-unit / 4;
  */
 @import "bower_components/inuit-clearfix/trumps.clearfix";
 @import "bower_components/inuit-spacing/trumps.spacing";
+$inuit-utility-namespace: "u-";
 @import "trumps.widths";
 
 .browserupgrade {

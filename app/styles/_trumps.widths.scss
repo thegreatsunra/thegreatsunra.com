@@ -2,109 +2,128 @@
     #WIDTHS
 \*------------------------------------*/
 
+/**
+ * Responsive width classes.
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+
+$inuit-utility-namespace:        null !default;
+
+$inuit-layout-namespace:        $inuit-namespace !default;
+
+$inuit-layout-gutter:           $inuit-base-spacing-unit !default;
+
+$inuit-layout-column-count:     12 !default;
+
+$inuit-layout-width-multiplier: 100% / $inuit-layout-column-count !default;
+
+
+
+
 @media (min-width: 34em) { // 544px
-    @for $i from 0 through $gridColumnCount {
-        .u-sm-offset-#{$i}\/#{$gridColumnCount} { 
-            margin-left: $i * $gridColumnMultiplier;
+    @for $i from 0 through $inuit-layout-column-count {
+        .#{$inuit-utility-namespace}sm-offset-#{$i}\/#{$inuit-layout-column-count} { 
+            margin-left: $i * $inuit-layout-width-multiplier;
         }
         @if $i == 0 {
-            .u-sm-pull-#{$i}\/#{$gridColumnCount} { 
+            .#{$inuit-utility-namespace}sm-pull-#{$i}\/#{$inuit-layout-column-count} { 
                 right: auto;
             }
-            .u-sm-push-#{$i}\/#{$gridColumnCount} { 
+            .#{$inuit-utility-namespace}sm-push-#{$i}\/#{$inuit-layout-column-count} { 
                 left: auto;
             }
         }
         @else {
-            .u-sm-#{$i}\/#{$gridColumnCount} { 
-                width: $i * $gridColumnMultiplier;
+            .#{$inuit-utility-namespace}sm-#{$i}\/#{$inuit-layout-column-count} { 
+                width: $i * $inuit-layout-width-multiplier;
             }
-            .u-sm-pull-#{$i}\/#{$gridColumnCount} { 
-                right: $i * $gridColumnMultiplier;
+            .#{$inuit-utility-namespace}sm-pull-#{$i}\/#{$inuit-layout-column-count} { 
+                right: $i * $inuit-layout-width-multiplier;
             }
-            .u-sm-push-#{$i}\/#{$gridColumnCount} { 
-                left: $i * $gridColumnMultiplier;
+            .#{$inuit-utility-namespace}sm-push-#{$i}\/#{$inuit-layout-column-count} { 
+                left: $i * $inuit-layout-width-multiplier;
             }
         }
     }
 }
 
 @media (min-width: 48em) { // 768px
-    @for $i from 0 through $gridColumnCount {
-        .u-md-offset-#{$i}\/#{$gridColumnCount} { 
-            margin-left: $i * $gridColumnMultiplier;
+    @for $i from 0 through $inuit-layout-column-count {
+        .#{$inuit-utility-namespace}md-offset-#{$i}\/#{$inuit-layout-column-count} { 
+            margin-left: $i * $inuit-layout-width-multiplier;
         }
         @if $i == 0 {
-            .u-md-pull-#{$i}\/#{$gridColumnCount} { 
+            .#{$inuit-utility-namespace}md-pull-#{$i}\/#{$inuit-layout-column-count} { 
                 right: auto;
             }
-            .u-md-push-#{$i}\/#{$gridColumnCount} { 
+            .#{$inuit-utility-namespace}md-push-#{$i}\/#{$inuit-layout-column-count} { 
                 left: auto;
             }
         }
         @else {
-            .u-md-#{$i}\/#{$gridColumnCount} { 
-                width: $i * $gridColumnMultiplier;
+            .#{$inuit-utility-namespace}md-#{$i}\/#{$inuit-layout-column-count} { 
+                width: $i * $inuit-layout-width-multiplier;
             }
-            .u-md-pull-#{$i}\/#{$gridColumnCount} { 
-                right: $i * $gridColumnMultiplier;
+            .#{$inuit-utility-namespace}md-pull-#{$i}\/#{$inuit-layout-column-count} { 
+                right: $i * $inuit-layout-width-multiplier;
             }
-            .u-md-push-#{$i}\/#{$gridColumnCount} { 
-                left: $i * $gridColumnMultiplier;
+            .#{$inuit-utility-namespace}md-push-#{$i}\/#{$inuit-layout-column-count} { 
+                left: $i * $inuit-layout-width-multiplier;
             }
         }
     }
 }
 
 @media (min-width: 62em) { // 992px
-    @for $i from 0 through $gridColumnCount {
-        .u-lg-offset-#{$i}\/#{$gridColumnCount} { 
-            margin-left: $i * $gridColumnMultiplier;
+    @for $i from 0 through $inuit-layout-column-count {
+        .#{$inuit-utility-namespace}lg-offset-#{$i}\/#{$inuit-layout-column-count} { 
+            margin-left: $i * $inuit-layout-width-multiplier;
         }
         @if $i == 0 {
-            .u-lg-pull-#{$i}\/#{$gridColumnCount} { 
+            .#{$inuit-utility-namespace}lg-pull-#{$i}\/#{$inuit-layout-column-count} { 
                 right: auto;
             }
-            .u-lg-push-#{$i}\/#{$gridColumnCount} { 
+            .#{$inuit-utility-namespace}lg-push-#{$i}\/#{$inuit-layout-column-count} { 
                 left: auto;
             }
         }
         @else {
-            .u-lg-#{$i}\/#{$gridColumnCount} { 
-                width: $i * $gridColumnMultiplier;
+            .#{$inuit-utility-namespace}lg-#{$i}\/#{$inuit-layout-column-count} { 
+                width: $i * $inuit-layout-width-multiplier;
             }
-            .u-lg-pull-#{$i}\/#{$gridColumnCount} { 
-                right: $i * $gridColumnMultiplier;
+            .#{$inuit-utility-namespace}lg-pull-#{$i}\/#{$inuit-layout-column-count} { 
+                right: $i * $inuit-layout-width-multiplier;
             }
-            .u-lg-push-#{$i}\/#{$gridColumnCount} { 
-                left: $i * $gridColumnMultiplier;
+            .#{$inuit-utility-namespace}lg-push-#{$i}\/#{$inuit-layout-column-count} { 
+                left: $i * $inuit-layout-width-multiplier;
             }
         }
     }
 }
 
 @media (min-width: 75em) { // 1200px
-    @for $i from 0 through $gridColumnCount {
-        .u-xl-offset-#{$i}\/#{$gridColumnCount} { 
-            margin-left: $i * $gridColumnMultiplier;
+    @for $i from 0 through $inuit-layout-column-count {
+        .#{$inuit-utility-namespace}xl-offset-#{$i}\/#{$inuit-layout-column-count} { 
+            margin-left: $i * $inuit-layout-width-multiplier;
         }
         @if $i == 0 {
-            .u-xl-pull-#{$i}\/#{$gridColumnCount} { 
+            .#{$inuit-utility-namespace}xl-pull-#{$i}\/#{$inuit-layout-column-count} { 
                 right: auto;
             }
-            .u-xl-push-#{$i}\/#{$gridColumnCount} { 
+            .#{$inuit-utility-namespace}xl-push-#{$i}\/#{$inuit-layout-column-count} { 
                 left: auto;
             }
         }
         @else {
-            .u-xl-#{$i}\/#{$gridColumnCount} { 
-                width: $i * $gridColumnMultiplier;
+            .#{$inuit-utility-namespace}xl-#{$i}\/#{$inuit-layout-column-count} { 
+                width: $i * $inuit-layout-width-multiplier;
             }
-            .u-xl-pull-#{$i}\/#{$gridColumnCount} { 
-                right: $i * $gridColumnMultiplier;
+            .#{$inuit-utility-namespace}xl-pull-#{$i}\/#{$inuit-layout-column-count} { 
+                right: $i * $inuit-layout-width-multiplier;
             }
-            .u-xl-push-#{$i}\/#{$gridColumnCount} { 
-                left: $i * $gridColumnMultiplier;
+            .#{$inuit-utility-namespace}xl-push-#{$i}\/#{$inuit-layout-column-count} { 
+                left: $i * $inuit-layout-width-multiplier;
             }
         }
     }
