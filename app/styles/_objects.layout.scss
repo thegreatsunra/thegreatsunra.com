@@ -2,21 +2,55 @@
     #LAYOUT
 \*------------------------------------*/
 
+/**
+ * The thegreatsunra layout system uses floats and stuff.
+ * Combine the layout items with the widths found in `trumps.widths`.
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+
+$inuit-object-namespace:        null !default;
+
+$inuit-layout-namespace:        $inuit-namespace !default;
+
+$inuit-layout-gutter:           $inuit-base-spacing-unit !default;
+
+$inuit-layout-column-count:     12 !default;
+
+
+
+// Here we set a variable assuming that `box-sizing: border-box;` is not set
+// globally. If it has been previously been defined, the following variable will
+// be overriden and will be set to `true`.
+$inuit-global-border-box: false !default;
+
+
+
+
+/**
+ * Begin a layout group.
+ */
+// scope all layout styles above mobile (for now)
 @media (min-width: 34em) { // 544px
-    .o-layout {
-        margin-left: -($gridGutter / 2);
-        margin-right: -($gridGutter / 2);
-        &:after {
-            content: "";
-            display: table;
-            clear: both;
-        }    
+    .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout,
+    %.#{$inuit-object-namespace}#{$inuit-layout-namespace}layout {
+        list-style: none;
+        margin:  0;
+        padding: 0;
+        margin-left: -$inuit-layout-gutter; // need to divide by 2?
+        margin-right:  -$inuit-layout-gutter; // need to divide by 2?
+        @extend %clearfix;
     }
-    .o-layout__item {
+
+    .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item,
+    %.#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item {
+        vertical-align: top;
+        width: 100%;
         float: left;
         position: relative;
         min-height: 1px;
-        padding-left: $gridGutter / 2;
-        padding-right: $gridGutter / 2;
+        padding-left: $inuit-layout-gutter; // need to divide by 2?
+        padding-right:  $inuit-layout-gutter; // need to divide by 2?
+        @extend %clearfix;
     }
 }
