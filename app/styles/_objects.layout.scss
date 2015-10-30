@@ -11,11 +11,16 @@
 
 $inuit-object-namespace:        null !default;
 
+$inuit-utility-namespace:        null !default;
+
 $inuit-layout-namespace:        $inuit-namespace !default;
 
 $inuit-layout-gutter:           $inuit-base-spacing-unit !default;
 
 $inuit-layout-column-count:     12 !default;
+
+$inuit-layout-width-multiplier: 100% / $inuit-layout-column-count !default;
+
 
 
 
@@ -52,5 +57,123 @@ $inuit-global-border-box: false !default;
         padding-left: $inuit-layout-gutter; // need to divide by 2?
         padding-right:  $inuit-layout-gutter; // need to divide by 2?
         @extend %clearfix;
+    }
+}
+
+
+
+
+/*------------------------------------*\
+    #WIDTHS
+\*------------------------------------*/
+
+/**
+ * Responsive width classes.
+ */
+@media (min-width: 34em) { // 544px
+    @for $i from 0 through $inuit-layout-column-count {
+        .#{$inuit-utility-namespace}sm-offset-#{$i}\/#{$inuit-layout-column-count} { 
+            margin-left: $i * $inuit-layout-width-multiplier;
+        }
+        @if $i == 0 {
+            .#{$inuit-utility-namespace}sm-pull-#{$i}\/#{$inuit-layout-column-count} { 
+                right: auto;
+            }
+            .#{$inuit-utility-namespace}sm-push-#{$i}\/#{$inuit-layout-column-count} { 
+                left: auto;
+            }
+        }
+        @else {
+            .#{$inuit-utility-namespace}sm-#{$i}\/#{$inuit-layout-column-count} { 
+                width: $i * $inuit-layout-width-multiplier;
+            }
+            .#{$inuit-utility-namespace}sm-pull-#{$i}\/#{$inuit-layout-column-count} { 
+                right: $i * $inuit-layout-width-multiplier;
+            }
+            .#{$inuit-utility-namespace}sm-push-#{$i}\/#{$inuit-layout-column-count} { 
+                left: $i * $inuit-layout-width-multiplier;
+            }
+        }
+    }
+}
+
+@media (min-width: 48em) { // 768px
+    @for $i from 0 through $inuit-layout-column-count {
+        .#{$inuit-utility-namespace}md-offset-#{$i}\/#{$inuit-layout-column-count} { 
+            margin-left: $i * $inuit-layout-width-multiplier;
+        }
+        @if $i == 0 {
+            .#{$inuit-utility-namespace}md-pull-#{$i}\/#{$inuit-layout-column-count} { 
+                right: auto;
+            }
+            .#{$inuit-utility-namespace}md-push-#{$i}\/#{$inuit-layout-column-count} { 
+                left: auto;
+            }
+        }
+        @else {
+            .#{$inuit-utility-namespace}md-#{$i}\/#{$inuit-layout-column-count} { 
+                width: $i * $inuit-layout-width-multiplier;
+            }
+            .#{$inuit-utility-namespace}md-pull-#{$i}\/#{$inuit-layout-column-count} { 
+                right: $i * $inuit-layout-width-multiplier;
+            }
+            .#{$inuit-utility-namespace}md-push-#{$i}\/#{$inuit-layout-column-count} { 
+                left: $i * $inuit-layout-width-multiplier;
+            }
+        }
+    }
+}
+
+@media (min-width: 62em) { // 992px
+    @for $i from 0 through $inuit-layout-column-count {
+        .#{$inuit-utility-namespace}lg-offset-#{$i}\/#{$inuit-layout-column-count} { 
+            margin-left: $i * $inuit-layout-width-multiplier;
+        }
+        @if $i == 0 {
+            .#{$inuit-utility-namespace}lg-pull-#{$i}\/#{$inuit-layout-column-count} { 
+                right: auto;
+            }
+            .#{$inuit-utility-namespace}lg-push-#{$i}\/#{$inuit-layout-column-count} { 
+                left: auto;
+            }
+        }
+        @else {
+            .#{$inuit-utility-namespace}lg-#{$i}\/#{$inuit-layout-column-count} { 
+                width: $i * $inuit-layout-width-multiplier;
+            }
+            .#{$inuit-utility-namespace}lg-pull-#{$i}\/#{$inuit-layout-column-count} { 
+                right: $i * $inuit-layout-width-multiplier;
+            }
+            .#{$inuit-utility-namespace}lg-push-#{$i}\/#{$inuit-layout-column-count} { 
+                left: $i * $inuit-layout-width-multiplier;
+            }
+        }
+    }
+}
+
+@media (min-width: 75em) { // 1200px
+    @for $i from 0 through $inuit-layout-column-count {
+        .#{$inuit-utility-namespace}xl-offset-#{$i}\/#{$inuit-layout-column-count} { 
+            margin-left: $i * $inuit-layout-width-multiplier;
+        }
+        @if $i == 0 {
+            .#{$inuit-utility-namespace}xl-pull-#{$i}\/#{$inuit-layout-column-count} { 
+                right: auto;
+            }
+            .#{$inuit-utility-namespace}xl-push-#{$i}\/#{$inuit-layout-column-count} { 
+                left: auto;
+            }
+        }
+        @else {
+            .#{$inuit-utility-namespace}xl-#{$i}\/#{$inuit-layout-column-count} { 
+                width: $i * $inuit-layout-width-multiplier;
+            }
+            .#{$inuit-utility-namespace}xl-pull-#{$i}\/#{$inuit-layout-column-count} { 
+                right: $i * $inuit-layout-width-multiplier;
+            }
+            .#{$inuit-utility-namespace}xl-push-#{$i}\/#{$inuit-layout-column-count} { 
+                left: $i * $inuit-layout-width-multiplier;
+            }
+        }
     }
 }

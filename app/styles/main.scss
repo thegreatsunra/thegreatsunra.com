@@ -29,6 +29,7 @@
  * #OBJECTS
  */
 $inuit-object-namespace: "o-";
+$inuit-utility-namespace: "u-";
 $inuit-layout-gutter: $inuit-base-spacing-unit / 4;
 @import "objects.layout";
 .o-layout__test {
@@ -38,13 +39,16 @@ $inuit-layout-gutter: $inuit-base-spacing-unit / 4;
 	padding: 10px;
 	margin-bottom: 20px;
 }
+
+ /**
+ * #COMPONENTS
+ */
+
  /**
  * #TRUMPS
  */
 @import "bower_components/inuit-clearfix/trumps.clearfix";
 @import "bower_components/inuit-spacing/trumps.spacing";
-$inuit-utility-namespace: "u-";
-@import "trumps.widths";
 
 .browserupgrade {
   margin: 0.2em 0;
