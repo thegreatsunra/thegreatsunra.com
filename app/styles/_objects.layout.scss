@@ -17,11 +17,17 @@ $inuit-layout-width-multiplier: 100% / $inuit-layout-column-count !default;
 $inuit-layout-max-width:        100% !default;
 
 $inuit-layout-gutter:           ($inuit-base-spacing-unit / 2) !default;
+$inuit-layout-gutter--tiny:       quarter($inuit-layout-gutter) !default;
 $inuit-layout-gutter--small:        halve($inuit-layout-gutter) !default;
+$inuit-layout-gutter--large:       double($inuit-layout-gutter) !default;
+$inuit-layout-gutter--huge:     quadruple($inuit-layout-gutter) !default;
 
 $inuit-enable-layout--center:   false !default;
 
+$inuit-enable-layout--tiny:     false !default;
 $inuit-enable-layout--small:    false !default;
+$inuit-enable-layout--large:    false !default;
+$inuit-enable-layout--huge:     false !default;
 
 // Here we set a variable assuming that `box-sizing: border-box;` is not set
 // globally. If it has been previously been defined, the following variable will
@@ -67,6 +73,27 @@ $inuit-global-border-box: false !default;
             margin-right: auto;
         }
     }
+
+    @if ($inuit-enable-layout--tiny == true) {
+
+        /**
+         * Layouts with tiny gutters.
+         */
+
+        .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--tiny,
+        %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--tiny {
+            margin-left: -($inuit-layout-gutter--tiny);
+            margin-right: -($inuit-layout-gutter--tiny);
+            > .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item,
+            > %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item {
+                padding-left: $inuit-layout-gutter--tiny;
+                padding-right: $inuit-layout-gutter--tiny;
+            }
+
+        }
+
+    }
+
     @if ($inuit-enable-layout--small == true) {
 
         /**
@@ -82,6 +109,48 @@ $inuit-global-border-box: false !default;
             > %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item {
                 padding-left: $inuit-layout-gutter--small;
                 padding-right: $inuit-layout-gutter--small;
+            }
+
+        }
+
+    }
+
+    @if ($inuit-enable-layout--large == true) {
+
+        /**
+         * Layouts with large gutters.
+         */
+
+        .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--large,
+        %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--large {
+            margin-left: -($inuit-layout-gutter--large);
+            margin-right: -($inuit-layout-gutter--large);
+
+            > .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item,
+            > %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item {
+                padding-left: $inuit-layout-gutter--large;
+                padding-right: $inuit-layout-gutter--large;
+            }
+
+        }
+
+    }
+
+    @if ($inuit-enable-layout--huge == true) {
+
+        /**
+         * Layouts with huge gutters.
+         */
+
+        .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--huge,
+        %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--huge {
+            margin-left: -($inuit-layout-gutter--huge);
+            margin-right: -($inuit-layout-gutter--huge);
+
+            > .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item,
+            > %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item {
+                padding-left: $inuit-layout-gutter--huge;
+                padding-right: $inuit-layout-gutter--huge;
             }
 
         }
