@@ -31,6 +31,8 @@
 $inuit-object-namespace: "o-";
 $inuit-utility-namespace: "u-";
 $inuit-layout-gutter: $inuit-base-spacing-unit / 4;
+$inuit-layout-max-width: 80em;
+$inuit-enable-layout--center: true;
 @import "objects.layout";
 .o-layout__test {
 	background-color: #fee;
