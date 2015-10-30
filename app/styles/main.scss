@@ -36,6 +36,7 @@ $inuit-enable-layout--tiny: true;
 $inuit-enable-layout--small: true;
 @import "objects.layout";
 .o-layout__test {
+	text-align: center;
 	background-color: #fee;
 	font-size: 9px;
 	min-height: 40px;
