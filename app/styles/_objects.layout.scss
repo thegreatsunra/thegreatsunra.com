@@ -20,8 +20,10 @@ $inuit-layout-gutter:           $inuit-base-spacing-unit !default;
 $inuit-layout-column-count:     12 !default;
 
 $inuit-layout-width-multiplier: 100% / $inuit-layout-column-count !default;
+$inuit-layout-max-width:        100% !default;
 
 
+$inuit-enable-layout--center:   false !default;
 
 
 // Here we set a variable assuming that `box-sizing: border-box;` is not set
@@ -58,8 +60,16 @@ $inuit-global-border-box: false !default;
         padding-right:  $inuit-layout-gutter; // need to divide by 2?
         @extend %clearfix;
     }
-}
 
+    @if ($inuit-enable-layout--center == true) {
+
+        .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--center,
+        %.#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
 
 
 
