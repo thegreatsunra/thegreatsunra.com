@@ -13,28 +13,28 @@
 
 // Predefine the variables below in order to alter and enable specific features.
 
-$layout-column-count:     12 !default;
-$layout-width-multiplier: 100% / $layout-column-count !default;
-$layout-max-width:        100% !default;
-$layout-base-spacing-unit: 24px !default;
-
-$layout-gutter:           ($layout-base-spacing-unit / 2) !default;
-$layout-gutter--tiny:       quarter($layout-gutter) !default;
-$layout-gutter--small:        halve($layout-gutter) !default;
-$layout-gutter--large:       double($layout-gutter) !default;
-$layout-gutter--huge:     quadruple($layout-gutter) !default;
-
-$enable-layout--center:   false !default;
-
-$enable-layout--tiny:     false !default;
-$enable-layout--small:    false !default;
-$enable-layout--large:    false !default;
-$enable-layout--huge:     false !default;
+$layout-column-count:       12 !default;
+$layout-width-multiplier:   100% / $layout-column-count !default;
+$layout-max-width:          100% !default;
 $layout-max-width--xs:      $layout-max-width !default;
 $layout-max-width--s:       $layout-max-width !default;
 $layout-max-width--md:      $layout-max-width !default;
 $layout-max-width--lg:      $layout-max-width !default;
 $layout-max-width--xl:      $layout-max-width !default;
+$layout-base-spacing-unit:  24px !default;
+
+$layout-gutter:        ($layout-base-spacing-unit / 2) !default;
+$layout-gutter--tiny:          quarter($layout-gutter) !default;
+$layout-gutter--small:           halve($layout-gutter) !default;
+$layout-gutter--large:          double($layout-gutter) !default;
+$layout-gutter--huge:        quadruple($layout-gutter) !default;
+
+$enable-layout--center:     false !default;
+$enable-layout--tiny:       false !default;
+$enable-layout--small:      false !default;
+$enable-layout--large:      false !default;
+$enable-layout--huge:       false !default;
+
 $enable-layout-max-width--xs:   false !default;
 $enable-layout-max-width--sm:   false !default;
 $enable-layout-max-width--md:   false !default;
