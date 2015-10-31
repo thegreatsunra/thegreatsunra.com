@@ -28,10 +28,12 @@
 /**
  * #OBJECTS
  */
-$inuit-layout-max-width: 80em;
-$inuit-enable-layout--center: true;
-$inuit-enable-layout--tiny: true;
-$inuit-enable-layout--small: true;
+$layout-base-spacing-unit: $inuit-base-spacing-unit;
+$layout-max-width: 80em;
+
+$enable-layout--center: true;
+$enable-layout--tiny: true;
+$enable-layout--small: true;
 @import "objects.layout";
 .o-layout__test {
 	text-align: center;
