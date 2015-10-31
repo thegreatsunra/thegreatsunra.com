@@ -24,6 +24,14 @@
 @import "bower_components/inuit-headings/base.headings";
 @import "bower_components/inuit-lists/base.lists";
 @import "bower_components/inuit-images/base.images";
+$mq-breakpoints: (
+    xs:  20em,
+    sm:  35em,
+    md:  50em,
+    lg:  65em,
+    xl:  80em,
+);
+@import "bower_components/sass-mq/mq";
 
 /**
  * #OBJECTS

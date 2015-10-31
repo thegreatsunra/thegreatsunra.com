@@ -14,7 +14,8 @@
     "inuit-lists": "~0.1.0",
     "inuit-images": "~0.3.3",
     "inuit-spacing": "~0.7.0",
-    "inuit-clearfix": "~0.2.2"
+    "inuit-clearfix": "~0.2.2",
+    "sass-mq": "~3.2.4"
   },
   "devDependencies": {
     "chai": "~3.4.0",

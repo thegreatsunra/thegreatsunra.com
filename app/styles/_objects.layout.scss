@@ -7,6 +7,9 @@
  * Combine the layout items with the widths found in `trumps.widths`.
  */
 
+// DEPENDS ON SASS-MQ: https://github.com/sass-mq/sass-mq
+// (which should be in your pre-processor settings in your manifest)
+// (what's the best way to describe dependencies and include them?)
 
 // Predefine the variables below in order to alter and enable specific features.
 
@@ -163,7 +166,34 @@ $enable-layout--huge:     false !default;
 /**
  * Responsive width classes.
  */
-@media (min-width: 34em) { // 544px
+@include mq($from: xs) {
+    @for $i from 0 through $layout-column-count {
+        .u-offset-#{$i}\/#{$layout-column-count}\@xs { 
+            margin-left: $i * $layout-width-multiplier;
+        }
+        @if $i == 0 {
+            .u-pull-#{$i}\/#{$layout-column-count}\@xs { 
+                right: auto;
+            }
+            .u-push-#{$i}\/#{$layout-column-count}\@xs { 
+                left: auto;
+            }
+        }
+        @else {
+            .u-#{$i}\/#{$layout-column-count}\@xs { 
+                width: $i * $layout-width-multiplier;
+            }
+            .u-pull-#{$i}\/#{$layout-column-count}\@xs { 
+                right: $i * $layout-width-multiplier;
+            }
+            .u-push-#{$i}\/#{$layout-column-count}\@xs { 
+                left: $i * $layout-width-multiplier;
+            }
+        }
+    }
+}
+
+@include mq($from: sm) {
     @for $i from 0 through $layout-column-count {
         .u-offset-#{$i}\/#{$layout-column-count}\@sm { 
             margin-left: $i * $layout-width-multiplier;
@@ -190,7 +220,7 @@ $enable-layout--huge:     false !default;
     }
 }
 
-@media (min-width: 48em) { // 768px
+@include mq($from: md) {
     @for $i from 0 through $layout-column-count {
         .u-offset-#{$i}\/#{$layout-column-count}\@md { 
             margin-left: $i * $layout-width-multiplier;
@@ -217,7 +247,7 @@ $enable-layout--huge:     false !default;
     }
 }
 
-@media (min-width: 62em) { // 992px
+@include mq($from: lg) {
     @for $i from 0 through $layout-column-count {
         .u-offset-#{$i}\/#{$layout-column-count}\@lg { 
             margin-left: $i * $layout-width-multiplier;
@@ -244,7 +274,7 @@ $enable-layout--huge:     false !default;
     }
 }
 
-@media (min-width: 75em) { // 1200px
+@include mq($from: xl) {
     @for $i from 0 through $layout-column-count {
         .u-offset-#{$i}\/#{$layout-column-count}\@xl { 
             margin-left: $i * $layout-width-multiplier;
