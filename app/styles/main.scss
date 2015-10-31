@@ -8,6 +8,14 @@
 @import "bower_components/inuit-defaults/settings.defaults";
 @import "bower_components/inuit-functions/tools.functions";
 @import "bower_components/inuit-mixins/tools.mixins";
+$mq-breakpoints: (
+    xs:  20em,
+    sm:  35em,
+    md:  50em,
+    lg:  65em,
+    xl:  80em,
+);
+@import "bower_components/sass-mq/mq";
 
 /**
  * #GENERIC
@@ -24,24 +32,15 @@
 @import "bower_components/inuit-headings/base.headings";
 @import "bower_components/inuit-lists/base.lists";
 @import "bower_components/inuit-images/base.images";
-$mq-breakpoints: (
-    xs:  20em,
-    sm:  35em,
-    md:  50em,
-    lg:  65em,
-    xl:  80em,
-);
-@import "bower_components/sass-mq/mq";
 
 /**
  * #OBJECTS
  */
 $layout-base-spacing-unit: $inuit-base-spacing-unit;
-$layout-max-width: 80em;
-
-$enable-layout--center: true;
 $enable-layout--tiny: true;
+$layout-max-width: 60em;
 $enable-layout--small: true;
+$enable-layout--center: true;
 @import "objects.layout";
 .o-layout__test {
 	text-align: center;
