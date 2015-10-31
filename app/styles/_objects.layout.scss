@@ -31,122 +31,127 @@ $enable-layout--huge:     false !default;
 /**
  * Begin a layout group.
  */
-// scope all layout styles above mobile (for now)
-@media (min-width: 34em) { // 544px
-    .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout,
-    %.#{$inuit-object-namespace}#{$inuit-object-namespace}#{$inuit-layout-namespace}layout {
-        list-style: none;
-        margin:  0;
-        padding: 0;
-        margin-left: -$inuit-layout-gutter;
-        margin-right:  -$inuit-layout-gutter;
-        max-width: $inuit-layout-max-width;
-        @extend %clearfix;
+.o-layout,
+%o-layout {
+    list-style: none;
+    margin:  0;
+    padding: 0;
+    margin-left: -$layout-gutter;
+    margin-right:  -$layout-gutter;
+    max-width: $layout-max-width;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
     }
+}
 
-    .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item,
-    %.#{$inuit-object-namespace}#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item {
-        vertical-align: top;
-        width: 100%;
-        float: left;
-        position: relative;
-        min-height: 1px;
-        padding-left: $inuit-layout-gutter;
-        padding-right:  $inuit-layout-gutter;
-        @extend %clearfix;
+.o-layout__item,
+%o-layout__item {
+    vertical-align: top;
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: $layout-gutter;
+    padding-right:  $layout-gutter;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
     }
+}
 
-    @if ($inuit-enable-layout--center == true) {
+@if ($enable-layout--center == true) {
 
-        .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--center,
-        %.#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--center {
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .o-layout--center,
+    %o-layout--center {
+        margin-left: auto;
+        margin-right: auto;
     }
+}
 
-    @if ($inuit-enable-layout--tiny == true) {
+@if ($enable-layout--tiny == true) {
 
-        /**
-         * Layouts with tiny gutters.
-         */
+    /**
+     * Layouts with tiny gutters.
+     */
 
-        .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--tiny,
-        %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--tiny {
-            margin-left: -($inuit-layout-gutter--tiny);
-            margin-right: -($inuit-layout-gutter--tiny);
-            > .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item,
-            > %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item {
-                padding-left: $inuit-layout-gutter--tiny;
-                padding-right: $inuit-layout-gutter--tiny;
-            }
-
-        }
-
-    }
-
-    @if ($inuit-enable-layout--small == true) {
-
-        /**
-         * Layouts with small gutters.
-         */
-
-        .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--small,
-        %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--small {
-            margin-left: -($inuit-layout-gutter--small);
-            margin-right: -($inuit-layout-gutter--small);
-
-            > .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item,
-            > %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item {
-                padding-left: $inuit-layout-gutter--small;
-                padding-right: $inuit-layout-gutter--small;
-            }
-
+    .o-layout--tiny,
+    %o-layout--tiny {
+        margin-left: -($layout-gutter--tiny);
+        margin-right: -($layout-gutter--tiny);
+        > .o-layout__item,
+        > %o-layout__item {
+            padding-left: $layout-gutter--tiny;
+            padding-right: $layout-gutter--tiny;
         }
 
     }
 
-    @if ($inuit-enable-layout--large == true) {
+}
 
-        /**
-         * Layouts with large gutters.
-         */
+@if ($enable-layout--small == true) {
 
-        .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--large,
-        %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--large {
-            margin-left: -($inuit-layout-gutter--large);
-            margin-right: -($inuit-layout-gutter--large);
+    /**
+     * Layouts with small gutters.
+     */
 
-            > .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item,
-            > %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item {
-                padding-left: $inuit-layout-gutter--large;
-                padding-right: $inuit-layout-gutter--large;
-            }
+    .o-layout--small,
+    %o-layout--small {
+        margin-left: -($layout-gutter--small);
+        margin-right: -($layout-gutter--small);
 
+        > .o-layout__item,
+        > %o-layout__item {
+            padding-left: $layout-gutter--small;
+            padding-right: $layout-gutter--small;
         }
 
     }
 
-    @if ($inuit-enable-layout--huge == true) {
+}
 
-        /**
-         * Layouts with huge gutters.
-         */
+@if ($enable-layout--large == true) {
 
-        .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--huge,
-        %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout--huge {
-            margin-left: -($inuit-layout-gutter--huge);
-            margin-right: -($inuit-layout-gutter--huge);
+    /**
+     * Layouts with large gutters.
+     */
 
-            > .#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item,
-            > %#{$inuit-object-namespace}#{$inuit-layout-namespace}layout__item {
-                padding-left: $inuit-layout-gutter--huge;
-                padding-right: $inuit-layout-gutter--huge;
-            }
+    .o-layout--large,
+    %o-layout--large {
+        margin-left: -($layout-gutter--large);
+        margin-right: -($layout-gutter--large);
 
+        > .o-layout__item,
+        > %o-layout__item {
+            padding-left: $layout-gutter--large;
+            padding-right: $layout-gutter--large;
         }
 
     }
+
+}
+
+@if ($enable-layout--huge == true) {
+
+    /**
+     * Layouts with huge gutters.
+     */
+
+    .o-layout--huge,
+    %o-layout--huge {
+        margin-left: -($layout-gutter--huge);
+        margin-right: -($layout-gutter--huge);
+
+        > .o-layout__item,
+        > %o-layout__item {
+            padding-left: $layout-gutter--huge;
+            padding-right: $layout-gutter--huge;
+        }
+
+    }
+
 }
 
 
