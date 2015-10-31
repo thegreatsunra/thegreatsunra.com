@@ -1,0 +1,87 @@
+/*------------------------------------*\
+    #RESPONSIVE UTILITIES
+\*------------------------------------*/
+
+/**
+ * Utilities for doing responsive things
+ */
+@mixin hidden {
+	display: none;
+}
+
+@mixin visibleblock {
+	display: block;
+}
+
+@mixin visibleinline {
+	display: inline;
+}
+
+.is-hidden {
+	@include hidden;
+}
+.is-visibleblock {
+	@include visibleblock;
+}
+.is-visibleinline {
+	@include visibleinline;
+}
+
+@include mq($from: xs) {
+	.is-hidden\@xs {
+		@include hidden;
+	}
+	.is-visibleblock\@xs {
+		@include visibleblock;
+	}
+	.is-visibleinline\@xs {
+		@include visibleinline;
+	}
+}
+
+@include mq($from: sm) {
+	.is-hidden\@sm {
+		@include hidden;
+	}
+	.is-visibleblock\@sm {
+		@include visibleblock;
+	}
+	.is-visibleinline\@sm {
+		@include visibleinline;
+	}
+}
+
+@include mq($from: md) {
+	.is-hidden\@md {
+		@include hidden;
+	}
+	.is-visibleblock\@md {
+		@include visibleblock;
+	}
+	.is-visibleinline\@md {
+		@include visibleinline;
+	}
+}
+
+@include mq($from: lg) {
+	.is-hidden\@lg {
+		@include hidden;
+	}
+	.is-visibleblock\@lg {
+		@include visibleblock;
+	}
+	.is-visibleinline\@lg {
+		@include visibleinline;
+	}
+}
+@include mq($from: xl) {
+	.is-hidden\@xl {
+		@include hidden;
+	}
+	.is-visibleblock\@xl {
+		@include visibleblock;
+	}
+	.is-visibleinline\@xl {
+		@include visibleinline;
+	}
+}
