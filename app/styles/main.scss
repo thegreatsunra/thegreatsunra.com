@@ -8,12 +8,17 @@
 @import "bower_components/inuit-defaults/settings.defaults";
 @import "bower_components/inuit-functions/tools.functions";
 @import "bower_components/inuit-mixins/tools.mixins";
+// 20em = 320px
+// 40em = 640px
+// 45em = 720px
+// 60em = 960px
+// 75em = 1200px
 $mq-breakpoints: (
     xs:  20em,
-    sm:  35em,
-    md:  50em,
-    lg:  65em,
-    xl:  80em,
+    sm:  40em,
+    md:  45em,
+    lg:  60em,
+    xl:  75em,
 );
 @import "bower_components/sass-mq/mq";
 
