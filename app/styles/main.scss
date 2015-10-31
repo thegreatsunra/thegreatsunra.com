@@ -37,9 +37,7 @@ $mq-breakpoints: (
  * #OBJECTS
  */
 $layout-base-spacing-unit: $inuit-base-spacing-unit;
-$enable-layout--tiny: true;
 $layout-max-width: 60em;
-$enable-layout--small: true;
 $enable-layout--center: true;
 @import "objects.layout";
 .o-layout__test {
@@ -62,6 +60,7 @@ $enable-layout--center: true;
  * #TRUMPS
  */
 @import "bower_components/inuit-clearfix/trumps.clearfix";
+$inuit-enable-paddings--small: true;
 @import "bower_components/inuit-spacing/trumps.spacing";
 
 .browserupgrade {
