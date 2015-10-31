@@ -30,6 +30,16 @@ $enable-layout--tiny:     false !default;
 $enable-layout--small:    false !default;
 $enable-layout--large:    false !default;
 $enable-layout--huge:     false !default;
+$layout-max-width--xs:      $layout-max-width !default;
+$layout-max-width--s:       $layout-max-width !default;
+$layout-max-width--md:      $layout-max-width !default;
+$layout-max-width--lg:      $layout-max-width !default;
+$layout-max-width--xl:      $layout-max-width !default;
+$enable-layout-max-width--xs:   false !default;
+$enable-layout-max-width--sm:   false !default;
+$enable-layout-max-width--md:   false !default;
+$enable-layout-max-width--lg:   false !default;
+$enable-layout-max-width--xl:   false !default;
 
 /**
  * Begin a layout group.
@@ -62,6 +72,51 @@ $enable-layout--huge:     false !default;
         content: "";
         display: table;
         clear: both;
+    }
+}
+
+@if ($enable-layout-max-width--xs == true) {
+    @include mq($until: xs) {
+        .o-layout,
+        %o-layout {
+            max-width: $layout-max-width--xs;
+        }
+    }
+}
+
+@if ($enable-layout-max-width--sm == true) {
+    @include mq($until: sm) {
+        .o-layout,
+        %o-layout {
+            max-width: $layout-max-width--sm;
+        }
+    }
+}
+
+@if ($enable-layout-max-width--md == true) {
+    @include mq($until: md) {
+        .o-layout,
+        %o-layout {
+            max-width: $layout-max-width--md;
+        }
+    }
+}
+
+@if ($enable-layout-max-width--lg == true) {
+    @include mq($until: lg) {
+        .o-layout,
+        %o-layout {
+            max-width: $layout-max-width--lg;
+        }
+    }
+}
+
+@if ($enable-layout-max-width--xl == true) {
+    @include mq($until: xl) {
+        .o-layout,
+        %o-layout {
+            max-width: $layout-max-width--xl;
+        }
     }
 }
 
