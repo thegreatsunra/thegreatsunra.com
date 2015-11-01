@@ -15,23 +15,29 @@
 /**
  * Add/remove floats
  */
-.float-right   { float:right!important; }
-.float-left    { float:left !important; }
-.float-none    { float:none !important; }
+.u-float-right   { float:right!important; }
+.u-float-left    { float:left !important; }
+.u-float-none    { float:none !important; }
 
+/**
+ * Add/remove floats
+ */
+.u-clear-right { clear:right!important;}
+.u-clear-left { clear:left!important;}
+.u-clear-both { clear:both!important;}
 
 /**
  * Text alignment
  */
-.text-left     { text-align:left  !important; }
-.text-center   { text-align:center!important; }
-.text-right    { text-align:right !important; }
+.u-text-left     { text-align:left  !important; }
+.u-text-center   { text-align:center!important; }
+.u-text-right    { text-align:right !important; }
 
 
 /**
  * Mute an object by reducing its opacity.
  */
-.muted{
+.u-muted{
     opacity:0.5!important;
     filter:alpha(opacity = 50)!important;
 }
@@ -43,7 +49,7 @@
    <p class=proceed><a href=#>Read more...</a></p>
  *
  */
-.proceed{
+.u-proceed{
     text-align:right!important;
 }
 
@@ -54,7 +60,7 @@
    <a href=# class=go>Read more</a>
  *
  */
-.go:after{
+.u-go:after{
     content:"\00A0" "\00BB"!important;
 }
 
@@ -62,6 +68,6 @@
 /**
  * Apply capital case to an element (usually a `strong`).
  */
-.caps{
+.u-caps{
     text-transform:uppercase!important;
 }
