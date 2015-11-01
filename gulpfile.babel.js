@@ -172,7 +172,7 @@ gulp.task('smith', function() {
       gulpsmith()
       .use(layouts({ engine: 'handlebars' }))
   )
-  .pipe(gulp.dest("./app"))
+  .pipe(gulp.dest("./.tmp"))
   .pipe(reload({stream: true}));
 });
 
