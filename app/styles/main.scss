@@ -70,6 +70,7 @@ $enable-layout--center: true;
 $inuit-enable-paddings--small: true;
 @import "bower_components/inuit-spacing/trumps.spacing";
 @import "trumps.responsive";
+@import "trumps.helpers";
 
 .browserupgrade {
   margin: 0.2em 0;
