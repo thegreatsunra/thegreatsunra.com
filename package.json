@@ -28,6 +28,7 @@
     "lodash": "^3.10.1",
     "main-bower-files": "^2.5.0",
     "metalsmith": "^2.1.0",
+    "metalsmith-copy": "^0.2.1",
     "metalsmith-layouts": "^1.4.2",
     "opn": "^1.0.1",
     "wiredep": "^2.2.2"

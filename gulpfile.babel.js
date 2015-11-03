@@ -8,6 +8,7 @@ import gulpsmith from 'gulpsmith';
 import layouts from 'metalsmith-layouts';
 import handlebars from 'handlebars';
 import lodash from 'lodash';
+import copy from 'metalsmith-copy';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -112,8 +113,8 @@ gulp.task('serve', ['styles', 'fonts', 'smith'], () => {
   ]).on('change', reload);
 
   gulp.watch([
-    'src/*.html',
-    'layouts/*.html'
+    'src/**/*.hbs',
+    'layouts/*.hbs'
   ], ['smith']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
@@ -169,8 +170,17 @@ gulp.task('smith', function() {
     delete file.frontMatter;
   })
   .pipe(
-      gulpsmith()
-      .use(layouts({ engine: 'handlebars' }))
+    gulpsmith()
+    .use(layouts({ 
+      "engine": 'handlebars',
+      "default": "default.hbs",
+      "pattern": "*.hbs"
+    }))
+    .use(copy({
+      pattern: '*.hbs',
+      extension: '.html',
+      move: true
+    }))
   )
   .pipe(gulp.dest("./.tmp"))
   .pipe(reload({stream: true}));
