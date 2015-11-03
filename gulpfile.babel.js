@@ -174,9 +174,10 @@ gulp.task('smith', function() {
     .use(layouts({ 
       "engine": 'handlebars',
       "default": "default.hbs",
+      "pattern": "**/*.hbs"
     }))
     .use(copy({
-      pattern: '*.hbs',
+      pattern: '**/*.hbs',
       extension: '.html',
       move: true
     }))
