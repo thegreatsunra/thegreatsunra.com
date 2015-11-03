@@ -94,7 +94,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'fonts', 'smith'], () => {
+gulp.task('serve', ['clean', 'styles', 'fonts', 'smith'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -174,7 +174,6 @@ gulp.task('smith', function() {
     .use(layouts({ 
       "engine": 'handlebars',
       "default": "default.hbs",
-      "pattern": "*.hbs"
     }))
     .use(copy({
       pattern: '*.hbs',
