@@ -13,6 +13,20 @@ import copy from 'metalsmith-copy';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
+var siteConfig = {
+  site: {
+    title:            "Dane Petersen (thegreatsuna)",
+    author:           "Dane Petersen",
+    year:             "2015",
+    componentsFolder: "app/components",
+    cssFolder:        "styles",
+    jsFolder:         "scripts",
+    imgFolder:        "images",
+    cssMainFile:      "main",
+    jsMainFile:       "main"
+  }
+};
+
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
     .pipe($.plumber())
@@ -171,6 +185,7 @@ gulp.task('smith', function() {
   })
   .pipe(
     gulpsmith()
+    .metadata(siteConfig)
     .use(layouts({ 
       "engine": 'handlebars',
       "default": "default.hbs",

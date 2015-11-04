@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{title}}</title>
-
+    <title>{{site.title}} | {{title}}</title>
     <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
     <!-- Place favicon.ico in the root directory -->
 
@@ -15,7 +14,7 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/{{site.cssFolder}}/{{site.cssMainFile}}.css">
     <!-- endbuild -->
     
   </head>
@@ -57,7 +56,7 @@
     </section>
     <footer class="c-footer-site">
       <div class="c-copyright">
-        Copyright &copy; 2001 - 2015 Dane Petersen. All Rights Reserved. <a href="/colophon.html">Colophon</a>
+        Copyright &copy; 2001 &mdash; {{site.year}} {{site.author}}. All rights reserved. <a href="/colophon.html">Colophon</a>
       </div>
       <div class="o-nav c-social-icons">
         <ul class="c-social-icons-list">
@@ -102,7 +101,7 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="{{site.jsFolder}}/{{site.jsMainFile}}.js"></script>
     <!-- endbuild -->
   </body>
 </html>
