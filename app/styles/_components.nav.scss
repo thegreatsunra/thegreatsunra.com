@@ -16,3 +16,9 @@
 	float: left;
 	margin-right: 1em;
 }
+
+.c-nav__link {
+	&.is-active {
+		color: red;
+	}
+}

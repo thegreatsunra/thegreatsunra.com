@@ -38,16 +38,16 @@
       <nav class="c-nav">
         <ul class="c-nav__list">
           <li class="c-nav__item">
-            <a class="c-nav__link" href="/">Home</a>
+            <a class="c-nav__link{{#if homeIsActive}} is-active{{/if}}" href="/">Home</a>
           </li>
           <li class="c-nav__item">
-            <a class="c-nav__link" href="/portfolio">Portfolio</a>
+            <a class="c-nav__link{{#if portfolioIsActive}} is-active{{/if}}" href="/portfolio">Portfolio</a>
           </li>
           <li class="c-nav__item">
-            <a class="c-nav__link" href="/resume.html">R&eacute;sum&eacute;</a>
+            <a class="c-nav__link{{#if resumeIsActive}} is-active{{/if}}" href="/resume.html">R&eacute;sum&eacute;</a>
           </li>
           <li class="c-nav__item">
-            <a class="c-nav__link" href="/contact.html">Contact</a>
+            <a class="c-nav__link{{#if contactIsActive}} is-active{{/if}}" href="/contact.html">Contact</a>
           </li>
         </ul>
       </nav>
