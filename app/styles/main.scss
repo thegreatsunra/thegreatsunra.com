@@ -92,10 +92,3 @@ $inuit-enable-margins: true;
 @import "bower_components/inuit-spacing/trumps.spacing";
 @import "trumps.responsive";
 @import "trumps.helpers";
-
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
