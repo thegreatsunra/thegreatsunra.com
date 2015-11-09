@@ -52,26 +52,17 @@ $enable-layout-max-width--xl:   false !default;
     margin-left: -$layout-gutter;
     margin-right:  -$layout-gutter;
     max-width: $layout-max-width;
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-.o-layout__item,
-%o-layout__item {
-    vertical-align: top;
-    width: 100%;
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding-left: $layout-gutter;
-    padding-right:  $layout-gutter;
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
+    @include clearfix;
+    > .o-layout__item,
+    %o-layout__item {
+        vertical-align: top;
+        width: 100%;
+        float: left;
+        position: relative;
+        min-height: 1px;
+        padding-left: $layout-gutter;
+        padding-right:  $layout-gutter;
+        @include clearfix;
     }
 }
 

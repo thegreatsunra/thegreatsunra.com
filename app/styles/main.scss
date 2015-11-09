@@ -41,6 +41,8 @@ $mq-breakpoints: (
 /**
  * #OBJECTS
  */
+$inuit-list-bare-namespace: "o-";
+@import "bower_components/inuit-list-bare/objects.list-bare";
 $layout-base-spacing-unit: $inuit-base-spacing-unit;
 $layout-max-width: 60em;
 $enable-layout-max-width--md: true;
