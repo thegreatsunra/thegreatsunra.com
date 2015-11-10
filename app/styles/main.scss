@@ -35,7 +35,7 @@ $mq-breakpoints: (
  * #ELEMENTS
  */
 @import "elements.page";
-@import "bower_components/inuit-headings/base.headings";
+@import "elements.headings";
 @import "bower_components/inuit-lists/base.lists";
 @import "bower_components/inuit-images/base.images";
 
