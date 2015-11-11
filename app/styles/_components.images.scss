@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    #NAVIGATION
+\*------------------------------------*/
+
+/**
+ * Image styling
+ */
+
+$image-base-padding:  ($inuit-base-line-height / 6) !default; // likely 24px / 6 = 4px
+
+.img {
+
+}
+
+.img--bordered {
+	border: 1px solid #ccc;
+}
+
+.img--rounded {
+  border-radius: $image-base-padding;
+}
+
+.img--padded {
+  padding: $image-base-padding;
+}
+
+.img__caption {
+	font-size: 12px;
+	color: #666;
+}
