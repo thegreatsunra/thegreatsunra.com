@@ -21,7 +21,7 @@ $layout-max-width--s:       $layout-max-width !default;
 $layout-max-width--md:      $layout-max-width !default;
 $layout-max-width--lg:      $layout-max-width !default;
 $layout-max-width--xl:      $layout-max-width !default;
-$layout-base-spacing-unit:  24px !default;
+$layout-base-spacing-unit:  $inuit-base-line-height !default; // likely 24px
 
 $layout-gutter:        ($layout-base-spacing-unit / 2) !default;
 $layout-gutter--tiny:          quarter($layout-gutter) !default;
@@ -66,8 +66,11 @@ $enable-layout-max-width--xl:   false !default;
     }
 }
 
+// we're using "until" so max-width stops applying as the viewport gets bigger.
+// as a result, to enable max-width for a particular breakpoint, we need to use
+// the media query so we can target the breakpoint below it
 @if ($enable-layout-max-width--xs == true) {
-    @include mq($until: xs) {
+    @include mq($until: sm) { // [1]
         .o-layout,
         %o-layout {
             max-width: $layout-max-width--xs;
@@ -76,7 +79,7 @@ $enable-layout-max-width--xl:   false !default;
 }
 
 @if ($enable-layout-max-width--sm == true) {
-    @include mq($until: sm) {
+    @include mq($until: md) {
         .o-layout,
         %o-layout {
             max-width: $layout-max-width--sm;
@@ -85,7 +88,7 @@ $enable-layout-max-width--xl:   false !default;
 }
 
 @if ($enable-layout-max-width--md == true) {
-    @include mq($until: md) {
+    @include mq($until: lg) {
         .o-layout,
         %o-layout {
             max-width: $layout-max-width--md;
@@ -94,7 +97,7 @@ $enable-layout-max-width--xl:   false !default;
 }
 
 @if ($enable-layout-max-width--lg == true) {
-    @include mq($until: lg) {
+    @include mq($until: xl) {
         .o-layout,
         %o-layout {
             max-width: $layout-max-width--lg;
@@ -102,14 +105,15 @@ $enable-layout-max-width--xl:   false !default;
     }
 }
 
-@if ($enable-layout-max-width--xl == true) {
-    @include mq($until: xl) {
-        .o-layout,
-        %o-layout {
-            max-width: $layout-max-width--xl;
-        }
-    }
-}
+// don't use this; use the non-responsive layout max-width instead
+// @if ($enable-layout-max-width--xl == true) {
+//     @include mq($until: xl) {
+//         .o-layout,
+//         %o-layout {
+//             max-width: $layout-max-width--xl;
+//         }
+//     }
+// }
 
 @if ($enable-layout--center == true) {
 

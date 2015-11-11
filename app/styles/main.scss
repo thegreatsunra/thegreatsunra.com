@@ -46,8 +46,8 @@ $inuit-list-bare-namespace: "o-";
 @import "bower_components/inuit-list-bare/objects.list-bare";
 $layout-base-spacing-unit: $inuit-base-spacing-unit;
 $layout-max-width: 60em;
-// $enable-layout-max-width--md: true;
-// $layout-max-width--md: 29em;
+$enable-layout-max-width--sm: true;
+$layout-max-width--sm: 40em;
 $enable-layout--center: true;
 @import "objects.layout";
 .o-layout__test {
