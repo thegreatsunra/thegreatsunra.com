@@ -8,23 +8,23 @@
 
 $image-base-padding:  ($inuit-base-line-height / 6) !default; // likely 24px / 6 = 4px
 
-.img {
+.c-img {
 
 }
 
-.img--bordered {
+.c-img--bordered {
 	border: 1px solid #ccc;
 }
 
-.img--rounded {
+.c-img--rounded {
   border-radius: $image-base-padding;
 }
 
-.img--padded {
+.c-img--padded {
   padding: $image-base-padding;
 }
 
-.img__caption {
 	font-size: 12px;
+.c-img__caption {
 	color: #666;
 }
