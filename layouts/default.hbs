@@ -28,38 +28,38 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-  <div class="c-container o-layout o-layout--center u-ph-">
-    <header class="c-header-site">
+  <header class="c-header">
+    <div class="o-layout o-layout--center">
       <h1 class="c-headline">
         <a href="/" class="c-headline__link">
-          Dane Petersen is thegreatsunra<span class="is-hidden is-visibleinline@md">, a rock&rsquo;em sock&rsquo;em designer/developer</span>.
+          Dane Petersen is thegreatsunra<span class="u-is-hidden u-is-visibleinline@md">, a rock&rsquo;em sock&rsquo;em designer/developer</span>.
         </a>
       </h1>
       <nav class="c-nav">
         <ul class="c-nav__list">
           <li class="c-nav__item">
-            <a class="c-nav__link{{#if homeIsActive}} is-active{{/if}}" href="/">Home</a>
+            <a class="c-nav__link{{#if homeIsActive}} u-is-active{{/if}}" href="/">Home</a>
           </li>
           <li class="c-nav__item">
-            <a class="c-nav__link{{#if portfolioIsActive}} is-active{{/if}}" href="/portfolio">Portfolio</a>
+            <a class="c-nav__link{{#if portfolioIsActive}} u-is-active{{/if}}" href="/portfolio">Portfolio</a>
           </li>
           <li class="c-nav__item">
-            <a class="c-nav__link{{#if resumeIsActive}} is-active{{/if}}" href="/resume.html">R&eacute;sum&eacute;</a>
+            <a class="c-nav__link{{#if resumeIsActive}} u-is-active{{/if}}" href="/resume.html">R&eacute;sum&eacute;</a>
           </li>
           <li class="c-nav__item">
-            <a class="c-nav__link{{#if contactIsActive}} is-active{{/if}}" href="/contact.html">Contact</a>
+            <a class="c-nav__link{{#if contactIsActive}} u-is-active{{/if}}" href="/contact.html">Contact</a>
           </li>
         </ul>
       </nav>
-    </header>
-    <section class="c-main">
+    </div>
+  </header>
 
-      <section class="c-content">
-        {{{contents}}}
-      </section>
+  <div class="o-layout o-layout--center">
+    {{{contents}}}
+  </div>
 
-    </section>
-    <footer class="c-footer-site">
+  <footer class="c-footer">
+    <div class="o-layout o-layout--center">
       <div class="c-copyright">
         Copyright &copy; 2001 &mdash; {{site.year}} {{site.author}}. All rights reserved. <a href="/colophon.html">Colophon</a>
       </div>
@@ -85,8 +85,8 @@
           </li>
         </ul>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!--
