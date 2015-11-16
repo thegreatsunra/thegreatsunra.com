@@ -6,8 +6,10 @@
  * Portfolio list styles. On the home page. For now.
  */
 
-.c-portfolio {
-	list-style: none;
-	// margin: 0;
-	// padding: 0;
+.c-portfolio__title {
+	margin-bottom: 0;
+}
+
+.c-portfolio__item {
+	margin-bottom: 2rem;
 }
