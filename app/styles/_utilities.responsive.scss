@@ -17,71 +17,71 @@
 	display: inline;
 }
 
-.is-hidden {
+.u-is-hidden {
 	@include hidden;
 }
-.is-visibleblock {
+.u-is-visibleblock {
 	@include visibleblock;
 }
-.is-visibleinline {
+.u-is-visibleinline {
 	@include visibleinline;
 }
 
 @include mq($from: xs) {
-	.is-hidden\@xs {
+	.u-is-hidden\@xs {
 		@include hidden;
 	}
-	.is-visibleblock\@xs {
+	.u-is-visibleblock\@xs {
 		@include visibleblock;
 	}
-	.is-visibleinline\@xs {
+	.u-is-visibleinline\@xs {
 		@include visibleinline;
 	}
 }
 
 @include mq($from: sm) {
-	.is-hidden\@sm {
+	.u-is-hidden\@sm {
 		@include hidden;
 	}
-	.is-visibleblock\@sm {
+	.u-is-visibleblock\@sm {
 		@include visibleblock;
 	}
-	.is-visibleinline\@sm {
+	.u-is-visibleinline\@sm {
 		@include visibleinline;
 	}
 }
 
 @include mq($from: md) {
-	.is-hidden\@md {
+	.u-is-hidden\@md {
 		@include hidden;
 	}
-	.is-visibleblock\@md {
+	.u-is-visibleblock\@md {
 		@include visibleblock;
 	}
-	.is-visibleinline\@md {
+	.u-is-visibleinline\@md {
 		@include visibleinline;
 	}
 }
 
 @include mq($from: lg) {
-	.is-hidden\@lg {
+	.u-is-hidden\@lg {
 		@include hidden;
 	}
-	.is-visibleblock\@lg {
+	.u-is-visibleblock\@lg {
 		@include visibleblock;
 	}
-	.is-visibleinline\@lg {
+	.u-is-visibleinline\@lg {
 		@include visibleinline;
 	}
 }
 @include mq($from: xl) {
-	.is-hidden\@xl {
+	.u-is-hidden\@xl {
 		@include hidden;
 	}
-	.is-visibleblock\@xl {
+	.u-is-visibleblock\@xl {
 		@include visibleblock;
 	}
-	.is-visibleinline\@xl {
+	.u-is-visibleinline\@xl {
 		@include visibleinline;
 	}
 }

@@ -91,6 +91,6 @@ $inuit-enable-paddings--small: true;
 $inuit-enable-paddings--large: true;
 $inuit-enable-margins: true;
 @import "bower_components/inuit-spacing/trumps.spacing";
-@import "trumps.responsive";
-@import "trumps.helpers";
+@import "utilities.responsive";
+@import "utilities.helpers";
 @import "utilities.widths";
