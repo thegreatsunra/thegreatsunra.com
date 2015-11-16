@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+
+$inuit-base-line-height: 16px !default;
+
+.c-header {
+  margin: 0 0 $inuit-base-line-height 0;
+  padding: $inuit-base-line-height 0 0 0;
+  background: #333;
+  color: #fff;
+}
