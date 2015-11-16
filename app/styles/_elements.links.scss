@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+
+a {
+  text-decoration: none;
+  color: #e66;
+  &:hover {
+    color: #c33;
+    text-decoration: underline;
+  }
+}
