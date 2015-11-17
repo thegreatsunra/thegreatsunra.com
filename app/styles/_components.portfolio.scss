@@ -13,5 +13,15 @@ $inuit-base-spacing-unit: 24px !default;
 }
 
 .c-portfolio__item {
-  margin-bottom: 2rem;
+  margin-bottom: $inuit-base-spacing-unit;
+}
+
+.c-portfolio__description {
+
+}
+
+@include mq($from: md) {
+  .c-portfolio__description {
+    margin-top: $inuit-base-spacing-unit;
+  }
 }
