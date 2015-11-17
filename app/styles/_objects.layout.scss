@@ -23,7 +23,7 @@ $layout-max-width--lg:      $layout-max-width !default;
 $layout-max-width--xl:      $layout-max-width !default;
 $inuit-base-spacing-unit:   24px !default; // likely 24px
 
-$layout-gutter:        ($layout-base-spacing-unit / 2) !default;
+$layout-gutter:        ($inuit-base-spacing-unit / 2) !default;
 $layout-gutter--tiny:          quarter($layout-gutter) !default;
 $layout-gutter--small:           halve($layout-gutter) !default;
 $layout-gutter--large:          double($layout-gutter) !default;
