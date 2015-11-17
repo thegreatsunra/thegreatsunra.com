@@ -20,29 +20,29 @@ h3,
 h4, 
 h5, 
 h6 {
-	font-weight: normal;
+  font-weight: normal;
 }
 
 h1 {
-    @include inuit-font-size($inuit-heading-size-1);
+  @include inuit-font-size($inuit-heading-size-1);
 }
 
 h2 {
-    @include inuit-font-size($inuit-heading-size-2);
+  @include inuit-font-size($inuit-heading-size-2);
 }
 
 h3 {
-    @include inuit-font-size($inuit-heading-size-3);
+  @include inuit-font-size($inuit-heading-size-3);
 }
 
 h4 {
-    @include inuit-font-size($inuit-heading-size-4);
+  @include inuit-font-size($inuit-heading-size-4);
 }
 
 h5 {
-    @include inuit-font-size($inuit-heading-size-5);
+  @include inuit-font-size($inuit-heading-size-5);
 }
 
 h6 {
-    @include inuit-font-size($inuit-heading-size-6);
+  @include inuit-font-size($inuit-heading-size-6);
 }

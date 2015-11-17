@@ -9,26 +9,26 @@
 $inuit-base-spacing-unit: 24px !default;
 
 .c-nav__list {
-	list-style: none;
-	margin: 0 0 $inuit-base-line-height 0;
-	padding: 0;
-	@include clearfix;
+  list-style: none;
+  margin: 0 0 $inuit-base-line-height 0;
+  padding: 0;
+  @include clearfix;
 }
 
 .c-nav__item {
-	font-weight: bold;
-	float: left;
-	margin-right: $inuit-base-line-height;
+  font-weight: bold;
+  float: left;
+  margin-right: $inuit-base-line-height;
 }
 
 .c-nav__link {
-	color: #36f;
-	text-decoration: none;
-	&.u-is-active {
-		color: #fff;
-	}
-	&:hover {
-		color: #fff;
-		text-decoration: underline;
-	}
+  color: #36f;
+  text-decoration: none;
+  &.u-is-active {
+    color: #fff;
+  }
+  &:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
 }

@@ -15,31 +15,31 @@
 /**
  * Add/remove floats
  */
-.u-float-right   { float:right!important; }
-.u-float-left    { float:left !important; }
-.u-float-none    { float:none !important; }
+.u-float-right   { float: right !important; }
+.u-float-left    { float: left  !important; }
+.u-float-none    { float: none  !important; }
 
 /**
  * Add/remove floats
  */
-.u-clear-right { clear:right!important;}
-.u-clear-left { clear:left!important;}
-.u-clear-both { clear:both!important;}
+.u-clear-right { clear: right !important;}
+.u-clear-left { clear: left !important;}
+.u-clear-both { clear: both !important;}
 
 /**
  * Text alignment
  */
-.u-text-left     { text-align:left  !important; }
-.u-text-center   { text-align:center!important; }
-.u-text-right    { text-align:right !important; }
+.u-text-left     { text-align: left !important; }
+.u-text-center   { text-align: center !important; }
+.u-text-right    { text-align: right !important; }
 
 
 /**
  * Mute an object by reducing its opacity.
  */
 .u-muted{
-    opacity:0.5!important;
-    filter:alpha(opacity = 50)!important;
+    opacity: 0.5 !important;
+    filter: alpha(opacity = 50) !important;
 }
 
 
@@ -50,7 +50,7 @@
  *
  */
 .u-proceed{
-    text-align:right!important;
+  text-align: right !important;
 }
 
 
@@ -61,7 +61,7 @@
  *
  */
 .u-go:after{
-    content:"\00A0" "\00BB"!important;
+  content: "\00A0" "\00BB" !important;
 }
 
 
@@ -69,5 +69,5 @@
  * Apply capital case to an element (usually a `strong`).
  */
 .u-caps{
-    text-transform:uppercase!important;
+  text-transform: uppercase !important;
 }

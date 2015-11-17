@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    #LAYOUT
+  #LAYOUT
 \*------------------------------------*/
 
 /**
@@ -46,63 +46,63 @@ $enable-layout-max-width--xl:   false !default;
  */
 .o-layout,
 %o-layout {
-    list-style: none;
-    margin:  0;
-    padding: 0;
-    margin-left: -$layout-gutter;
-    margin-right:  -$layout-gutter;
-    max-width: $layout-max-width;
+  list-style: none;
+  margin:  0;
+  padding: 0;
+  margin-left: -$layout-gutter;
+  margin-right:  -$layout-gutter;
+  max-width: $layout-max-width;
+  @include clearfix;
+  > .o-layout__item,
+  %o-layout__item {
+    vertical-align: top;
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: $layout-gutter;
+    padding-right:  $layout-gutter;
     @include clearfix;
-    > .o-layout__item,
-    %o-layout__item {
-        vertical-align: top;
-        width: 100%;
-        float: left;
-        position: relative;
-        min-height: 1px;
-        padding-left: $layout-gutter;
-        padding-right:  $layout-gutter;
-        @include clearfix;
-    }
+  }
 }
 
 // we're using "until" so max-width stops applying as the viewport gets bigger.
 // as a result, to enable max-width for a particular breakpoint, we need to use
 // the media query so we can target the breakpoint below it
 @if ($enable-layout-max-width--xs == true) {
-    @include mq($until: sm) { // [1]
-        .o-layout,
-        %o-layout {
-            max-width: $layout-max-width--xs;
-        }
+  @include mq($until: sm) { // [1]
+    .o-layout,
+    %o-layout {
+      max-width: $layout-max-width--xs;
     }
+  }
 }
 
 @if ($enable-layout-max-width--sm == true) {
-    @include mq($until: md) {
-        .o-layout,
-        %o-layout {
-            max-width: $layout-max-width--sm;
-        }
+  @include mq($until: md) {
+    .o-layout,
+    %o-layout {
+      max-width: $layout-max-width--sm;
     }
+  }
 }
 
 @if ($enable-layout-max-width--md == true) {
-    @include mq($until: lg) {
-        .o-layout,
-        %o-layout {
-            max-width: $layout-max-width--md;
-        }
+  @include mq($until: lg) {
+    .o-layout,
+    %o-layout {
+      max-width: $layout-max-width--md;
     }
+  }
 }
 
 @if ($enable-layout-max-width--lg == true) {
-    @include mq($until: xl) {
-        .o-layout,
-        %o-layout {
-            max-width: $layout-max-width--lg;
-        }
+  @include mq($until: xl) {
+    .o-layout,
+    %o-layout {
+      max-width: $layout-max-width--lg;
     }
+  }
 }
 
 // don't use this; use the non-responsive layout max-width instead
@@ -117,92 +117,92 @@ $enable-layout-max-width--xl:   false !default;
 
 @if ($enable-layout--center == true) {
 
-    .o-layout--center,
-    %o-layout--center {
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .o-layout--center,
+  %o-layout--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @if ($enable-layout--tiny == true) {
 
-    /**
-     * Layouts with tiny gutters.
-     */
+  /**
+   * Layouts with tiny gutters.
+   */
 
-    .o-layout--tiny,
-    %o-layout--tiny {
-        margin-left: -($layout-gutter--tiny);
-        margin-right: -($layout-gutter--tiny);
-        > .o-layout__item,
-        > %o-layout__item {
-            padding-left: $layout-gutter--tiny;
-            padding-right: $layout-gutter--tiny;
-        }
-
+  .o-layout--tiny,
+  %o-layout--tiny {
+    margin-left: -($layout-gutter--tiny);
+    margin-right: -($layout-gutter--tiny);
+    > .o-layout__item,
+    > %o-layout__item {
+      padding-left: $layout-gutter--tiny;
+      padding-right: $layout-gutter--tiny;
     }
+
+  }
 
 }
 
 @if ($enable-layout--small == true) {
 
-    /**
-     * Layouts with small gutters.
-     */
+  /**
+   * Layouts with small gutters.
+   */
 
-    .o-layout--small,
-    %o-layout--small {
-        margin-left: -($layout-gutter--small);
-        margin-right: -($layout-gutter--small);
+  .o-layout--small,
+  %o-layout--small {
+    margin-left: -($layout-gutter--small);
+    margin-right: -($layout-gutter--small);
 
-        > .o-layout__item,
-        > %o-layout__item {
-            padding-left: $layout-gutter--small;
-            padding-right: $layout-gutter--small;
-        }
-
+    > .o-layout__item,
+    > %o-layout__item {
+      padding-left: $layout-gutter--small;
+      padding-right: $layout-gutter--small;
     }
+
+  }
 
 }
 
 @if ($enable-layout--large == true) {
 
-    /**
-     * Layouts with large gutters.
-     */
+  /**
+   * Layouts with large gutters.
+   */
 
-    .o-layout--large,
-    %o-layout--large {
-        margin-left: -($layout-gutter--large);
-        margin-right: -($layout-gutter--large);
+  .o-layout--large,
+  %o-layout--large {
+    margin-left: -($layout-gutter--large);
+    margin-right: -($layout-gutter--large);
 
-        > .o-layout__item,
-        > %o-layout__item {
-            padding-left: $layout-gutter--large;
-            padding-right: $layout-gutter--large;
-        }
-
+    > .o-layout__item,
+    > %o-layout__item {
+      padding-left: $layout-gutter--large;
+      padding-right: $layout-gutter--large;
     }
+
+  }
 
 }
 
 @if ($enable-layout--huge == true) {
 
-    /**
-     * Layouts with huge gutters.
-     */
+  /**
+   * Layouts with huge gutters.
+   */
 
-    .o-layout--huge,
-    %o-layout--huge {
-        margin-left: -($layout-gutter--huge);
-        margin-right: -($layout-gutter--huge);
+  .o-layout--huge,
+  %o-layout--huge {
+    margin-left: -($layout-gutter--huge);
+    margin-right: -($layout-gutter--huge);
 
-        > .o-layout__item,
-        > %o-layout__item {
-            padding-left: $layout-gutter--huge;
-            padding-right: $layout-gutter--huge;
-        }
-
+    > .o-layout__item,
+    > %o-layout__item {
+      padding-left: $layout-gutter--huge;
+      padding-right: $layout-gutter--huge;
     }
+
+  }
 
 }
