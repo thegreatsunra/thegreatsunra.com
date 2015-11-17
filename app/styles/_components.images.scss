@@ -6,7 +6,7 @@
  * Image styling
  */
 
-$image-base-padding:  ($inuit-base-line-height / 6) !default; // likely 24px / 6 = 4px
+$image-base-padding:  ($inuit-base-spacing-unit / 6) !default; // likely 24px / 6 = 4px
 
 .c-img {
 
