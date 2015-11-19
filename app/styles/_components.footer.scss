@@ -3,8 +3,14 @@
 \*------------------------------------*/
 
 $inuit-base-spacing-unit: 24px !default;
+$footer-height: ($inuit-base-spacing-unit * 5) !default;
 
 .c-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: $footer-height;
+  width: 100%;
   background: #333;
   color: #fff;
   padding: $inuit-base-line-height 0 $inuit-base-line-height 0;
