@@ -10,7 +10,7 @@ $inuit-base-spacing-unit: 24px !default;
 
 .c-nav__list {
   list-style: none;
-  margin: 0 0 $inuit-base-line-height 0;
+  margin: 0 0 $inuit-base-spacing-unit 0;
   padding: 0;
   @include clearfix;
 }
@@ -18,7 +18,13 @@ $inuit-base-spacing-unit: 24px !default;
 .c-nav__item {
   font-weight: bold;
   float: left;
-  margin-right: $inuit-base-line-height;
+  margin-right: $inuit-base-spacing-unit;
+  @include mq($from: sm) {
+    margin-right: $inuit-base-spacing-unit * 2;
+  }
+  @include mq($from: md) {
+    margin-right: $inuit-base-spacing-unit * 3;
+  }
 }
 
 .c-nav__link {
