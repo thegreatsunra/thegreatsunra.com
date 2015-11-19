@@ -6,18 +6,22 @@ $inuit-base-spacing-unit: 24px !default;
 
 .c-social {
   list-style: none;
-  margin: 0 0 $inuit-base-line-height 0;
+  margin: 0 0 $inuit-base-spacing-unit 0;
   padding: 0;
   @include clearfix;
   .iconic {
     fill: #fff;
-    height: $inuit-base-spacing-unit * 2;
-    width: $inuit-base-spacing-unit * 2;
+    height: $inuit-base-spacing-unit;
+    width: $inuit-base-spacing-unit;
+    @include mq($from: lg) {
+      height: $inuit-base-spacing-unit * 2;
+      width: $inuit-base-spacing-unit * 2;
+    }
   }
 }
 
 .c-social__item {
   font-weight: bold;
   float: left;
-  margin-right: $inuit-base-line-height;
+  margin-right: $inuit-base-spacing-unit;
 }
