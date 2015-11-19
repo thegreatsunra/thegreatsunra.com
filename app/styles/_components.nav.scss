@@ -28,13 +28,13 @@ $inuit-base-spacing-unit: 24px !default;
 }
 
 .c-nav__link {
-  color: #36f;
+  color: $base-accent-color;
   text-decoration: none;
   &.u-is-active {
-    color: #fff;
+    color: $base-text-color-light;
   }
   &:hover {
-    color: #fff;
+    color: $base-text-color-light;
     text-decoration: underline;
   }
 }

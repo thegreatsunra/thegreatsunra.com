@@ -10,7 +10,7 @@ $inuit-base-spacing-unit: 24px !default;
   padding: 0;
   @include clearfix;
   .iconic {
-    fill: #fff;
+    fill: $base-text-color-light;
     height: $inuit-base-spacing-unit;
     width: $inuit-base-spacing-unit;
     @include mq($from: lg) {

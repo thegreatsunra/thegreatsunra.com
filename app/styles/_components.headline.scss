@@ -15,10 +15,10 @@ $inuit-base-spacing-unit: 24px !default;
 }
 
 .c-headline__link {
-  color: #fff;
+  color: $base-text-color-light;
   text-decoration: none;
   &:hover {
-  	color: #fff;
+  	color: $base-text-color-light;
     text-decoration: underline;
   }
 }

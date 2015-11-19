@@ -5,9 +5,9 @@
 $inuit-base-spacing-unit: 24px !default;
 
 .c-header {
-  border-top: 10px solid #9cf;
+  border-top: 10px solid $base-accent-color;
   margin: 0 0 $inuit-base-line-height 0;
   padding: $inuit-base-line-height 0 0 0;
-  background: #333;
-  color: #fff;
+  background: $base-background-color-dark;
+  color: $base-text-color-light;
 }

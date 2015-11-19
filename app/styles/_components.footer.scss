@@ -11,7 +11,7 @@ $footer-height: ($inuit-base-spacing-unit * 6) !default;
   bottom: 0;
   height: $footer-height;
   width: 100%;
-  background: #333;
-  color: #fff;
-  padding: $inuit-base-line-height 0 $inuit-base-line-height 0;
+  background: $base-background-color-dark;
+  color: $base-text-color-light;
+  padding: $inuit-base-spacing-unit 0 $inuit-base-spacing-unit 0;
 }
