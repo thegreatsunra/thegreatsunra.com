@@ -7,21 +7,32 @@
  */
 
 $inuit-base-spacing-unit: 24px !default;
+$image-base-padding:  ($inuit-base-spacing-unit / 6) !default; // likely 24px 
 
 .c-portfolio__title {
-  margin-bottom: 0;
+  font-size: 22px;
+  margin-bottom: $inuit-base-spacing-unit / 4;
+  @include mq($from: md, $until: lg) {
+    font-size: 18px;
+  }
+}
+
+.c-portfolio__title--home {
+  margin-top: $inuit-base-spacing-unit / 3;
+  font-size: 18px;
 }
 
 .c-portfolio__item {
-  margin-bottom: $inuit-base-spacing-unit;
+  margin-bottom: $inuit-base-spacing-unit * 1.5;
 }
 
 .c-portfolio__description {
-
+  margin-top: $inuit-base-spacing-unit / 4;
+  @include mq($from: md) {
+    margin-top: $inuit-base-spacing-unit * 1.25;
+  }
 }
 
-@include mq($from: md) {
-  .c-portfolio__description {
-    margin-top: $inuit-base-spacing-unit;
-  }
+.c-portfolio__img {
+  border-radius: $image-base-padding;
 }
