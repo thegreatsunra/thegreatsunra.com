@@ -13,9 +13,9 @@ $inuit-base-spacing-unit: 24px !default;
     fill: $base-text-color-light;
     height: $inuit-base-spacing-unit;
     width: $inuit-base-spacing-unit;
-    @include mq($from: lg) {
-      height: $inuit-base-spacing-unit * 2;
-      width: $inuit-base-spacing-unit * 2;
+    @include mq($from: md) {
+      height: $inuit-base-spacing-unit * 1.75;
+      width: $inuit-base-spacing-unit * 1.75;
     }
   }
 }
@@ -23,5 +23,11 @@ $inuit-base-spacing-unit: 24px !default;
 .c-social__item {
   font-weight: bold;
   float: left;
-  margin-right: $inuit-base-spacing-unit;
+  margin-right: $inuit-base-spacing-unit * 1.25;
+  @include mq($from: lg) {
+    margin-right: $inuit-base-spacing-unit;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
 }
