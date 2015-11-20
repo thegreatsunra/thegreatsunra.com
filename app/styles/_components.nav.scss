@@ -15,10 +15,10 @@ $inuit-base-spacing-unit: 24px !default;
 }
 
 .c-nav__item {
-  font-weight: bold;
+  // font-weight: bold; // looks awful on iOS
   float: left;
   margin-bottom: $inuit-base-spacing-unit / 4;
-  margin-right: $inuit-base-spacing-unit / 2;
+  margin-right: $inuit-base-spacing-unit / 3;
   @include mq($from: md) {
     margin-right: $inuit-base-spacing-unit * 2;
   }
