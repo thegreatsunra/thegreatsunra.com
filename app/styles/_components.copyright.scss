@@ -5,5 +5,9 @@
 $inuit-base-spacing-unit: 24px !default;
 
 .c-copyright {
-  padding-top: $inuit-base-spacing-unit / 2;
+  font-size: 14px;
+  padding: ($inuit-base-spacing-unit / 2) 0 ($inuit-base-spacing-unit / 4) 0;
+  @include mq($from: md) {
+    text-align: right;
+  }
 }
