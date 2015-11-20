@@ -11,7 +11,8 @@ $inuit-base-spacing-unit: 24px !default;
 .c-headline {
   font-weight: bold;
   font-size: 24px;
-  line-height: 1;
+  line-height: 1.25em;
+  margin-bottom: $inuit-base-spacing-unit / 4;
 }
 
 .c-headline__link {
