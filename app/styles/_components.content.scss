@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #CONTENT
+\*------------------------------------*/
+
+.c-content {
+  &::before {
+    content: " ";
+    height: $inuit-base-spacing-unit;
+    width: 100%;
+    display: block;
+    border-top: 1px solid $white;
+    background-image: linear-gradient(
+      #999999,
+      #cccccc 33%, 
+      #ffffff)
+  }
+}
