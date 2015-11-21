@@ -52,14 +52,6 @@ $enable-layout-max-width--sm: true;
 $layout-max-width--sm: 29.625em;
 $enable-layout--center: true;
 @import "objects.layout";
-.o-layout__test {
-  text-align: center;
-  background-color: #fee;
-  font-size: 9px;
-  min-height: 40px;
-  padding: 10px;
-  margin-bottom: 20px;
-}
 
  /**
  * #COMPONENTS
