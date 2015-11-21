@@ -67,15 +67,16 @@ $enable-layout--center: true;
 @import "components.footer";
 @import "components.social";
 @import "components.copyright";
+@import "components.resume";
 
  /**
  * #TRUMPS
  */
 @import "bower_components/inuit-clearfix/trumps.clearfix";
-$inuit-enable-paddings: true;
-$inuit-enable-paddings--small: true;
-$inuit-enable-paddings--large: true;
-$inuit-enable-margins: true;
+$inuit-enable-paddings:         true;
+$inuit-enable-paddings--small:  true;
+$inuit-enable-paddings--large:  true;
+$inuit-enable-margins:          true;
 @import "bower_components/inuit-spacing/trumps.spacing";
 @import "utilities.responsive";
 @import "utilities.helpers";

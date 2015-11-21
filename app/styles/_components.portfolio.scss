@@ -11,28 +11,34 @@ $image-base-padding:  ($inuit-base-spacing-unit / 6) !default; // likely 24px
 
 .c-portfolio__title {
   font-size: 22px;
-  margin-bottom: $inuit-base-spacing-unit / 8;
+  margin-bottom: $inuit-base-spacing-unit / 4;
   @include mq($from: md, $until: lg) {
     font-size: 18px;
   }
 }
 
 .c-portfolio__title--home {
-  margin-top: $inuit-base-spacing-unit / 8;
+  margin-top: $inuit-base-spacing-unit / 4;
   font-size: 18px;
-  @include mq($from: md, $until: lg) {
-    font-size: 14px;
+  @include mq($until: lg) {
+    font-size: 15px;
   }
 }
 
 .c-portfolio__item {
   margin-bottom: $inuit-base-spacing-unit * 1.5;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .c-portfolio__description {
   margin-top: $inuit-base-spacing-unit / 3;
   @include mq($from: md) {
-    margin-top: $inuit-base-spacing-unit * 1.5;
+    margin-top: $inuit-base-spacing-unit * 1;
+  }
+  @include mq($from: lg) {
+    margin-top: $inuit-base-spacing-unit * 1.25;
   }
 }
 
