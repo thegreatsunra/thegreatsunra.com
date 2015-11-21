@@ -17,12 +17,14 @@
  *    render text using sub-pixel anti-aliasing.
  */
 
+$footer-height: ($inuit-base-spacing-unit * 6.5) !default;
+
 html {
   font-size: ($inuit-base-font-size / 16px) * 1em; /* [1] */
   line-height: $inuit-base-line-height / $inuit-base-font-size; /* [1] */
   font-family: Georgia, "Times New Roman", sans-serif;
   background-color: $inuit-base-background-color;
-  color: $inuit-base-text-color;
+  color: $base-text-color-dark;
   position: relative;
   overflow-y: scroll; /* [2] */
   min-height: 100%; /* [3] */
@@ -30,4 +32,8 @@ html {
       -ms-text-size-adjust: 100%; /* [4] */
   -moz-osx-font-smoothing: grayscale; /* [5] */
    -webkit-font-smoothing: antialiased; /* [5] */
+}
+
+body {
+    margin: 0 0 $footer-height; /* bottom = footer height */
 }
