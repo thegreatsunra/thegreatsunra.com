@@ -3,6 +3,7 @@
 \*------------------------------------*/
 
 .c-content {
+  padding-bottom: $inuit-base-spacing-unit;
   &::before {
     content: " ";
     height: $inuit-base-spacing-unit;

@@ -8,18 +8,45 @@
 
 $inuit-base-spacing-unit: 24px !default;
 
-.c-headline {
+.c-site-headline {
   // font-weight: bold; // looks awful on iOS
   font-size: 24px;
   line-height: 1.25em;
   margin-bottom: $inuit-base-spacing-unit / 4;
 }
 
-.c-headline__link {
+.c-site-headline__link {
   color: $base-text-color-light;
   text-decoration: none;
   &:hover {
   	color: $base-text-color-light;
     text-decoration: underline;
+  }
+}
+
+.c-page-headline--small {
+  font-size: $inuit-base-font-size;
+  line-height: $inuit-base-line-height;
+}
+
+.c-page-headline {
+  font-size: $inuit-base-font-size * 1.5;
+  line-height: $inuit-base-line-height * 1.5;
+}
+
+.c-page-headline--large {
+  font-size: $inuit-base-font-size * 2;
+  line-height: $inuit-base-line-height * 2;
+}
+
+.c-page-headline--huge {
+  font-size: $inuit-base-font-size * 3;
+  line-height: $inuit-base-line-height * 3;
+}
+
+@include mq($from: md) {
+  .c-page-headline--huge\@md {
+    font-size: $inuit-base-font-size * 3;
+    line-height: $inuit-base-line-height * 3;
   }
 }

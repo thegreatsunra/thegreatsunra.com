@@ -4,9 +4,10 @@
 
 a {
   text-decoration: none;
-  color: $base-accent-color;
+  color: saturate(darken($base-accent-color, 30%), 50%);
+  transition: all .1s ease-in;
   &:hover {
-    color: $base-accent-color;
-    text-decoration: underline;
+    color: saturate(darken($base-accent-color, 15%), 100%);
+    text-decoration: none;
   }
 }
