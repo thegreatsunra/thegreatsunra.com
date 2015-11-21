@@ -57,7 +57,8 @@ $enable-layout--center: true;
  * #COMPONENTS
  */
 @import "components.header";
-@import "components.headline";
+@import "components.page-headline";
+@import "components.site-headline";
 @import "components.nav";
 @import "components.content";
 @import "components.portfolio";
@@ -66,9 +67,6 @@ $enable-layout--center: true;
 @import "components.footer";
 @import "components.social";
 @import "components.copyright";
-
-
-
 
  /**
  * #TRUMPS
