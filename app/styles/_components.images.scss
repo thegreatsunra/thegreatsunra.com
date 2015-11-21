@@ -9,7 +9,7 @@
 $image-base-padding:  ($inuit-base-spacing-unit / 6) !default; // likely 24px / 6 = 4px
 
 .c-img {
-
+  margin-bottom: $inuit-base-spacing-unit;
 }
 
 .c-img--bordered {
@@ -25,7 +25,8 @@ $image-base-padding:  ($inuit-base-spacing-unit / 6) !default; // likely 24px / 
 }
 
 .c-img__caption {
-  padding-top: $inuit-base-spacing-unit / 6;
+  margin-top: -$inuit-base-spacing-unit;
+  margin-bottom: $inuit-base-spacing-unit;
   font-size: 13px;
   color: $base-text-color-medium;
 }
