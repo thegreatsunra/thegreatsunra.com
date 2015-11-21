@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Dane Petersen -- Designer, Developer, Writer -- http://twitter.com/thegreatsunra
+
+# THANKS
+
+    Harry Roberts
+    Pete Butler
+    Jake Ingman -- http://twitter.com/jingman
+    Rob Dodson -- http://twitter.com/rob_dodson
+    PJ Onori -- http://twitter.com/somerandomdude
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, JavaScript, Sass, inuitcss
+    Node, Metalsmith, HTML5 Boilerplate
+    Yeoman, generator-gulp-webapp
