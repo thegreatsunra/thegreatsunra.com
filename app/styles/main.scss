@@ -46,12 +46,12 @@ $mq-breakpoints: (
  */
 $inuit-list-bare-namespace: "o-";
 @import "bower_components/inuit-list-bare/objects.list-bare";
-$layout-base-spacing-unit: $inuit-base-spacing-unit;
 $layout-max-width: 59em;
 $enable-layout-max-width--sm: true;
 $layout-max-width--sm: 29.625em;
 $enable-layout--center: true;
 @import "objects.layout";
+@import "objects.separator";
 
  /**
  * #COMPONENTS
@@ -70,7 +70,6 @@ $enable-layout--center: true;
 
 
 
-
  /**
  * #TRUMPS
  */
@@ -82,4 +81,5 @@ $inuit-enable-margins: true;
 @import "bower_components/inuit-spacing/trumps.spacing";
 @import "utilities.responsive";
 @import "utilities.helpers";
+@import "utilities.typography";
 @import "utilities.widths";

@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #SEPARATOR
+\*------------------------------------*/
+
+/**
+ * Separate things from other things.
+ */
+
+.o-separator {
+  border: 0;
+  height: 1px;
+  margin: $inuit-base-spacing-unit 0 $inuit-base-spacing-unit 0;
+  background: $base-border-color;
+}
