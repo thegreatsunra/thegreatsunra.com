@@ -10,7 +10,8 @@ $inuit-base-spacing-unit: 24px !default;
 $image-base-padding:  ($inuit-base-spacing-unit / 6) !default; // likely 24px 
 
 .c-portfolio__title {
-  font-size: 22px;
+  font-size: $inuit-base-font-size * 1.25;
+  line-height: 1.25;
   margin-bottom: $inuit-base-spacing-unit / 4;
   @include mq($from: md, $until: lg) {
     font-size: 18px;
@@ -18,11 +19,9 @@ $image-base-padding:  ($inuit-base-spacing-unit / 6) !default; // likely 24px
 }
 
 .c-portfolio__title--home {
+  font-size: $inuit-base-font-size;
+  line-height: 1.25;
   margin-top: $inuit-base-spacing-unit / 4;
-  font-size: 18px;
-  @include mq($until: lg) {
-    font-size: 15px;
-  }
 }
 
 .c-portfolio__item {
