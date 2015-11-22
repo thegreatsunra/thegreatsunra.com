@@ -42,6 +42,19 @@ gulp.task('styles', () => {
     .pipe(reload({stream: true}));
 });
 
+gulp.task('styles:dist', () => {
+  return gulp.src('app/styles/*.scss')
+    .pipe($.plumber())
+    .pipe($.sourcemaps.init())
+    .pipe($.sass.sync({
+      outputStyle: 'compressed',
+      precision: 10,
+      includePaths: ['.']
+    }).on('error', $.sass.logError))
+    .pipe($.autoprefixer({browsers: ['last 1 version']}))
+    .pipe(gulp.dest('dist/styles'))
+});
+
 function lint(files, options) {
   return () => {
     return gulp.src(files)
@@ -178,7 +191,7 @@ gulp.task('wiredep', () => {
 });
 
 gulp.task('smith', function() {
-  gulp.src("./src/**/*")
+  gulp.src("src/**/*")
   .pipe($.frontMatter()).on("data", function(file) {
     lodash.assign(file, file.frontMatter); 
     delete file.frontMatter;
@@ -197,11 +210,17 @@ gulp.task('smith', function() {
       move: true
     }))
   )
-  .pipe(gulp.dest("./.tmp"))
+  .pipe(gulp.dest(".tmp"))
+  .pipe(gulp.dest("dist"))
   .pipe(reload({stream: true}));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('scripts', () => {
+  return gulp.src('app/scripts/**/*.js', {
+  }).pipe(gulp.dest('dist/scripts'));
+});
+
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'styles:dist', 'smith', 'scripts'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
