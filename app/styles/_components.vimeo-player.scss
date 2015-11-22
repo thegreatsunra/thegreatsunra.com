@@ -8,6 +8,7 @@
   height: 0; 
   overflow: hidden; 
   max-width: 100%;
+  margin-bottom: $inuit-base-spacing-unit;
   iframe, object, embed {
     position: absolute; 
     top: 0; 
@@ -15,4 +16,11 @@
     width: 100%; 
     height: 100%; 
   }
+}
+
+.c-vimeo-player__caption {
+  margin-top: (-$inuit-base-spacing-unit) + $inuit-base-spacing-unit / 4;
+  margin-bottom: $inuit-base-spacing-unit;
+  font-size: 13px;
+  color: $base-text-color-medium;
 }

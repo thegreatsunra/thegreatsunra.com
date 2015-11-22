@@ -25,7 +25,7 @@ $image-base-padding:  ($inuit-base-spacing-unit / 6) !default; // likely 24px / 
 }
 
 .c-img__caption {
-  margin-top: -$inuit-base-spacing-unit;
+  margin-top: (-$inuit-base-spacing-unit) + $inuit-base-spacing-unit / 4;
   margin-bottom: $inuit-base-spacing-unit;
   font-size: 13px;
   color: $base-text-color-medium;
