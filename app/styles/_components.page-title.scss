@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    #PAGE TITLE
+\*------------------------------------*/
+
+/**
+ * Page title styling
+ */
+
+$inuit-base-spacing-unit: 24px !default;
+
+.c-page-title--small {
+  font-size: $inuit-base-font-size;
+  line-height: $inuit-base-line-height;
+}
+
+.c-page-title {
+  font-size: $inuit-base-font-size * 1.5;
+  line-height: 1.25;
+}
+
+.c-page-title--large {
+  font-size: $inuit-base-font-size * 2;
+  line-height: 1.25;
+}
+
+.c-page-title--huge {
+  font-size: $inuit-base-font-size * 3;
+  line-height: 1.25;
+}
+
+@include mq($from: md) {
+  .c-page-title--huge\@md {
+    font-size: $inuit-base-font-size * 3;
+  line-height: 1.25;
+  }
+}
+
+@include mq($from: lg) {
+  .c-page-title\@lg {
+    font-size: $inuit-base-font-size * 1.5;
+  line-height: 1.25;
+  }
+}
+
+@include mq($from: lg) {
+  .c-page-title--huge\@lg {
+    font-size: $inuit-base-font-size * 3;
+    line-height: 1.25;
+  }
+}
