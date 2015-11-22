@@ -5,6 +5,7 @@ import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
 import gulpsmith from 'gulpsmith';
+import permalinks from 'metalsmith-permalinks'
 import layouts from 'metalsmith-layouts';
 import handlebars from 'handlebars';
 import lodash from 'lodash';
@@ -208,6 +209,9 @@ gulp.task('smith', function() {
       pattern: '**/*.hbs',
       extension: '.html',
       move: true
+    }))
+    .use(permalinks({
+      pattern: ':path'
     }))
   )
   .pipe(gulp.dest(".tmp"))
