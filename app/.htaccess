@@ -991,12 +991,12 @@ FileETag None
   RewriteBase /
 
   # Redirects for Tumblr
-  RewriteCond %{REQUEST_URI} ^(/post|/page)
-  RewriteRule ^(.*)$ http://thegreatsunra.tumblr.com/$1 [R=301,L]
+  # RewriteCond %{REQUEST_URI} ^(/post|/page)
+  # RewriteRule ^(.*)$ http://thegreatsunra.tumblr.com/$1 [R=301,L]
 
   # Redirect index.php to root
-  RewriteCond %{REQUEST_URI} ^/index.php$
-  RewriteRule (.*) / [R=301,L]
+  # RewriteCond %{REQUEST_URI} ^/index.php$
+  # RewriteRule (.*) / [R=301,L]
 
   # Hide the *.html files by redirecting all requests for foo.html to foo:
   # RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ /.+\.html\ HTTP
@@ -1017,6 +1017,10 @@ FileETag None
   # RewriteCond %{REQUEST_FILENAME} !-f
   # RewriteCond %{REQUEST_FILENAME}.html -f
   # RewriteRule ^.+$ %{REQUEST_FILENAME}.html [L]
+
+  # Redirects for images
+  RewriteCond %{REQUEST_URI} ^/app/img
+  RewriteRule ^(.*)$ /images/$1 [R=301,L]
 
   # TODO: remove trailing slash in cases where it is already there
 
