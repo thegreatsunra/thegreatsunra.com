@@ -28,6 +28,27 @@ $inuit-base-spacing-unit: 24px !default;
   line-height: 1.25;
 }
 
+@include mq($from: sm) {
+  .c-page-title\@sm {
+    font-size: $inuit-base-font-size * 1.5;
+    line-height: 1.25;
+  }
+}
+
+@include mq($from: sm) {
+  .c-page-title--huge\@sm {
+    font-size: $inuit-base-font-size * 3;
+    line-height: 1.25;
+  }
+}
+
+@include mq($from: sm) {
+  .c-page-title--large\@sm {
+    font-size: $inuit-base-font-size * 2;
+    line-height: 1.25;
+  }
+}
+
 @include mq($from: md) {
   .c-page-title--huge\@md {
     font-size: $inuit-base-font-size * 3;
