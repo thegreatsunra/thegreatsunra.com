@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    #BROWSER NOTICE
+\*------------------------------------*/
+
+.c-browser-notice {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  padding: $inuit-base-spacing-unit / 2 0 $inuit-base-spacing-unit / 2 0;
+  background-color: #262626;
+  color: #dddddd;
+  a {
+    color: lighten($base-accent-color, 15%);
+    text-decoration: underline;
+    &:hover {
+      color: $white;
+    }
+  }
+}

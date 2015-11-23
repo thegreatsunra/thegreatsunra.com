@@ -4,6 +4,7 @@
 
 .c-header {
   color: $base-text-color-light;
+  border-bottom: 1px solid darken($base-background-color-dark, 40%);
   background: $base-background-color-dark;
   background-image: url("/images/diag-r-10.png"), linear-gradient(
     lighten($base-background-color-dark, 25%), 
