@@ -22,6 +22,11 @@ $inuit-base-spacing-unit: 24px !default;
   @include mq($from: md) {
     margin-right: $inuit-base-spacing-unit * 2;
   }
+  &:first-child { // You should be ashamed of this
+    .c-nav__link { // Your cyclomatic complexity is off the charts
+      padding-left: 0;
+    }
+  }
 }
 
 .c-nav__link {
