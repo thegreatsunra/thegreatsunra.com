@@ -6,5 +6,5 @@ dist
 npm-debug.log
 bower_components
 test/bower_components
-app/images
-!app/images/layout*
+app/images/*
+!app/images/layout/*
