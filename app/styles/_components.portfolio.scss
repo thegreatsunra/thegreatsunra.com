@@ -10,11 +10,11 @@ $inuit-base-spacing-unit: 24px !default;
 $image-base-padding:  ($inuit-base-spacing-unit / 6) !default; // likely 24px 
 
 .c-portfolio__title {
-  font-size: $inuit-base-font-size * 1.25;
+  font-size: $inuit-base-font-size;
   line-height: 1.25;
   margin-bottom: $inuit-base-spacing-unit / 4;
-  @include mq($from: md, $until: lg) {
-    font-size: 18px;
+  @include mq($from: lg) {
+    font-size: $inuit-base-font-size * 1.25;
   }
 }
 
