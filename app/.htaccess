@@ -1020,7 +1020,7 @@ FileETag None
 
   # Redirects for images
   RewriteCond %{REQUEST_URI} ^/app/img
-  RewriteRule ^(.*)$ /images/$1 [R=301,L]
+  RewriteRule ^/app/img(.*)$ /images/$1 [R=301,L]
 
   # TODO: remove trailing slash in cases where it is already there
 
