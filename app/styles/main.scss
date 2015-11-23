@@ -11,13 +11,13 @@
 @import "tools.mixins";
 @import "tools.variables";
 // 18em = 288px
-// 40em = 640px
+// 23em = 368px
 // 45em = 720px
 // 60em = 960px
 // 75em = 1200px
 $mq-breakpoints: (
     xs:  18em,
-    sm:  40em,
+    sm:  23em,
     md:  45em,
     lg:  60em,
     xl:  75em,
