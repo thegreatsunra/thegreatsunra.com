@@ -984,7 +984,7 @@ FileETag None
 # </IfModule>
 
 # ----------------------------------------------------------------------
-# | Added by Dane Petersen for Redirects - April 9, 2013               |
+# | Added by Dane Petersen for Redirects - November 24, 2015           |
 # ----------------------------------------------------------------------
 
 <IfModule mod_rewrite.c>
@@ -1019,8 +1019,8 @@ FileETag None
   # RewriteRule ^.+$ %{REQUEST_FILENAME}.html [L]
 
   # Redirects for images
-  # RewriteCond %{REQUEST_URI} ^/app/img
-  # RewriteRule ^/app/img(.*)$ /images/$1 [R=301,L]
+  RewriteCond %{REQUEST_URI} ^/app/img/
+  RewriteRule ^/?app/img/(.*)$ /images/$1 [R=301,L]
 
   # TODO: remove trailing slash in cases where it is already there
 
