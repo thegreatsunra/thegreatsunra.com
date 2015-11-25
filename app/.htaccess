@@ -990,14 +990,30 @@ FileETag None
 <IfModule mod_rewrite.c>
   RewriteBase /
 
-  # Redirects for Tumblr
+  # TODO: remove trailing slash from directories
+
+  # Redirect for Tumblr
   RewriteCond %{REQUEST_URI} ^(/post|/page)
   RewriteRule ^(.*)$ http://thegreatsunra.tumblr.com/$1 [R=301,L]
 
-  # Redirects for images
+  # Redirect for images
   RewriteCond %{REQUEST_URI} ^/app/img/
   RewriteRule ^/?app/img/(.*)$ /images/$1 [R=301,L]
 
-  # TODO: remove trailing slash from directories
+  # Redirect for wallpaper photos
+  RewriteCond %{REQUEST_URI} ^/photo/wallpaper
+  RewriteRule ^(.*)$ http://terra.brainsideout.com/wallpaper [R=301,L]
+
+  # Redirect for smartfm app
+  RewriteCond %{REQUEST_URI} ^/portfolio/smartfmapp
+  RewriteRule ^(.*)$ /portfolio/smartfm-app [R=301,L]
+
+  # Redirect for energy monitor
+  RewriteCond %{REQUEST_URI} ^/portfolio/energymonitor
+  RewriteRule ^(.*)$ /portfolio/energy-monitor [R=301,L]
+
+  # Redirect for lost mountain
+  RewriteCond %{REQUEST_URI} ^/portfolio/lostmountain
+  RewriteRule ^(.*)$ /portfolio/lost-mountain [R=301,L]
 
 </IfModule>
