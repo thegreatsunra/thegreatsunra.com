@@ -18,7 +18,7 @@ var siteConfig = {
   site: {
     title:            "Dane Petersen (thegreatsuna)",
     author:           "Dane Petersen",
-    year:             "2015",
+    year:             "2016",
     componentsFolder: "app/components",
     cssFolder:        "styles",
     jsFolder:         "scripts",
