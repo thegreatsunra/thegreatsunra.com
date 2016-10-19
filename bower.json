@@ -2,7 +2,7 @@
   "name": "thegreatsunra-bem",
   "private": true,
   "dependencies": {
-    "inuit-normalize.css": "inuit-normalize#~3.0.3",
+    "inuit-normalize.css": "inuit-normalize#~4.1.1",
     "inuit-reset": "~0.1.1",
     "inuit-box-sizing": "~0.2.0",
     "inuit-defaults": "~0.2.3",
@@ -17,7 +17,7 @@
     "inuit-list-bare": "~0.3.0"
   },
   "devDependencies": {
-    "chai": "~3.4.0",
-    "mocha": "~2.3.3"
+    "chai": "~3.5.0",
+    "mocha": "~3.1.2"
   }
 }
