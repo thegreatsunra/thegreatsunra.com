@@ -14,11 +14,19 @@ resumeIsActive: true
     <h3 class="c-resume__title">Senior Design Technologist</h3>
     <p class="c-resume__metadata"><a href="https://filament.com/" rel="external">Filament</a>, Minneapolis, MN<br>
       January 2017 &#8211; present</p>
-    <p>Filament builds hardware for the industrial internet of things that allows assets to wirelessly and securely talk to each other.</p>
 
-    <p>As Filament's design technologist I build cross-platform desktop, tablet, and mobile apps for managing hardware, "headless" apps for communicating with wireless mesh networks, and cloud architectures for securely transmitting and storing asset data.</p>
+    <p>Filament builds hardware for the industrial internet of things that allows assets to wirelessly and securely talk to each other. As Filament&rsquo;s design technologist I build cross-platform apps for managing hardware, &ldquo;headless&rdquo; apps for connecting to mesh networks, and cloud infrastructures for securely transmitting and storing asset data.</p>
 
-    <p>I get it done with Node, Electron, Cordova, Webpack, Vue.js, Ubuntu, AWS, and Terraform.</p>
+    <p>I get it done with Node, Electron, Cordova, Webpack, Vue.js, Resin.io, AWS, and Terraform.</p>
+
+    <p>Using AWS and Terraform, I built a scalable and repeatable cloud infrastructure that securely connects to a Filament network and receives, stores, and publishes device data for authorized agents. Components include AWS IoT for connecting to Filament gateways, DynamoDB, API Gateway, Lambda for processing device reports and API requests, Cognito for authorizing users and securing access to the API, and S3 for web hosting.</p>
+
+    <p>Using Node, I wrote a gateway script that connects to a Filament mesh network and sends device reports to any configured integration, including AWS IoT, Microsoft SQL Server, Losant, and Socket.io. I packaged the script to function in numerous contexts, including on a Raspberry Pi, inside a Docker container, deployed remotely via Resin.io, and embedded in a desktop app.</p>
+
+    <p>I built a mobile progressive web app, secured by AWS Cognito and populated with data from API Gateway, that allows users to quickly activate a new Filament device. Capabilities include scanning a QR code on a device, confirming connectivity, visualizing the status of the Filament network and all known devices, and displaying devices on a map.</p>
+
+    <p>With Electron, I built a desktop app for macOS and Windows that enables users to connect directly to a Filament network and visualize the status and sensor data of all known devices. Using Cordova, I created a cross-platform iOS and Android app that allows users to discover and connect directly to a Filament device over Bluetooth.</p>
+
     <h3 class="c-resume__title">Senior Staff Software Designer</h3>
     <p class="c-resume__metadata"><a href="http://www.ge.com/digital" rel="external">GE Digital</a>, Minneapolis, MN<br>
       April 2016 &#8211; December 2016</p>
