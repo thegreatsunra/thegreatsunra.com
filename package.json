@@ -1,50 +1,43 @@
 {
+  "name": "thegreatsunra-bem",
   "private": true,
+  "version": "0.0.0",
+  "description": "Source code for thegreatsunra.com",
+  "author": "Dane Petersen",
   "engines": {
-    "node": ">=6.9.0"
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "build": "node index.js",
+    "lint": "eslint --ext .js index.js config.js --fix"
+  },
+  "dependencies": {
+    "ejs": "^2.5.8",
+    "front-matter": "^2.3.0",
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.2",
+    "inuit-box-sizing": "^0.2.0",
+    "inuit-clearfix": "^0.2.2",
+    "inuit-defaults": "^0.2.3",
+    "inuit-functions": "^0.2.0",
+    "inuit-images": "^0.3.3",
+    "inuit-list-bare": "^0.3.0",
+    "inuit-lists": "^0.1.0",
+    "inuit-mixins": "^0.2.3",
+    "inuit-normalize": "^4.1.1",
+    "inuit-reset": "^0.1.1",
+    "inuit-shared": "^0.1.5",
+    "inuit-spacing": "^0.7.0",
+    "node-sass": "^4.8.3",
+    "sass-mq": "^4.0.2"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "browser-sync": "^2.23.6",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-cache": "^1.0.2",
-    "gulp-eslint": "^4.0.2",
-    "gulp-front-matter": "^1.3.0",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-minify-html": "^1.0.6",
-    "gulp-plumber": "^1.2.0",
-    "gulp-sass": "^3.2.1",
-    "gulp-size": "^3.0.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0",
-    "gulp-useref": "^3.1.5",
-    "gulpsmith": "^0.6.0",
-    "handlebars": "^4.0.11",
-    "lodash": "^4.17.5",
-    "main-bower-files": "^2.13.1",
-    "metalsmith": "^2.3.0",
-    "metalsmith-copy": "^0.4.0",
-    "metalsmith-layouts": "^1.8.1",
-    "metalsmith-permalinks": "^0.5.0",
-    "opn": "^5.3.0",
-    "wiredep": "^4.0.0"
-  },
-  "eslintConfig": {
-    "env": {
-      "node": true,
-      "browser": true
-    },
-    "rules": {
-      "quotes": [
-        2,
-        "single"
-      ]
-    }
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
