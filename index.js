@@ -4,6 +4,7 @@ const sass = require('node-sass')
 
 const config = require('./config')
 
+const globP = promisify(require('glob'))
 
 const srcPath = './src'
 const distPath = config.build.outputPath
@@ -14,6 +15,14 @@ fse.emptyDirSync(distPath)
 // copy assets folder
 fse.copy(`./static`, `${distPath}`)
 console.log('Copied static files\n')
+const buildHTML = async () => {
+  try {
+    const files = await globP('**/*.@(ejs|html)', {cwd: `${srcPath}/pages`})
+  } catch (err) {
+    console.log('Something happened in the file loop', err)
+  }
+}
+
 const buildSass = () => {
   sass.render({
     file: path.resolve(__dirname, './styles/main.scss'),
@@ -38,4 +47,5 @@ const buildSass = () => {
   })
 }
 
+buildHTML()
 buildSass()
