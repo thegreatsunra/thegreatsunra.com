@@ -39,6 +39,13 @@ const buildHTML = async () => {
         const templateConfig = Object.assign({}, config, {
           page: pageData.attributes
         })
+        let pageContent
+        // generate page content according to file type
+        if (fileData.ext === '.ejs') {
+          pageContent = ejs.render(pageData.body, templateConfig)
+        } else {
+          pageContent = pageData.body
+        }
       } catch (err) {
         console.log('Error making destination paths or reading page data', err)
       }
