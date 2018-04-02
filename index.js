@@ -26,6 +26,12 @@ const buildHTML = async () => {
       } else {
         destPath = path.join(distPath, fileData.dir, fileData.name)
       }
+      try {
+        // create destination directory
+        await fse.mkdirs(destPath)
+      } catch (err) {
+        console.log('Error making destination paths or reading page data', err)
+      }
     })
   } catch (err) {
     console.log('Something happened in the file loop', err)
