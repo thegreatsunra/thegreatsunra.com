@@ -18,6 +18,15 @@ console.log('Copied static files\n')
 const buildHTML = async () => {
   try {
     const files = await globP('**/*.@(ejs|html)', {cwd: `${srcPath}/pages`})
+    files.forEach(async file => {
+      const fileData = path.parse(file)
+      let destPath
+      if (fileData.name === 'index') {
+        destPath = path.join(distPath, fileData.dir)
+      } else {
+        destPath = path.join(distPath, fileData.dir, fileData.name)
+      }
+    })
   } catch (err) {
     console.log('Something happened in the file loop', err)
   }
