@@ -1,9 +1,13 @@
+const ejs = require('ejs')
+const frontMatter = require('front-matter')
 const fse = require('fs-extra')
 const path = require('path')
+const { promisify } = require('util')
 const sass = require('node-sass')
 
 const config = require('./config')
 
+const ejsRenderFile = promisify(ejs.renderFile)
 const globP = promisify(require('glob'))
 
 const srcPath = './src'
@@ -29,6 +33,12 @@ const buildHTML = async () => {
       try {
         // create destination directory
         await fse.mkdirs(destPath)
+        const data = await fse.readFile(`${srcPath}/pages/${file}`, 'utf-8')
+        // render page
+        const pageData = frontMatter(data)
+        const templateConfig = Object.assign({}, config, {
+          page: pageData.attributes
+        })
       } catch (err) {
         console.log('Error making destination paths or reading page data', err)
       }
