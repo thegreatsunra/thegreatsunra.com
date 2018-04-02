@@ -7,9 +7,13 @@ const config = require('./config')
 
 const srcPath = './src'
 const distPath = config.build.outputPath
+
 // clear destination folder
 fse.emptyDirSync(distPath)
 
+// copy assets folder
+fse.copy(`./static`, `${distPath}`)
+console.log('Copied static files\n')
 const buildSass = () => {
   sass.render({
     file: path.resolve(__dirname, './styles/main.scss'),
