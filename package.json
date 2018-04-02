@@ -8,6 +8,7 @@
     "node": ">=8.9.0"
   },
   "scripts": {
+    "build": "node index.js",
     "lint": "eslint --ext .js index.js config.js --fix"
   },
   "dependencies": {
