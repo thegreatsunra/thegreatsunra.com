@@ -54,6 +54,14 @@ const buildHTML = async () => {
             Object.assign({}, templateConfig, { body: pageContent })
           )
           // save the html file
+          if (fileData.name !== 'index') {
+            // fse.mkdirs(`${destPath}/${fileData.name}`)
+            fse.writeFile(`${destPath}/index.html`, str)
+            console.log(`Generated ${destPath}/index.html`)
+          } else {
+            fse.writeFile(`${destPath}/${fileData.name}.html`, str)
+            console.log(`Generated ${destPath}/${fileData.name}.html`)
+          }
         } catch (err) {
           console.log('Error rendering EJS file', err)
         }
