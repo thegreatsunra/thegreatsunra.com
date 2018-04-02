@@ -46,6 +46,17 @@ const buildHTML = async () => {
         } else {
           pageContent = pageData.body
         }
+        try {
+          // render layout with page contents
+          const layout = pageData.attributes.layout || 'default'
+          const str = await ejsRenderFile(
+            `${srcPath}/layouts/${layout}.ejs`,
+            Object.assign({}, templateConfig, { body: pageContent })
+          )
+          // save the html file
+        } catch (err) {
+          console.log('Error rendering EJS file', err)
+        }
       } catch (err) {
         console.log('Error making destination paths or reading page data', err)
       }
