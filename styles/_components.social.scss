@@ -15,9 +15,11 @@ $inuit-base-spacing-unit: 24px !default;
   font-weight: bold;
   float: left;
   margin-right: $inuit-base-spacing-unit * 1.25;
-  fill: $base-text-color-light;
   height: $inuit-base-spacing-unit;
   width: $inuit-base-spacing-unit;
+  svg {
+    fill: $base-text-color-light;
+  }
   @include mq($from: md) {
     height: $inuit-base-spacing-unit * 1.75;
     width: $inuit-base-spacing-unit * 1.75;
