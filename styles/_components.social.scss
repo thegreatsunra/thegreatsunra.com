@@ -9,21 +9,21 @@ $inuit-base-spacing-unit: 24px !default;
   margin: 0 0 $inuit-base-spacing-unit 0;
   padding: 0;
   @include clearfix;
-  .iconic {
-    fill: $base-text-color-light;
-    height: $inuit-base-spacing-unit;
-    width: $inuit-base-spacing-unit;
-    @include mq($from: md) {
-      height: $inuit-base-spacing-unit * 1.75;
-      width: $inuit-base-spacing-unit * 1.75;
-    }
-  }
 }
 
 .c-social__item {
   font-weight: bold;
   float: left;
   margin-right: $inuit-base-spacing-unit * 1.25;
+  height: $inuit-base-spacing-unit;
+  width: $inuit-base-spacing-unit;
+  svg {
+    fill: $base-text-color-light;
+  }
+  @include mq($from: md) {
+    height: $inuit-base-spacing-unit * 1.75;
+    width: $inuit-base-spacing-unit * 1.75;
+  }
   @include mq($from: lg) {
     margin-right: $inuit-base-spacing-unit;
   }

@@ -1,0 +1,36 @@
+<!--[if (page.lte) IE 11]>
+  <div class="c-browser-notice">
+    <div class="o-layout o-layout--center">
+      <div class="o-layout__item">
+        Hi there! Your web browser looks a bit long in the tooth. If (page.you) { <a href="http://browsehappy.com/">upgrade your browser</a> I can guarantee you a better experience!
+      </div>
+    </div>
+  </div>
+<![endif]-->
+<header class="c-header">
+  <div class="o-layout o-layout--center">
+    <div class="o-layout__item">
+      <h1 class="c-site-title">
+        <a href="/" class="c-site-title__link">
+          Dane Petersen is thegreatsunra<span class="u-is-hidden u-is-visibleinline@md">, a UX designer <span class="u-ampersand">&amp;</span> web developer</span>.
+        </a>
+      </h1>
+      <nav class="c-nav">
+        <ul class="c-nav__list">
+          <li class="c-nav__item">
+            <a class="c-nav__link<% if (page.homeIsActive) { %> u-is-active<% } %>" href="/">Home</a>
+          </li>
+          <li class="c-nav__item">
+            <a class="c-nav__link<% if (page.portfolioIsActive) { %> u-is-active<% } %>" href="/portfolio">Portfolio</a>
+          </li>
+          <li class="c-nav__item">
+            <a class="c-nav__link<% if (page.resumeIsActive) { %> u-is-active<% } %>" href="/resume">R&eacute;sum&eacute;</a>
+          </li>
+          <li class="c-nav__item">
+            <a class="c-nav__link<% if (page.contactIsActive) { %> u-is-active<% } %>" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
