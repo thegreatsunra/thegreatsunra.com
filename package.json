@@ -1,11 +1,11 @@
 {
   "name": "thegreatsunra-bem",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Source code for thegreatsunra.com",
   "author": "Dane Petersen",
   "engines": {
-    "node": ">=8.9.0"
+    "node": ">=10.15.3"
   },
   "scripts": {
     "build": "node index.js",
