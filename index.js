@@ -3,7 +3,7 @@ const frontMatter = require('front-matter')
 const fse = require('fs-extra')
 const path = require('path')
 const { promisify } = require('util')
-const sass = require('node-sass')
+const sass = require('sass')
 
 const config = require('./config')
 

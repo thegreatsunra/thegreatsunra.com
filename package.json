@@ -28,7 +28,7 @@
     "inuit-reset": "^0.1.1",
     "inuit-shared": "^0.1.5",
     "inuit-spacing": "^0.7.0",
-    "node-sass": "^4.12.0",
+    "sass": "^1.22.9",
     "sass-mq": "^5.0.1"
   },
   "devDependencies": {
