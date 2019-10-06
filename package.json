@@ -1,7 +1,7 @@
 {
   "name": "thegreatsunra-bem",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Source code for thegreatsunra.com",
   "author": "Dane Petersen",
   "engines": {
@@ -12,9 +12,9 @@
     "lint": "eslint --ext .js index.js config.js --fix"
   },
   "dependencies": {
-    "ejs": "^2.6.1",
+    "ejs": "^2.7.1",
     "front-matter": "^3.0.2",
-    "fs-extra": "^8.0.1",
+    "fs-extra": "^8.1.0",
     "glob": "^7.1.4",
     "inuit-box-sizing": "^0.2.0",
     "inuit-clearfix": "^0.2.2",
@@ -28,16 +28,16 @@
     "inuit-reset": "^0.1.1",
     "inuit-shared": "^0.1.5",
     "inuit-spacing": "^0.7.0",
-    "node-sass": "^4.12.0",
-    "sass-mq": "^5.0.0"
+    "sass": "^1.23.0",
+    "sass-mq": "^5.0.1"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
   }
 }

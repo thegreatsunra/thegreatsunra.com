@@ -3,15 +3,15 @@
 
 # TEAM
 
-    Dane Petersen -- Designer, Developer, Writer -- http://twitter.com/thegreatsunra
+    Dane Petersen -- Designer, Developer, Writer -- https://twitter.com/thegreatsunra
 
 # THANKS
 
     Harry Roberts
     Pete Butler
-    Jake Ingman -- http://twitter.com/jingman
-    Rob Dodson -- http://twitter.com/rob_dodson
-    PJ Onori -- http://twitter.com/somerandomdude
+    Jake Ingman -- https://twitter.com/jingman
+    Rob Dodson -- https://twitter.com/rob_dodson
+    PJ Onori -- https://twitter.com/somerandomdude
 
 # TECHNOLOGY COLOPHON
 
