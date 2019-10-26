@@ -17,7 +17,7 @@ const distPath = config.build.outputPath
 fse.emptyDirSync(distPath)
 
 // copy assets folder
-fse.copy(`./static`, `${distPath}`)
+fse.copy('./static', `${distPath}`)
 console.log('Copied static files\n')
 const buildHTML = async () => {
   try {
