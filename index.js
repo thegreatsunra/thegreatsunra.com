@@ -76,7 +76,7 @@ const buildHTML = async () => {
 
 const buildSass = () => {
   sass.render({
-    file: path.resolve(__dirname, './styles/main.scss'),
+    file: path.resolve(__dirname, './scss/main.scss'),
     includePaths: [path.resolve(__dirname, './node_modules')],
     outputStyle: 'compressed'
   }, (err, result) => {
