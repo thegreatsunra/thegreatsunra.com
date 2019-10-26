@@ -5,9 +5,9 @@
 /**
  * #SETTINGS
  */
-@import "inuit-defaults/settings.defaults";
-@import "inuit-functions/tools.functions";
-@import "inuit-mixins/tools.mixins";
+@import "inuitcss/inuit-defaults/settings.defaults";
+@import "inuitcss/inuit-functions/tools.functions";
+@import "inuitcss/inuit-mixins/tools.mixins";
 @import "tools.mixins";
 @import "tools.variables";
 // 18em = 288px
@@ -27,10 +27,10 @@ $mq-breakpoints: (
 /**
  * #GENERIC
  */
-@import "inuit-normalize/generic.normalize";
-@import "inuit-reset/generic.reset";
-@import "inuit-box-sizing/generic.box-sizing";
-@import "inuit-shared/generic.shared";
+@import "inuitcss/inuit-normalize/generic.normalize";
+@import "inuitcss/inuit-reset/generic.reset";
+@import "inuitcss/inuit-box-sizing/generic.box-sizing";
+@import "inuitcss/inuit-shared/generic.shared";
 
 /**
  * #ELEMENTS
@@ -38,14 +38,14 @@ $mq-breakpoints: (
 @import "elements.page";
 @import "elements.headings";
 @import "elements.links";
-@import "inuit-lists/base.lists";
-@import "inuit-images/base.images";
+@import "inuitcss/inuit-lists/base.lists";
+@import "inuitcss/inuit-images/base.images";
 
 /**
  * #OBJECTS
  */
 $inuit-list-bare-namespace: "o-";
-@import "inuit-list-bare/objects.list-bare";
+@import "inuitcss/inuit-list-bare/objects.list-bare";
 $layout-max-width: 59em;
 $enable-layout-max-width--sm: true;
 $layout-max-width--sm: 29.625em;
@@ -74,12 +74,12 @@ $enable-layout--center: true;
  /**
  * #TRUMPS
  */
-@import "inuit-clearfix/trumps.clearfix";
+@import "inuitcss/inuit-clearfix/trumps.clearfix";
 $inuit-enable-paddings:         true;
 $inuit-enable-paddings--small:  true;
 $inuit-enable-paddings--large:  true;
 $inuit-enable-margins:          true;
-@import "inuit-spacing/trumps.spacing";
+@import "inuitcss/inuit-spacing/trumps.spacing";
 @import "utilities.responsive";
 @import "utilities.helpers";
 @import "utilities.typography";
