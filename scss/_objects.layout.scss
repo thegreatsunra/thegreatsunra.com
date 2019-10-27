@@ -23,7 +23,7 @@ $layout-max-width--lg:      $layout-max-width !default;
 $layout-max-width--xl:      $layout-max-width !default;
 $inuit-base-spacing-unit:   24px !default; // likely 24px
 
-$layout-gutter:        ($inuit-base-spacing-unit / 2) !default;
+$layout-gutter:         ($inuit-base-spacing-unit / 2) !default;
 $layout-gutter--tiny:          quarter($layout-gutter) !default;
 $layout-gutter--small:           halve($layout-gutter) !default;
 $layout-gutter--large:          double($layout-gutter) !default;
@@ -50,7 +50,7 @@ $enable-layout-max-width--xl:   false !default;
   margin:  0;
   padding: 0;
   margin-left: -$layout-gutter;
-  margin-right:  -$layout-gutter;
+  margin-right: -$layout-gutter;
   max-width: $layout-max-width;
   @include clearfix;
   > .o-layout__item,
@@ -61,7 +61,7 @@ $enable-layout-max-width--xl:   false !default;
     position: relative;
     min-height: 1px;
     padding-left: $layout-gutter;
-    padding-right:  $layout-gutter;
+    padding-right: $layout-gutter;
     @include clearfix;
   }
 }

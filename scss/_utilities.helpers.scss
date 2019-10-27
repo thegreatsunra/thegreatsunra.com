@@ -37,7 +37,7 @@
 /**
  * Mute an object by reducing its opacity.
  */
-.u-muted{
+.u-muted {
     opacity: 0.5 !important;
     filter: alpha(opacity = 50) !important;
 }
@@ -49,7 +49,7 @@
    <p class=proceed><a href=#>Read more...</a></p>
  *
  */
-.u-proceed{
+.u-proceed {
   text-align: right !important;
 }
 
@@ -60,7 +60,7 @@
    <a href=# class=go>Read more</a>
  *
  */
-.u-go:after{
+.u-go:after {
   content: "\00A0" "\00BB" !important;
 }
 
@@ -68,6 +68,6 @@
 /**
  * Apply capital case to an element (usually a `strong`).
  */
-.u-caps{
+.u-caps {
   text-transform: uppercase !important;
 }
