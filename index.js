@@ -17,7 +17,7 @@ const distPath = config.build.outputPath
 fse.emptyDirSync(distPath)
 
 // copy assets folder
-fse.copy(`./static`, `${distPath}`)
+fse.copy('./static', `${distPath}`)
 console.log('Copied static files\n')
 const buildHTML = async () => {
   try {
@@ -82,7 +82,7 @@ const buildSass = () => {
   }, (err, result) => {
     if (!err) {
       fse.mkdirs(path.resolve(__dirname, './dist/styles/')).then(() => {
-      // No errors during the compilation, write this result on the disk
+        // No errors during the compilation, write this result on the disk
         fse.writeFile(path.resolve(__dirname, './dist/styles/main.css'), result.css, (err) => {
           if (!err) {
             console.log('\nGenerated main.css\n')
