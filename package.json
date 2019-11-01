@@ -1,7 +1,7 @@
 {
   "name": "thegreatsunra-bem",
   "private": true,
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Source code for thegreatsunra.com",
   "author": "Dane Petersen",
   "engines": {
@@ -16,7 +16,7 @@
     "front-matter": "^3.0.2",
     "fs-extra": "^8.1.0",
     "glob": "^7.1.5",
-    "sass": "^1.23.1",
+    "sass": "^1.23.3",
     "sass-mq": "^5.0.1"
   },
   "devDependencies": {
