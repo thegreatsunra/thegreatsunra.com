@@ -1,6 +1,17 @@
+#########################
+### thegreatsunra.com ###
+#########################
+
 !.gitkeep
 
+# all images
+/static/images/**
+# except layout images
+!/static/images/layout/**
+
+############
 ### Node ###
+############
 
 # Logs
 logs
