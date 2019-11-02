@@ -6,7 +6,7 @@ portfolioIsActive: true
 
 <h1 class="c-page-title--large c-page-title--huge@lg">Filament Cloud Infrastructure</h1>
 
-<h3 class="c-page-title">While working remotely at Filament, I built an end-to-end cloud infrastructure using AWS, Terraform, Node and Vue to help us test, validate and deploy our industrial-strength GPS tracking&nbsp;hardware.</h3>
+<h3 class="c-page-title">While working remotely at Filament, I built an end-to-end cloud infrastructure using AWS, Terraform, Node and Vue to help us test, validate and deploy our industrial-strength GPS tracking&nbsp;hardware. <a href="https://github.com/thegreatsunra/aws-terraform-iot" rel="external" class="u-go">View the open-sourced code</a></h3>
 <hr class="o-separator">
 <div class="o-layout">
   <div class="o-layout__item u-6/12@md u-push-6/12@md">
@@ -51,12 +51,12 @@ portfolioIsActive: true
       <li>An “infrastructure as code” configuration, written with Terraform, which allows us to quickly, consistently and repeatedly spin up our entire end-to-end cloud infrastructure with as little manual effort as possible.</li>
     </ul>
 
-    <p>If you enjoy code, <a href="https://github.com/thegreatsunra/aws-terraform-iot">I open-sourced much of the infrastructure</a> and put it up on GitHub. If words are more your speed, please read on!</p>
+    <p>If you enjoy code, <a href="https://github.com/thegreatsunra/aws-terraform-iot" rel="external">I open-sourced much of the infrastructure</a> and put it up on GitHub. If words are more your speed, please read on!</p>
   </div>
   <div class="o-layout__item u-clear-both u-8/12@md">
     <h3>The Mesh</h3>
 
-    <p><a href="http://telehash.org/">Using a protocol called telehash</a>, Filament devices are able to self-organize and form an encrypted mesh network with each other without requiring predefined roles or routes. Filament builds the hardware and writes the device firmware that makes this magic happen.</p>
+    <p><a href="http://telehash.org/" rel="external">Using a protocol called telehash</a>, Filament devices are able to self-organize and form an encrypted mesh network with each other without requiring predefined roles or routes. Filament builds the hardware and writes the device firmware that makes this magic happen.</p>
 
     <h3>The Bridge</h3>
 
@@ -66,25 +66,25 @@ portfolioIsActive: true
     <h3>The Gateway</h3>
   </div>
   <div class="o-layout__item u-clear-both u-3/12@md u-push-9/12@md">
-    <p><a href="https://www.raspberrypi.org/"><img src="/images/filamentinfrastructure/raspberry-pi.png" alt="Raspberry Pi logo, sketched"></a></p>
+    <p><a href="https://www.raspberrypi.org/" rel="external"><img src="/images/filamentinfrastructure/raspberry-pi.png" alt="Raspberry Pi logo, sketched"></a></p>
   </div>
   <div class="o-layout__item u-9/12@md u-pull-3/12@md">
-    <p>The Filament bridge device is connected to a gateway via USB, which it uses for both data transfer and power. The gateway hardware is simply some form of computer, and could be anything from a <a href="https://www.raspberrypi.org/">Raspberry Pi</a>, to someone’s Mac or PC, to a tried-and-true industrial gateway device like the <a href="https://www.advantech.com/products/bda911fe-28bc-4171-aed3-67f76f6a12c8/utx-3115/mod_fa00d5cd-7d2b-430b-8983-c232bfb9f315">Advantech UTX-3115</a>.</p>
+    <p>The Filament bridge device is connected to a gateway via USB, which it uses for both data transfer and power. The gateway hardware is simply some form of computer, and could be anything from a <a href="https://www.raspberrypi.org/">Raspberry Pi</a>, to someone’s Mac or PC, to a tried-and-true industrial gateway device like the <a href="https://www.advantech.com/products/bda911fe-28bc-4171-aed3-67f76f6a12c8/utx-3115/mod_fa00d5cd-7d2b-430b-8983-c232bfb9f315" rel="external">Advantech UTX-3115</a>.</p>
 
     <p>With our cloud infrastructure we assume that the gateway has internet connectivity, either through Ethernet, Wi-Fi, a cellular modem, or a MiFi hotspot. The Filament SDK and a corresponding gateway app are necessary for shepherding sensor data from a Filament bridge device to some form of storage via the gateway hardware.</p>
   </div>
   <div class="o-layout__item u-clear-both u-3/12@md u-push-9/12@md">
-    <p><a href="https://nodejs.org/"><img src="/images/filamentinfrastructure/node.png" alt="NodeJS logo, sketched"></a></p>
+    <p><a href="https://nodejs.org/" rel="external"><img src="/images/filamentinfrastructure/node.png" alt="NodeJS logo, sketched"></a></p>
   </div>
   <div class="o-layout__item u-8/12@md u-pull-3/12@md">
-    <p>Written in Javascript, the SDK runs anywhere we can run <a href="https://nodejs.org/">NodeJS</a>, which means I’ve built gateway apps that run inside a native macOS/Windows app built with <a href="https://electronjs.org/">Electron</a>, execute directly on a Raspberry Pi, or deploy to multiple hardware platforms via BalenaCloud (née Resin.io).</p>
+    <p>Written in Javascript, the SDK runs anywhere we can run <a href="https://nodejs.org/" rel="external">NodeJS</a>, which means I’ve built gateway apps that run inside a native macOS/Windows app built with <a href="https://electronjs.org/" rel="external">Electron</a>, execute directly on a Raspberry Pi, or deploy to multiple hardware platforms via BalenaCloud (née Resin.io).</p>
   </div>
   <div class="o-layout__item u-clear-both u-4/12@md u-push-8/12@md">
-    <p><a href="https://www.balena.io/"><img src="/images/filamentinfrastructure/balena.png" alt="Balena (formerly Resin.io) logo, sketched"></a></p>
+    <p><a href="https://www.balena.io/" rel="external"><img src="/images/filamentinfrastructure/balena.png" alt="Balena (formerly Resin.io) logo, sketched"></a></p>
   </div>
   <div class="o-layout__item u-8/12@md u-pull-4/12@md">
-    <p>In the case of our cloud infrastructure, most Filament teams used Raspberry Pis as their gateway devices (there were exceptions… there are <em>always</em> exceptions!). Since Filament is a distributed company with team members in Reno, Tahoe, Minneapolis, Denver and San Francisco, I immediately needed a way to remotely deploy and manage the multitude of gateway devices and apps across our company sites. <a href="https://www.balena.io/">BalenaCloud</a> proved essential for this purpose, and even allowed me to remotely support our sales team as they did onsite demos for customers across the country.</p>
-    <p>A gateway is only useful if it can send its oncoming sensor data somewhere. While we used AWS for our cloud infrastructure, over the course of product development at Filament I built remote integrations for robust data solutions like Microsoft SQL Server and <a href="https://www.losant.com/">Losant</a>, lightweight local integrations using SQLite, and the occasional raw integration using sockets or webhooks.</p>
+    <p>In the case of our cloud infrastructure, most Filament teams used Raspberry Pis as their gateway devices (there were exceptions… there are <em>always</em> exceptions!). Since Filament is a distributed company with team members in Reno, Tahoe, Minneapolis, Denver and San Francisco, I immediately needed a way to remotely deploy and manage the multitude of gateway devices and apps across our company sites. <a href="https://www.balena.io/" rel="external">BalenaCloud</a> proved essential for this purpose, and even allowed me to remotely support our sales team as they did onsite demos for customers across the country.</p>
+    <p>A gateway is only useful if it can send its incoming sensor data somewhere. While we used AWS for our cloud infrastructure, over the course of product development at Filament I built remote integrations for robust data solutions like Microsoft SQL Server and <a href="https://www.losant.com/" rel="external">Losant</a>, lightweight local integrations using SQLite, and the occasional raw integration using sockets or webhooks.</p>
   </div>
   <div class="o-layout__item u-clear-both">
     <h3>The “Cloud”</h3>
@@ -95,11 +95,11 @@ portfolioIsActive: true
       </p>
     </div>
     <div class="o-layout__item u-8/12@md u-pull-4/12@md">
-      <p>For our cloud infrastructure, I used <a href="https://aws.amazon.com/iot/">AWS IoT</a> to “bless” every authorized gateway device with a certificate so it could send up sensor data via a secure connection. When a device message arrives at AWS, a rule sends it along to an <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> function written in Node that parses and acts on it, adding a record to the events table at <a href="https://aws.amazon.com/dynamodb/">AWS DynamoDB</a>, and adding/updating the device’s corresponding status in the devices table as necessary.</p>
+      <p>For our cloud infrastructure, I used <a href="https://aws.amazon.com/iot/" rel="external">AWS IoT</a> to “bless” every authorized gateway device with a certificate so it could send up sensor data via a secure connection. When a device message arrives at AWS, a rule sends it along to an <a href="https://aws.amazon.com/lambda/" rel="external">AWS Lambda</a> function written in Node that parses and acts on it, adding a record to the events table at <a href="https://aws.amazon.com/dynamodb/" rel="external">AWS DynamoDB</a>, and adding/updating the device’s corresponding status in the devices table as necessary.</p>
 
-      <p>I used <a href="https://aws.amazon.com/api-gateway/">AWS API Gateway</a> to expose an API that allows us to interface with the data stored in AWS DynamoDB, taking inspiration from the <a href="https://api.slack.com/">Slack API</a> for the format and structure of our own endpoints. Each API request maps to a Lambda function that does the heavy-lifting of handling input, executing the query, and returning the results.</p>
+      <p>I used <a href="https://aws.amazon.com/api-gateway/" rel="external">AWS API Gateway</a> to expose an API that allows us to interface with the data stored in AWS DynamoDB, taking inspiration from the <a href="https://api.slack.com/" rel="external">Slack API</a> for the format and structure of our own endpoints. Each API request maps to a Lambda function that does the heavy-lifting of handling input, executing the query, and returning the results.</p>
 
-      <p>Access to the API itself is secured via <a href="https://aws.amazon.com/cognito/">AWS Cognito</a>, so that only authorized agents, such as logged-in users, are allowed to execute requests against the API.</p>
+      <p>Access to the API itself is secured via <a href="https://aws.amazon.com/cognito/" rel="external">AWS Cognito</a>, so that only authorized agents, such as logged-in users, are allowed to execute requests against the API.</p>
     </div>
     <div class="o-layout__item u-clear-both">
       <h3>The Web App</h3>
@@ -108,12 +108,12 @@ portfolioIsActive: true
     </div>
     <div class="o-layout__item u-4/12@md u-push-8/12@md">
       <p class="u-text-center">
-        <img src="/images/filamentinfrastructure/vue.png" alt="VueJS logo, sketched" style="width: 33.3333333%;"><br>
-        <img src="/images/filamentinfrastructure/mapbox.png" alt="Mapbox logo, sketched">
+        <a href="https://vuejs.org/" rel="external"><img src="/images/filamentinfrastructure/vue.png" alt="VueJS logo, sketched" style="width: 33.3333333%;"></a><br>
+        <a href="https://www.mapbox.com/" rel="external"><img src="/images/filamentinfrastructure/mapbox.png" alt="Mapbox logo, sketched"></a>
       </p>
     </div>
     <div class="o-layout__item u-8/12@md u-pull-4/12@md">
-      <p>Using <a href="https://vuejs.org/">VueJS</a> and <a href="https://www.mapbox.com/">Mapbox</a>, I built a mobile-first, responsive web app that plots the current or last-known location for all our devices on a map. The app renders down to static HTML, CSS and Javascript for easy hosting on <a href="https://aws.amazon.com/s3/">AWS S3</a> or any static hosting provider, and is secured with AWS Cognito so that only authorized users can log in and use it. All device data displayed in the web app comes directly from our API, using <a href="https://github.com/axios/axios">Axios</a> to make authorized requests with the logged-in user’s Cognito token.</p>
+      <p>Using <a href="https://vuejs.org/" rel="external">VueJS</a> and <a href="https://www.mapbox.com/" rel="external">Mapbox</a>, I built a mobile-first, responsive web app that plots the current or last-known location for all our devices on a map. The app renders down to static HTML, CSS and Javascript for easy hosting on <a href="https://aws.amazon.com/s3/" rel="external">AWS S3</a> or any static hosting provider, and is secured with AWS Cognito so that only authorized users can log in and use it. All device data displayed in the web app comes directly from our API, using <a href="https://github.com/axios/axios" rel="external">Axios</a> to make authorized requests with the logged-in user’s Cognito token.</p>
     </div>
     <div class="o-layout__item">
     <p>
@@ -136,18 +136,18 @@ portfolioIsActive: true
     </p>
   </div>
   <div class="o-layout__item">
-    <p>Best of all, the map was cool, fun and just a little bit magical! Seeing all our devices across the country come together put a spring in our distributed team’s steps, and it was exciting over the following weeks and months to watch more and more new devices come online. We “knew” our devices only by their eight-character hash names, but to this day I still have a soft spot in my heart for <code>uxthswor</code>, <code>iglesggu</code>, <code>fxaq3wsf</code>, and their respective personalities.</p>
+    <p>Best of all, the map was cool, fun and just a little bit magical! Seeing all our devices across the country come together put a spring in our distributed team’s step, and it was exciting over the following weeks and months to watch more and more new devices come online. We “knew” our devices only by their eight-character hash names, but to this day I still have a soft spot in my heart for <code>uxthswor</code>, <code>iglesggu</code>, <code>fxaq3wsf</code>, and their respective personalities.</p>
   </div>
   <div class="o-layout__item">
     <h3>Infrastructure As Code</h3>
   </div>
   <div class="o-layout__item u-4/12@md u-push-8/12@md">
-    <p class="u-text-center"><a href="https://www.terraform.io/"><img src="/images/filamentinfrastructure/terraform.png" alt="Terraform logo, sketched"></a></p>
+    <p class="u-text-center"><a href="https://www.terraform.io/" rel="external"><img src="/images/filamentinfrastructure/terraform.png" alt="Terraform logo, sketched"></a></p>
   </div>
   <div class="o-layout__item u-8/12@md u-pull-4/12@md">
     <p>It was extremely important to me that the process of creating our cloud infrastructure be well-documented and repeatable. Mashing buttons in the AWS console until something works is a great way to learn, but it’s not a great way to build a reliable, maintainable, “knowable” system.</p>
 
-    <p>I used <a href="https://www.terraform.io/">Terraform</a> to define, script and automate as much of our infrastructure as possible. I couldn’t automate everything, of course, and automation itself follows the law of diminishing returns. Some newer AWS services like Cognito had incomplete Terraform Providers, and some Providers had bugs that required workarounds. Some of those workarounds required I dip in and execute <a href="https://aws.amazon.com/cloudformation/">AWS CloudFormation</a> scripts from Terraform, and some of them had no script-able equivalent at all. I methodically documented everything, especially the things I couldn’t automate.</p>
+    <p>I used <a href="https://www.terraform.io/" rel="external">Terraform</a> to define, script and automate as much of our infrastructure as possible. I couldn’t automate everything, of course, and automation itself follows the law of diminishing returns. Some newer AWS services like Cognito had incomplete Terraform Providers, and some Providers had bugs that required workarounds. Some of those workarounds required I dip in and execute <a href="https://aws.amazon.com/cloudformation/" rel="external">AWS CloudFormation</a> scripts from Terraform, and some of them had no script-able equivalent at all. I methodically documented everything, especially the things I couldn’t automate.</p>
 
     <p>As a result of these efforts, it became trivial to spin up and maintain unique infrastructures in multiple environments for different purposes at Filament. We had a “development” environment, of course, which is where I worked day in and day out. I’d destroy and rebuild that environment multiple times a day, and anyone else who was trying to use it for anything was simply fooling themselves.</p>
 
@@ -159,14 +159,14 @@ portfolioIsActive: true
     <h3>Open source (most of) the things!</h3>
   </div>
   <div class="o-layout__item u-4/12@md u-push-8/12@md">
-    <p class="u-text-center"><a href="https://github.com/thegreatsunra/aws-terraform-iot"><img style="width: 66.666666%;" src="/images/filamentinfrastructure/github.png" alt="GitHub logo, sketched"></a></p>
+    <p class="u-text-center"><a href="https://github.com/thegreatsunra/aws-terraform-iot" rel="external"><img style="width: 66.666666%;" src="/images/filamentinfrastructure/github.png" alt="GitHub logo, sketched"></a></p>
   </div>
   <div class="o-layout__item u-8/12@md u-pull-4/12@md">
     <p>Sometimes, as in startups, as in life, it doesn’t quite work out. A couple months after I completed the initial implementation of our cloud infrastructure, Filament pivoted and we no longer needed it. As a company we took a deep breath, and as an individual I took the time to open source what I could from the infrastructure I had built.</p>
 
-    <p>All the hard parts of the cloud infrastructure, including the Terraform scripts themselves, <a href="https://github.com/thegreatsunra/aws-terraform-iot">are available on GitHub</a>. What’s hard and what’s interesting aren’t necessarily the same thing, of course. Much of the interesting stuff was specific to Filament device hardware, including real-time sensor data, device status, mesh health, GPS tracking, and that totally awesome map we all knew and loved.</p>
+    <p>All the hard parts of the cloud infrastructure, including the Terraform scripts themselves, <a href="https://github.com/thegreatsunra/aws-terraform-iot" rel="external">are available on GitHub</a>. What’s hard and what’s interesting aren’t necessarily the same thing, of course. Much of the interesting stuff was specific to Filament device hardware, including real-time sensor data, device status, mesh health, GPS tracking, and that totally awesome map we all knew and loved.</p>
 
-    <p>The GitHub repo has <a href="https://github.com/thegreatsunra/aws-terraform-iot/tree/develop/gateway">a lightweight gateway app</a> that demonstrates an AWS IoT integration, as well as <a href="https://github.com/thegreatsunra/aws-terraform-iot/tree/develop/app">a lightweight Vue app</a> that demonstrates logging in via Cognito and making API requests. Without our little devices and the inexplicable emotional attachment that comes from laboring over them, however, I don’t know how much the code on GitHub will mean to you.</p>
+    <p>The GitHub repo has <a href="https://github.com/thegreatsunra/aws-terraform-iot/tree/develop/gateway" rel="external">a lightweight gateway app</a> that demonstrates an AWS IoT integration, as well as <a href="https://github.com/thegreatsunra/aws-terraform-iot/tree/develop/app" rel="external">a lightweight Vue app</a> that demonstrates logging in via Cognito and making API requests. Without our little devices and the inexplicable emotional attachment that comes from laboring over them, however, I don’t know how much the code on GitHub will mean to you.</p>
 
     <p>It simply means a lot to me.</p>
   </div>
