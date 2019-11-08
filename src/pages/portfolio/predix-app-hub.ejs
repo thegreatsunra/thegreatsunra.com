@@ -1,0 +1,122 @@
+---
+title: "Responsive UI for Predix App Hub"
+slug: "predixapphub"
+portfolioIsActive: true
+---
+
+<h1 class="c-page-title--large c-page-title--huge@lg">Responsive UI for Predix App Hub</h1>
+
+<h3 class="c-page-title">While working at GE Digital I built the responsive UI for App Hub, an architecture that lets developers build and deliver large web applications as a series of discrete microapps.</h3>
+<hr class="o-separator">
+<div class="o-layout">
+  <div class="o-layout__item u-12/12@md">
+    <img src="/images/predixapphub/macbook.png" alt="Screenshot of the Predix App Hub UI" class="c-img">
+  </div>
+  <div class="o-layout__item u-8/12@xs u-push-2/12@md u-6/12@md">
+    <img src="/images/predixapphub/ipad.png" alt="Screenshot of the Predix App Hub UI" class="c-img">
+  </div>
+  <div class="o-layout__item u-4/12@xs u-3/12@md u-push-2/12@md">
+    <img src="/images/predixapphub/iphone.png" alt="Screenshot of the Predix App Hub UI" class="c-img">
+  </div>
+  <div class="o-layout__item">
+    <h2>The Challenge</h2>
+  </div>
+  <div class="o-layout__item u-4/12@md u-push-8/12@md">
+    <img src="/images/predixapphub/ge-predix.png" alt="GE and Predix Logos" class="c-img">
+  </div>
+  <div class="o-layout__item u-8/12@md u-pull-4/12@md">
+    <p><a href="https://www.ge.com/digital/applications/asset-performance-management" rel="external">Predix APM</a> is GE Digital’s flagship asset performance management product that helps customers remotely monitor and optimize their industrial equipment.</p>
+
+    <p>As the capabilities of Predix APM grew, from a focused product for the energy sector to a suite of solutions for any company that manages industrial assets, the complexity of the front-end code grew in kind. Dozens of UI engineers on the Predix APM team found themselves building distinct application modules, each with their own unique requirements and dependencies.</p>
+    
+    <p>Due to architectural constraints, the entire Predix APM front-end team was required to commit their code to a single repository, and build and release the UI as a single monolithic web app. This led to frustration across teams as dependencies between modules would often conflict, and a disappointing experience for end users as loading the entire application suite at once led to poor performance and stability.</p>
+  </div>
+  <div class="o-layout__item">
+    <h2>The Solution</h2>
+  </div>
+  <div class="o-layout__item u-8/12@md">
+    <p>I joined a small team where I helped build GE Digital’s App Hub architecture, which empowers engineering teams to break their large monolithic web apps into smaller “microapps” that are seamlessly combined at runtime into a single unified experience for the end user.</p>
+
+    <p>Each microapp is a standalone web application, complete with its own dependencies and build pipeline, which is then “proxied” into the App Hub via a lightweight <a href="https://expressjs.com/" rel="external">Express</a> app that handles authentication, authorization and templating. My core responsibility on the App Hub team was building the layout UI that displays all global application elements, including navigation and notifications, and wraps around each and every microapp.</p>
+
+    <p>I worked closely with the Predix APM UX team to ensure not only that the App Hub UI was a pixel-perfect representation of their designs, but that its interactions reflected their intent as well. The UI is fully responsive across mobile, tablet and desktop breakpoints, and I followed a mobile-first methodology for organizing classes, styles and behaviors.</p>
+  </div>
+  <div class="o-layout__item">
+    <h3>Constrained by known unknowns.</h3>
+  </div>
+  <div class="o-layout__item u-8/12@md">
+    <p>My code for the App Hub UI was deeply informed by unknowns. We deliberately built the architecture so that just about anything at all could be a microapp and rendered within the App Hub, from a static HTML page to an Angular app, to a jQuery site, to a Predix-themed version of Bootstrap, to an app built entirely with <a href="https://predix-ui.com/" rel="external">Predix UI Polymer components</a>.</p>
+
+    <p>Given these unknowns, I had to tread carefully with my CSS and Javascript to ensure it wouldn’t conflict with any definitions that might be in a microapp. Likewise, my code had to be robust enough to withstand unexpected global behaviors that might spill out of a microapp, while leaving space to be overridden when a microapp developer really <em>really</em> means what their code is saying.</p>
+  </div>
+  <div class="o-layout__item">
+    <h3>Mobile-first Sass, with a class syntax to match.</h3>
+  </div>
+  <div class="o-layout__item u-6/12@xs u-3/12@md u-push-8/12@md">
+    <img src="/images/predixapphub/sass.png" alt="Sass Logo" class="c-img">
+  </div>
+  <div class="o-layout__item u-8/12@md u-pull-3/12@md">
+    <p>I authored the App Hub UI styles in <a href="https://sass-lang.com/" rel="external">Sass</a>, taking care to implement reasonable defaults while avoiding global definitions that might lead to unexpected behavior within a microapp. I built the layout in a mobile-first, responsive fashion, using a namespace prefix to avoid style collisions, <a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss" rel="external">ITCSS</a> to rationalize source order, and <a href="http://getbem.com/introduction/" rel="external">BEM syntax</a> to clearly articulate relationships between elements.</p>
+
+    <p>Writing “mobile-first” styles means that all the base styles and classes of the App Hub UI are applied universally, at the narrowest breakpoint. Any unique layouts or behaviors at wider breakpoints are layered on top of those base styles. Rather than implicitly altering the style of a class based on breakpoint, I embraced <a href="https://csswizardry.com/2015/03/immutable-css/" rel="external">immutability</a> and implemented these additional styles as explicit classes for their respective elements, extending the “modifier” piece of “block, element, modifier” with a “responsive modifier” syntax.</p>
+
+    <p>For example, a drawer that’s hidden (by default) on mobile, narrow on tablet, and wide on desktop might look like <code>&lt;nav class="drawer drawer--narrow@md drawer--wide@lg"&gt;</code>. While verbose, this syntax allows other developers to quickly understand how the App Hub UI behaves across multiple breakpoints simply by reviewing the HTML markup.</p>
+
+    <p>In the end, a bevvy of design components underlie the seemingly straightforward App Hub layout, including a fully responsive drawer, microapp navigation and sub-navigation, item badges, loading indicators, menus for user and application settings, alert toasts, and a notification center for managing persistent alerts. The App Hub UI even includes a “flipped” layout that supports right-to-left languages, which is elegantly implemented by changing a simple configuration variable in Sass.</p>
+  </div>
+  <div class="o-layout__item">
+    <h3>Javascriptin’ like it’s 1999.</h3>
+  </div>
+  <div class="o-layout__item u-8/12@md">
+    <p>In terms of Javascript, I worked pretty close to the metal due to the constraints and variability inherent in wrapping microapps. The App Hub code can’t use any external Javascript dependencies, for example, because those dependencies might conflict with a dependency (or even a specific <em>version</em> of a dependency) in a microapp. Teams across GE Digital managed their application dependencies in a variety of ways, so NPM, Bower, JSPM and plain ol’ <code>/lib</code> folders and script tags were all within the realm of possibility. Different teams were writing different flavors of Javascript using different transpilers, bundlers and build pipelines, so I had to be careful not to run afoul of those as well.</p>
+
+    <p>Finally, since support for Internet Explorer 11 was a requirement, I ultimately found myself writing the App Hub UI in plain vanilla ES5 Javascript with no external libraries or transpilers. This turned out to be fairly straightforward when the Javascript was simply for managing popover menus, responsive behavior and layout state, but it got more complex as I implemented a global event-based toast and notification system. Fortunately, a robust linting strategy kept me and my code honest even when the going got toughest.</p>
+  </div>
+  <div class="o-layout__item">
+    <h3>Testing the units, the end-to-ends, the manuals…</h3>
+  </div>
+  <div class="o-layout__item u-8/12@md">
+    <p>To keep my nose clean while building, updating and refactoring the App Hub UI, I wrote unit tests with <a href="https://mochajs.org/" rel="external">Mocha</a> and <a href="https://www.chaijs.com/" rel="external">Chai</a>, and end-to-end tests with <a href="https://protractor.angular.io/" rel="external">Protractor</a> and <a href="https://www.seleniumhq.org/" rel="external">Selenium</a>. While <a href="https://nightwatchjs.org/" rel="external">Nightwatch</a> or <a href="https://www.cypress.io/">Cypress</a href> are more suitable options for today’s end-to-end testing, it’s a little-known fact that back in the day you could use Protractor to test web apps written in any technology, not just Angular.</p>
+  </div>
+  <div class="o-layout__item">
+    <img src="/images/predixapphub/device-testing.jpg" alt="The App Hub UI on a Surface Pro, Moto G4, iPhone 8, and Shield tablet" class="c-img c-img--rounded">
+
+    <div class="c-img__caption">From left to right, the App Hub UI on a Microsoft Surface Pro tablet in Internet Explorer 11, a Moto G4 Android phone, an iPhone 8, and an NVIDIA Shield Android tablet</div>
+
+    <p>I did extensive manual testing on the App Hub UI as well, regularly mashing it by hand on actual macOS, Windows, Windows Touch, iPhone, iPad, Android phone and Android tablet hardware.</p>
+  </div>
+  <div class="o-layout__item">
+    <h3>Writing it down to remember it now. And later.</h3>
+  </div>
+  <div class="o-layout__item u-8/12@md">
+    <p>I took pains to carefully document the App Hub UI, creating a microapp in its own right that contains numerous pages of usage examples, and details all the available states of individual components. I also commented my Sass and Javascript code so that in addition to hand-crafted documentation, we could auto-generate documentation using <a href="http://sassdoc.com/" rel="external">SassDoc</a> and <a href="https://jsdoc.app/" rel="external">JSDoc</a> as well.</p>
+  </div>
+  <div class="o-layout__item">
+    <h2>App Hub + APM FTW!</h2>
+  </div>
+  <div class="o-layout__item u-8/12@md">
+    <p>In July 2016, the Predix APM team officially migrated their application to our App Hub architecture, finished splitting their monolith into microapps, and launched the refactored version of Predix APM to production. Over the following months, numerous other teams at GE Digital would adopt the App Hub architecture and begin building microapps as well.</p>
+  </div>
+  <div class="o-layout__item">
+    <hr class="o-separator">
+  </div>
+  <div class="o-layout__item">
+    <h3 class="c-project-metadata__title">Project Responsibilities</h3>
+    <p>Strategy, Architecture, Development, Testing, Documentation</p>
+
+    <h3 class="c-project-metadata__title">Project Technologies</h3>
+    <p>HTML, CSS, Javascript, Sass, Gulp, Node, Express</p>
+
+    <h3 class="c-project-metadata__title">Project Team</h3>
+    <p>
+      Hiren Adesara<br>
+      Pete Butler<br>
+      Minh Dang<br>
+      Victor Hsu<br>
+      Dane Petersen<br>
+      Ben Sykes
+    </p>
+    <h3 class="c-project-metadata__title">Project Timeline</h3>
+    <p>March – December 2016</p>
+  </div>
+</div>
