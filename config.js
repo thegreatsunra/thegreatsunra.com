@@ -1,6 +1,6 @@
 const config = {
   site: {
-    title: 'Dane Petersen (thegreatsunra)',
+    title: 'Dane Petersen',
     author: 'Dane Petersen',
     year: '2019',
     basePath: ''
