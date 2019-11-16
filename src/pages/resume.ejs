@@ -10,177 +10,250 @@ resumeIsActive: true
 
 <div class="o-layout">
   <div class="o-layout__item u-9/12@md">
-
     <h3 class="c-resume__title">Senior Interaction Designer</h3>
-    <p class="c-resume__metadata"><a href="https://geaviation.com/" rel="external">GE Aviation</a>, Minneapolis, MN<br>
-      April 2018 – October 2019</p>
-
-    <p>Worked with the GE Aviation Fleet Support team to strategize, design and build Fleet Monitor X, a next-generation diagnostics suite for monitoring a global fleet of more than 24,000 aircraft and 56,000 engines. Used Node to generate large sets of realistic, random data to power complex, responsive prototypes built in Vue and Vuetify, which were then rapidly integrated with real data from back-end services.</p>
-
+    <p class="c-resume__metadata">
+      <a href="https://geaviation.com/" rel="external">GE Aviation</a>, Minneapolis, MN<br>
+      April 2018 – October 2019
+    </p>
+    <p>Worked with the GE Aviation Fleet Support team to strategize, design and build Fleet Monitor X, a diagnostics suite that consolidates twenty separate tools for monitoring a global fleet of more than 24,000 aircraft and 56,000 engines.</p>
+    <p>Used Node to generate large sets of realistic fake data to power complex, responsive prototypes built in Vue and Vuetify, which could be rapidly integrated with real data from back-end services.</p>
     <h3 class="c-resume__title">Senior Design Technologist</h3>
-    <p class="c-resume__metadata"><a href="https://filament.com/" rel="external">Filament</a>, Minneapolis, MN<br>
-      January 2017 – March 2018</p>
-
-    <p>Filament builds hardware for the industrial internet of things that allows assets to wirelessly and securely talk to each other. As Filament’s design technologist I built cross-platform apps for managing hardware, “headless” apps for connecting to mesh networks, and cloud infrastructures for securely transmitting and storing asset data.</p>
-
-    <p>I got it done with Node, Electron, Cordova, Webpack, Vue.js, Resin.io, AWS, and Terraform.</p>
-
-    <p>Using AWS and Terraform, I built a readily scalable and deployable cloud infrastructure that securely connects to a Filament network and receives, stores, and publishes device data for authorized agents. Components include AWS IoT for connecting to Filament gateways, DynamoDB, API Gateway, Lambda for processing device reports and API requests, Cognito for authorizing users and securing access to the API, and S3 for web hosting.</p>
-
-    <p>Using Node, I wrote a gateway script that connects to a Filament mesh network and sends device reports to any configured integration, including AWS IoT, Microsoft SQL Server, Losant, and Socket.io. I packaged the script to function in numerous contexts, including on a Raspberry Pi, inside a Docker container, deployed remotely via Resin.io, and embedded in a desktop app.</p>
-
-    <p>I built a mobile progressive web app, secured by AWS Cognito and populated with data from API Gateway, that allows users to quickly activate a new Filament device. Capabilities include scanning a QR code on a device, confirming connectivity, visualizing the status of the Filament network and all known devices, and displaying devices on a map.</p>
-
-    <p>With Electron, I built a desktop app for macOS and Windows that enables users to connect directly to a Filament network and visualize the status and sensor data of all known devices. Using Cordova, I created a cross-platform iOS and Android app that allows users to discover and connect directly to a Filament device over Bluetooth.</p>
-
+    <p class="c-resume__metadata">
+      <a href="https://filament.com/" rel="external">Filament</a>, Minneapolis, MN<br>
+      January 2017 – March 2018
+    </p>
+    <p>Filament builds edge hardware for the industrial internet that allows assets to wirelessly and securely talk to each other. As Filament’s design technologist I built cross-platform apps for managing hardware, “headless” apps for connecting to mesh networks, and cloud infrastructures for securely transmitting and storing asset data.</p>
+    <p>Using AWS and Terraform, I built a <a href="/portfolio/filament-infrastructure">scalable cloud infrastructure</a> that securely connects to a Filament mesh network and receives, stores, and publishes device data for authorized agents. Components included AWS IoT for connecting to Filament gateway devices, Lambda for processing device reports and API requests, Cognito for securing API access and authorizing users, DynamoDB, API Gateway, and S3 for hosting a web app secured with Cognito and written in Vue and Mapbox.</p>
+    <p>Using Node, I wrote a gateway script that connects to a Filament mesh network and sends device reports to any configured integration, including AWS IoT, Microsoft SQL Server, Losant, and Socket.io. I packaged the script to function in numerous contexts, including on a Raspberry Pi, inside a Docker container, deployed remotely via BalenaCloud (née Resin.io), and embedded in a desktop app.</p>
+    <p>I built a mobile progressive web app, secured by AWS Cognito and populated with data from API Gateway, that allows users to quickly activate a new Filament device. Capabilities included scanning a QR code on a device, confirming Filament mesh network connectivity, visualizing the status of the mesh network and all known devices, and displaying devices on a map.</p>
     <h3 class="c-resume__title">Senior Staff Software Designer</h3>
-    <p class="c-resume__metadata"><a href="https://www.ge.com/digital" rel="external">GE Digital</a>, Minneapolis, MN<br>
-      April 2016 – December 2016</p>
-    <p>As a senior staff designer/developer, I developed the mobile-first, responsive design framework for Predix APM, GE Digital’s flagship application for industrial monitoring and diagnostics, which redeployed to production in July 2016.</p>
-    <p>Worked closely with the Predix APM UX team to build and release responsive toast and notification capabilities, work that included a messaging API.</p>
-    <p>Coached teams on advanced web application engineering practices including Node tooling, Sass, BEM syntax, and object-oriented CSS.</p>
+    <p class="c-resume__metadata">
+      <a href="https://www.ge.com/digital" rel="external">GE Digital</a>, Minneapolis, MN<br>
+      April 2016 – December 2016
+    </p>
+    <p>Developed the mobile-first, responsive <a href="/portfolio/predix-app-hub">design framework for Predix APM</a>, GE Digital’s flagship application for industrial monitoring and diagnostics, which deployed to production in July 2016.</p>
+    <p>Worked closely with the Predix APM UX team to build and release responsive toast and notification capabilities.</p>
+    <p>Coached front-end teams on advanced web application engineering practices including Node tooling, Sass, BEM syntax, and object-oriented CSS.</p>
     <h3 class="c-resume__title">Senior Staff Interaction Designer</h3>
-    <p class="c-resume__metadata"><a href="https://www.ge.com/digital" rel="external">GE Digital</a>, San Ramon, CA<br>
-      April 2015 – April 2016</p>
+    <p class="c-resume__metadata">
+      <a href="https://www.ge.com/digital" rel="external">GE Digital</a>, San Ramon, CA<br>
+      April 2015 – April 2016
+    </p>
     <p>Worked closely with members of GE Aviation leadership to strategize, design, and deliver platform capabilities that address critical business needs around user collaboration, remote diagnostics, and industrial asset lifecycle management.</p>
-    <p>Helped release Fleet Monitor, a web application for monitoring near-real-time performance of jet engines, into production for hundreds of airline operation centers.</p>
-
-    <p>Conceptualized, prototyped, and gained executive buy-in for 1Fleet Dashboard, a tablet-first view into near-real-time fleet metrics for Aviation leaders. Led a small UX team to refine the application design, used CSS, JavaScript and D3 to build visualization widgets alongside the engineering team, and deployed 1Fleet for use by GE Aviation leadership.</p>
+    <p>Helped release <a href="/portfolio/fleet-monitor">Fleet Monitor</a>, a web application for remotely monitoring jet engines, into production for hundreds of airline operation centers.</p>
+    <p>Conceptualized, prototyped, and gained executive buy-in for 1Fleet Dashboard, a tablet-first view into fleet metrics for Aviation leaders. Led a small UX team to refine the application design, built visualization widgets alongside the engineering team using CSS, JavaScript and D3, and deployed 1Fleet for use by GE Aviation leadership.</p>
     <h3 class="c-resume__title">Lead Interaction Designer</h3>
-    <p class="c-resume__metadata"><a href="https://www.ge.com/digital" rel="external">GE Digital</a>, San Ramon, CA<br>
-      April 2013 – March 2015</p>
-    <p>Oversaw product strategy on multiple engagements with GE Aviation where I led the design, execution, and release of web applications for monitoring and maintaining jet engines.</p>
-    <p>As an embedded designer on agile development teams, I used Angular and a full-stack JavaScript environment to create rich prototypes that rapidly integrated with our back-end systems.</p>
-    <p>Created <a href="https://github.com/thegreatsunra/propeller" rel="external">Propeller.js</a>, a Node-based prototyping tool that enables code-savvy designers to build sharable data-backed prototypes using the native code of the GE Industrial Internet Design Extension.</p>
-    <p>Strategized, designed, prototyped, and helped release two major iterations of Fleet Monitor, a new tool used by the GE Aviation Fleet Support team to monitor more than 38,000 jet engines across the globe.</p>
+    <p class="c-resume__metadata">
+      <a href="https://www.ge.com/digital" rel="external">GE Digital</a>, San Ramon, CA<br>
+      April 2013 – March 2015
+    </p>
+    <p>Oversaw product strategy on multiple engagements with GE Aviation where I led the design, execution, and release of web applications for monitoring and maintaining jet engines. As an embedded designer on agile development teams, I used Angular and a full-stack JavaScript environment to create rich prototypes that rapidly integrated with our back-end systems.</p>
+    <p>Strategized, designed, prototyped, and helped release two major iterations of <a href="/portfolio/fleet-monitor">Fleet Monitor</a>, a new tool used by the GE Aviation Fleet Support team to monitor more than 38,000 jet engines across the globe.</p>
     <p>Designed, prototyped, and helped deploy Workscope Strategy Analyzer, a tool that allows GE Aviation to visualize tens of thousands of possible maintenance futures for a single jet engine, and identify the optimal workscope to perform on it.</p>
+    <p>Created <a href="https://github.com/thegreatsunra/propeller" rel="external">Propeller</a>, a Node-based prototyping tool that enables code-savvy designers to build sharable, data-backed prototypes using the native code of the <a href="/portfolio/industrial-internet">GE Industrial Internet Design System</a>.</p>
     <h3 class="c-resume__title">Experience Designer</h3>
-    <p class="c-resume__metadata"><a href="https://www.adaptivepath.com/" rel="external">Adaptive Path</a>, San Francisco, CA<br>
-      June 2010 – April 2013</p>
-    <p>Worked with clients including SK Telecom, Topsy Labs, U.N. Global Pulse, PG<span class="u-ampersand">&amp;</span>E, Nike, Aol, Duke Energy, Corporate Executive Board and Capital Group to strategize, design and build compelling user experiences. Work involved research planning and preparation, field interviews, research analysis, sketching, concepting, wireframing, prototyping, and facilitating hands-on design workshops with clients.</p>
-    <p>As a design technologist, took a leadership role on technology-focused client projects through planning, prototyping and delivering production-ready responsive front-end code.</p>
-    <p>Launched updated websites and content management systems for Adaptive Path’s MX and UX Week conferences, and helped launch a fresh Adaptive Path website.</p>
+    <p class="c-resume__metadata">
+      <a href="https://www.adaptivepath.com/" rel="external">Adaptive Path</a>, San Francisco, CA<br>
+      June 2010 – April 2013
+    </p>
+    <p>Worked with clients including Nike, Disney, SK Telecom, Topsy Labs, U.N. Global Pulse, PG<span class="u-ampersand">&amp;</span>E, Aol, Duke Energy, Corporate Executive Board and Capital Group to strategize, design, and build compelling user experiences. Work involved research planning and preparation, field interviews, research analysis, sketching, concepting, wireframing, prototyping, and facilitating hands-on design workshops with clients.</p>
+    <p>As a design technologist, took a leadership role on technology-focused client projects through planning, prototyping, and delivering production-ready responsive front-end code.</p>
+    <p>Launched <a href="/portfolio/adaptive-events">updated websites and content management systems</a> for Adaptive Path’s MX and UX Week conferences, and helped launch a brand new Adaptive Path website.</p>
     <h3 class="c-resume__title">Experience Design Associate</h3>
-    <p class="c-resume__metadata"><a href="https://www.adaptivepath.com/" rel="external">Adaptive Path</a>, San Francisco, CA<br>
-      June 2009 – August 2009</p>
-    <p>Worked as an experience design intern on client projects, including concept generation and wireframing for the Cerego Smart.fm iPhone app. Published to the Adaptive Path weblog regarding sketching and concept work. Developed and launched an updated Adaptive Path website and home page using HTML, CSS, JavaScript, and PHP.</p>
+    <p class="c-resume__metadata">
+      <a href="https://www.adaptivepath.com/" rel="external">Adaptive Path</a>, San Francisco, CA<br>
+      June 2009 – August 2009
+    </p>
+    <p>Worked as an experience designer on client projects, including concept generation and wireframing for the <a href="portfolio/smartfm-app">Cerego Smart.fm iPhone app</a>. Published to the Adaptive Path weblog regarding sketching and concept work.</p>
+    <p>Developed and launched an <a href="portfolio/adaptive-home">updated Adaptive Path website and home page</a> using HTML, CSS, JavaScript, and PHP.</p>
     <h3 class="c-resume__title">Web Director</h3>
-    <p class="c-resume__metadata"><a href="https://www.bigwinds.com/" rel="external">Big Winds</a>, Hood River, OR<br>
-      February 2007 – August 2008</p>
+    <p class="c-resume__metadata">
+      <a href="https://www.bigwinds.com/" rel="external">Big Winds</a>, Hood River, OR<br>
+      February 2007 – August 2008
+    </p>
     <p>Managed the online presence of the largest windsports shop in the United States, including e-commerce engine, online product catalog, copywriting, content management, photography, advertising, and search engine visibility.</p>
-    <p>Migrated website and commerce engine to a new hosting environment and a Ruby on Rails architecture. Continually improved website design, layout, and usability, helping drive the strongest online and offline sales in business history.</p>
+    <p><a href="/portfolio/bigwinds">Migrated website and e-commerce engine</a> to a new hosting environment and a Ruby on Rails architecture. Continually improved website design, layout, and usability, helping drive the strongest online and offline sales in business history.</p>
     <h3 class="c-resume__title">Freelance Web Designer <span class="u-ampersand">&amp;</span> Developer</h3>
-    <p class="c-resume__metadata">Brainside Out, Minneapolis, MN<br>
-      September 2005 – February 2007</p>
-    <p>Managed website strategy, creation and maintenance for over a dozen clients as an independent web designer and developer. Work included project management, standards-based website design, back-end and front-end development, copywriting, webhost migration, software customization, and content management.</p>
-    <p>As a guest lecturer, presented to upper-division web design courses at the University of Minnesota Duluth, discussing design processes and client management.</p>
+    <p class="c-resume__metadata">
+      Brainside Out, Minneapolis, MN<br>
+      September 2005 – February 2007
+    </p>
+    <p>Managed website strategy, creation, and maintenance for more than a dozen clients as an independent web designer and developer. Work included project management, standards-based website design, back-end and front-end development, copywriting, webhost migration, software customization, and content management.</p>
     <h3 class="c-resume__title">Web Developer</h3>
-    <p class="c-resume__metadata"><a href="https://www.bigwinds.com/" rel="external">Big Winds</a>, Hood River, OR<br>
-      January 2005 – May 2005</p>
+    <p class="c-resume__metadata">
+      <a href="https://www.bigwinds.com/" rel="external">Big Winds</a>, Hood River, OR<br>
+      January 2005 – May 2005
+    </p>
     <p>Rebuilt the front-end of the Big Winds e-commerce engine using standards-based design practices, and launched a new website design. Updated back-end code and administrative sections to support new products and categories.</p>
-    <h3 class="c-resume__title">Web Support Specialist</h3>
-    <p class="c-resume__metadata"><a href="https://www.alpineinternet.com/" rel="external">Alpine Internet Solutions</a>, Bend, OR<br>
-      January 2004 – January 2005</p>
+    <h3 class="c-resume__title">Web Designer</h3>
+    <p class="c-resume__metadata">
+      <a href="https://www.alpineinternet.com/" rel="external">Alpine Internet Solutions</a>, Bend, OR<br>
+      January 2004 – January 2005
+    </p>
     <p>Involved in the design, development, launch, and maintenance of more than thirty client websites, with work including project management, information architecture, website design and layout, copywriting, and front-end development.</p>
-    <p>Created and implemented a series of website design standards, resulting in a unified front-end development process that the company continued to follow for more than five years. Trained a growing team of web designers in semantic standards-based design and development.</p>
+    <p>Created and implemented a series of <a href="/portfolio/alpine-quickstart">website design standards</a>, resulting in a unified front-end development process that the company continued to follow for more than five years.</p>
+    <p>Trained a growing team of web designers in semantic standards-based design and development.</p>
     <h3 class="c-resume__title">Webmaster</h3>
-    <p class="c-resume__metadata"><a href="https://www.bigwinds.com/" rel="external">Big Winds</a>, Hood River, OR<br>
-      July 2003 – November 2003</p>
+    <p class="c-resume__metadata">
+      <a href="https://www.bigwinds.com/" rel="external">Big Winds</a>, Hood River, OR<br>
+      July 2003 – November 2003
+    </p>
     <p>Rebuilt the Big Winds website using standards-based design practices, improving site usability, cross-browser compatibility and search engine visibility. Work resulted in a five-fold increase in online sales.</p>
 
     <hr class="o-separator">
 
     <h2 class="c-resume__title">Design Skills</h2>
-    <p>Familiar with human-centered design methods, including interviewing stakeholders, planning and preparing research plans, conducting field research, synthesizing and presenting research findings, creating personas, facilitating hands-on client workshops, sketching and generating concepts, wireframing interaction flows, prototyping interfaces, creating experience maps, articulating high-level design strategies, and crafting production-ready front-end code.</p>
+    <p>Experienced with human-centered design methods that include interviewing stakeholders, preparing research plans, conducting field research, synthesizing and presenting research findings, creating personas and journey maps, facilitating hands-on workshops, communicating design strategies to senior leadership, sketching and generating concepts, wireframing interaction flows, and prototyping interfaces.</p>
     <h2 class="c-resume__title">Technical Skills</h2>
-    <p>HTML5, CSS3, Sass, LESS, JavaScript, ES2015/ES6, Babel, Angular, ui-router, Lodash, jQuery, D3, Bootstrap, inuitcss, Handlebars, Node, NPM, JSPM, Bower, Gulp, Yeoman, Express, Mocha, Chai, Protractor, Git, git-flow, Ubuntu Server, Bash, Zsh, Apache, Nginx, PHP, Ruby, Arduino</p>
+    <p>HTML, CSS, Sass, JavaScript, Webpack, Vue, Vuetify, Node, Electron, AWS, Ubuntu, Nginx, Bash, Git, Terraform, Cordova, Bootstrap, Material Design, LESS, jQuery, Angular, D3, Chart.js, Highcharts, MySQL, PHP, Ruby, Arduino</p>
     <h2 class="c-resume__title">Software Skills</h2>
-    <p>Sublime Text, Terminal, Sketch, OmniGraffle, Keynote, Illustrator, Photoshop, InDesign</p>
+    <p>Sketch, OmniGraffle, Keynote, Acorn, Photoshop, Illustrator</p>
 
     <hr class="o-separator">
 
     <h2 class="c-resume__title">Education</h2>
     <h3 class="c-resume__title">Indiana University Bloomington</h3>
     <p class="c-resume__metadata">September 2008 – May 2010</p>
-    <p>Master of Science in Human-Computer Interaction Design, May 2010<br>
-      4.0 Cumulative GPA</p>
-    <h3 class="c-resume__title">University <span class="u-of">of</span> Minnesota Duluth</h3>
+    <p>
+      Master of Science in Human-Computer Interaction Design, May 2010<br>
+      4.0 Cumulative GPA
+    </p>
+    <h3 class="c-resume__title">University of Minnesota Duluth</h3>
     <p class="c-resume__metadata">September 1999 – May 2003</p>
-    <p>Bachelor of Arts, Summa Cum Laude, May 2003<br>
+    <p>
+      Bachelor of Arts, Summa Cum Laude, May 2003<br>
       Major: Interdisciplinary Studies, New Media Writing<br>
       Minors: Philosophy and Jazz Studies<br>
-      3.9 Cumulative GPA</p>
+      3.9 Cumulative GPA
+    </p>
 
     <hr class="o-separator">
 
     <h2 class="c-resume__title">Accomplishments</h2>
-    <p><span class="c-resume__metadata">June 2016</span><br>
-      Along with my former teammates at Adaptive Path, awarded <a href="https://www.google.com/patents/US9361639" rel="external">U.S. patent number 9361639B2</a>, “Video message capture and delivery for online purchases.”</p>
-    <p><span class="c-resume__metadata">April 2015 – April 2016</span><br>
-      As a senior staff interaction designer at GE Digital, received numerous “Above <span class="u-ampersand">&amp;</span> Beyond” awards from project leads, managers, and GE Aviation stakeholders for performing outstanding work and exemplifying the GE Beliefs.</p>
-    <p><span class="c-resume__metadata">January 2016</span><br>
-      Selected by GE Digital leaders to travel to GE’s leadership training center in Crotonville, New York to participate in exclusive training for igniting and sustaining cultural change in an organization.</p>
-    <p><span class="c-resume__metadata">September 2015</span><br>
-      Participated in scrum training and certified as a Scrum Product Owner by Scrum Inc.</p>
-    <p><span class="c-resume__metadata">April 2013 – April 2015</span><br>
-      As a lead interaction designer at GE Digital, recognized with “role model” status in multiple annual GE performance reviews.</p>
-    <p><span class="c-resume__metadata">March 2015</span><br>
-      Successfully completed Lean Six Sigma Green Belt training.</p>
-    <p><span class="c-resume__metadata">May 13, 2014</span><br>
-      Gave a lightning talk <a href="/portfolio/codecraft/">“Codecraft”</a> at the GE Design Conference, which discussed the rapid rate of change in development practices over the last ten years, and its implications for how we practice UX design.</p>
-    <p><span class="c-resume__metadata">September 16, 2013</span><br>
-      Conducted a half-day workshop with Karel Barnowski at <a href="http://www.leandaywest.com/">Lean Day West</a> in Portland, teaching more than 70 UX professionals how to achieve <a href="/portfolio/lean-day-west">better, faster UX in the enterprise</a> through design systems, sketching and prototyping.</p>
-    <p><span class="c-resume__metadata">August 8, 2013</span><br>
-      Spoke at IxDA San Francisco’s “Design Doing” event with <a href="/portfolio/industrial-internet">“Designing the Industrial Internet”</a>, a talk about my process of using design systems at GE to design and build software directly in HTML, CSS and JavaScript.</p>
-    <p><span class="c-resume__metadata">March 2, 2013</span><br>
-      Revisited my <a href="/images/onaircraft/on-aircraft-slides-2013.pdf">“On Aircraft And Craft”</a> talk at the IxDA San Francisco redUX event.</p>
-    <p><span class="c-resume__metadata">January 30, 2013</span><br>
-      Gave a talk <a href="/images/onaircraft/on-aircraft-slides-2013.pdf">“On Aircraft And Craft”</a> at the <a href="http://interaction13.ixda.org/">Interaction 13 Conference</a> in Toronto, discussing the importance of design principles and their implications for our craft.</p>
-    <p><span class="c-resume__metadata">November, 2012</span><br>
+    <p>
+      <span class="c-resume__metadata">June 2016</span><br>
+      Along with my former teammates at Adaptive Path, awarded <a href="https://www.google.com/patents/US9361639" rel="external">U.S. patent number 9361639B2</a>, “Video message capture and delivery for online purchases.”
+    </p>
+    <p>
+      <span class="c-resume__metadata">April 2015 – April 2016</span><br>
+      As a senior staff interaction designer at GE Digital, received numerous “Above <span class="u-ampersand">&amp;</span> Beyond” awards from project leads, managers, and GE Aviation stakeholders for performing outstanding work and exemplifying the GE Beliefs.
+    </p>
+    <p>
+      <span class="c-resume__metadata">January 2016</span><br>
+      Selected by GE Digital leaders and traveled to GE’s leadership training center in Crotonville, New York to participate in exclusive training for igniting and sustaining cultural change in an organization.
+    </p>
+    <p>
+      <span class="c-resume__metadata">September 2015</span><br>
+      Participated in scrum training and certified as a Scrum Product Owner by Scrum Inc.
+    </p>
+    <p>
+      <span class="c-resume__metadata">April 2013 – April 2015</span><br>
+      As a lead interaction designer at GE Digital, recognized with “role model” status in multiple annual GE performance reviews.
+    </p>
+    <p>
+      <span class="c-resume__metadata">March 2015</span><br>
+      Successfully completed Lean Six Sigma Green Belt training.
+    </p>
+    <p>
+      <span class="c-resume__metadata">May 13, 2014</span><br>
+      Gave a lightning talk <a href="/portfolio/codecraft/">“Codecraft”</a> at the GE Design Conference, which discussed the rapid rate of change in development practices over the last ten years, and its implications for how we practice UX design.
+    </p>
+    <p>
+      <span class="c-resume__metadata">September 16, 2013</span><br>
+      Conducted a half-day workshop with Karel Barnowski at <a href="http://www.leandaywest.com/">Lean Day West</a> in Portland, teaching more than 70 UX professionals how to achieve <a href="/portfolio/lean-day-west">better, faster UX in the enterprise</a> through design systems, sketching and prototyping.
+    </p>
+    <p>
+      <span class="c-resume__metadata">August 8, 2013</span><br>
+      Spoke at IxDA San Francisco’s “Design Doing” event with <a href="/portfolio/industrial-internet">“Designing the Industrial Internet”</a>, a talk about my process of using design systems at GE to design and build software directly in HTML, CSS and JavaScript.
+    </p>
+    <p>
+      <span class="c-resume__metadata">March 2, 2013</span><br>
+      Revisited my <a href="/images/onaircraft/on-aircraft-slides-2013.pdf">“On Aircraft And Craft”</a> talk at the IxDA San Francisco redUX event.
+    </p>
+    <p>
+      <span class="c-resume__metadata">January 30, 2013</span><br>
+      Gave a talk <a href="/images/onaircraft/on-aircraft-slides-2013.pdf">“On Aircraft And Craft”</a> at the <a href="http://interaction13.ixda.org/">Interaction 13 Conference</a> in Toronto, discussing the importance of design principles and their implications for our craft.
+    </p>
+    <p>
+      <span class="c-resume__metadata">November, 2012</span><br>
       Acted as an expert reviewer for manuscripts submitted to <a href="http://www.computer.org/portal/web/computingnow/pervasivecomputing">IEEE Pervasive Computing</a>.
-    <p><span class="c-resume__metadata">October 17, 2012</span><br>
-      Gave a keynote talk <a href="/portfolio/fastest-pivot">“The Fastest Pivot You’ll Ever Make”</a> at <a href="http://rocket-space.com">RocketSpace</a> in San Francisco, discussing how startups can use UX techniques to create more delightful products.</p>
-    <p><span class="c-resume__metadata">September 23, 2011</span><br>
-      Spoke with <a href="http://www.unglobalpulse.org/">U.N. Global Pulse</a> at the <a href="http://strataconf.com/stratany2011/public/schedule/detail/21575">2011 O’Reilly Strata Conference</a> in New York City about our work on <a href="/portfolio/hunchworks">HunchWorks</a>, a crowdsourced system for identifying and mitigating emerging global crises.</p>
-    <p><span class="c-resume__metadata">March 2011</span><br>
-      Arduino-based refrigerator alarm <a href="https://www.adafruit.com/blog/2011/03/20/adaptive-path-fridge-alarm/">picked up by the Adafruit blog</a> and cited as “Marvelous!”</p>
-    <p><span class="c-resume__metadata">November 2010</span><br>
-      Guest lectured on sketching for Principles of Usability course at Academy of Art University, San Francisco.</p>
-    <p><span class="c-resume__metadata">August 2010 <span class="u-ampersand">&amp;</span> November 2010</span><br>
-      Concept sketches for Smart.fm published in Suzanne Ginsburg’s <a href="https://www.amazon.com/Designing-iPhone-User-Experience-User-Centered/dp/0321699432">Designing the iPhone User Experience</a> book, and featured in Ginsburg’s BayCHI talk <a href="https://www.slideshare.net/ginsburgdesign/wrangling-apps-in-the-smartphone-wild-west">Wrangling Apps in the Smartphone Wild West</a>.</p>
-    <p><span class="c-resume__metadata">October 2010</span><br>
-      Blog post <a href="http://www.adaptivepath.com/blog/2010/09/30/can-experience-be-designed/">“Can Experience Be Designed?”</a> for the Adaptive Path blog referenced by Adam Richardson, Creative Director at Frog Design, in his <a href="http://blogs.hbr.org/cs/2010/10/understanding_customer_experie.html">Understanding Customer Experience</a> article for Harvard Business Review.</p>
-    <p><span class="c-resume__metadata">October 2010</span><br>
-      Participated in the <a href="http://thinkin.frogdesign.com">Frog Design Energy ThinkIn</a>, an invitation-only collaboration with the Smart Grid Consumer Collaborative to better understand energy-conscious behavior.</p>
-    <p><span class="c-resume__metadata">July 2010</span><br>
-      Blog post <a href="http://www.adaptivepath.com/ideas/constraints-opportunities-metaphor">“The Constraints and Opportunities of Metaphor”</a> for the Adaptive Path blog  <a href="http://uxi.org.il/pages/2741">translated into Hebrew</a> by UX Israel.</p>
-    <p><span class="c-resume__metadata">January 2009 – February 2010</span><br>
-      Executive Chair of the Indiana University Graduate Informatics Student Association.</p>
-    <p><span class="c-resume__metadata">April 2009</span><br>
-      Published WattBot: A Residential Electricity Monitoring and Feedback System in the <em>Extended Abstracts of CHI 2009.</em> Boston, MA. ACM Press, New York, NY. <a href="/images/energymonitor/sdc128-petersen.pdf">PDF Download</a>, <a href="http://doi.acm.org/10.1145/1520340.1520413" rel="external">ACM Digital Library</a></p>
-    <p><span class="c-resume__metadata">April 2009</span><br>
-      Advanced to the final round of the <em>CHI 2009 Student Design Competition</em> with <a href="/portfolio/energy-monitor">WattBot</a> and presented at the CHI 2009 conference in Boston, MA.</p>
-    <p><span class="c-resume__metadata">April 2009</span><br>
-      Honorable Mention in the <em>Indiana University School of Informatics Graduate Student Poster Session</em> with <a href="/portfolio/energy-monitor-poster">poster for WattBot</a>.</p>
+    <p>
+      <span class="c-resume__metadata">October 17, 2012</span><br>
+      Gave a keynote talk <a href="/portfolio/fastest-pivot">“The Fastest Pivot You’ll Ever Make”</a> at <a href="http://rocket-space.com">RocketSpace</a> in San Francisco, discussing how startups can use UX techniques to create more delightful products.
+    </p>
+    <p>
+      <span class="c-resume__metadata">September 23, 2011</span><br>
+      Spoke with <a href="http://www.unglobalpulse.org/">U.N. Global Pulse</a> at the <a href="http://strataconf.com/stratany2011/public/schedule/detail/21575">2011 O’Reilly Strata Conference</a> in New York City about our work on <a href="/portfolio/hunchworks">HunchWorks</a>, a crowdsourced system for identifying and mitigating emerging global crises.
+    </p>
+    <p>
+      <span class="c-resume__metadata">March 2011</span><br>
+      Arduino-based refrigerator alarm <a href="https://www.adafruit.com/blog/2011/03/20/adaptive-path-fridge-alarm/">picked up by the Adafruit blog</a> and cited as “Marvelous!”
+    </p>
+    <p>
+      <span class="c-resume__metadata">November 2010</span><br>
+      Guest lectured on sketching for Principles of Usability course at Academy of Art University, San Francisco.
+    </p>
+    <p>
+      <span class="c-resume__metadata">August 2010 <span class="u-ampersand">&amp;</span> November 2010</span><br>
+      Concept sketches for Smart.fm published in Suzanne Ginsburg’s <a href="https://www.amazon.com/Designing-iPhone-User-Experience-User-Centered/dp/0321699432">Designing the iPhone User Experience</a> book, and featured in Ginsburg’s BayCHI talk <a href="https://www.slideshare.net/ginsburgdesign/wrangling-apps-in-the-smartphone-wild-west">Wrangling Apps in the Smartphone Wild West</a>.
+    </p>
+    <p>
+      <span class="c-resume__metadata">October 2010</span><br>
+      Blog post <a href="http://www.adaptivepath.com/blog/2010/09/30/can-experience-be-designed/">“Can Experience Be Designed?”</a> for the Adaptive Path blog referenced by Adam Richardson, Creative Director at Frog Design, in his <a href="http://blogs.hbr.org/cs/2010/10/understanding_customer_experie.html">Understanding Customer Experience</a> article for Harvard Business Review.
+    </p>
+    <p>
+      <span class="c-resume__metadata">October 2010</span><br>
+      Participated in the <a href="http://thinkin.frogdesign.com">Frog Design Energy ThinkIn</a>, an invitation-only collaboration with the Smart Grid Consumer Collaborative to better understand energy-conscious behavior.
+    </p>
+    <p>
+      <span class="c-resume__metadata">July 2010</span><br>
+      Blog post <a href="http://www.adaptivepath.com/ideas/constraints-opportunities-metaphor">“The Constraints and Opportunities of Metaphor”</a> for the Adaptive Path blog  <a href="http://uxi.org.il/pages/2741">translated into Hebrew</a> by UX Israel.
+    </p>
+    <p>
+      <span class="c-resume__metadata">January 2009 – February 2010</span><br>
+      Executive Chair of the Indiana University Graduate Informatics Student Association.
+    </p>
+    <p>
+      <span class="c-resume__metadata">April 2009</span><br>
+      Published WattBot: A Residential Electricity Monitoring and Feedback System in the <em>Extended Abstracts of CHI 2009.</em> Boston, MA. ACM Press, New York, NY. <a href="/images/energymonitor/sdc128-petersen.pdf">PDF Download</a>, <a href="http://doi.acm.org/10.1145/1520340.1520413" rel="external">ACM Digital Library</a>
+    </p>
+    <p>
+      <span class="c-resume__metadata">April 2009</span><br>
+      Advanced to the final round of the <em>CHI 2009 Student Design Competition</em> with <a href="/portfolio/energy-monitor">WattBot</a> and presented at the CHI 2009 conference in Boston, MA.
+    </p>
+    <p>
+      <span class="c-resume__metadata">April 2009</span><br>
+      Honorable Mention in the <em>Indiana University School of Informatics Graduate Student Poster Session</em> with <a href="/portfolio/energy-monitor-poster">poster for WattBot</a>.
+    </p>
 
     <hr class="o-separator">
     
     <h2 class="c-resume__title">Other Experience</h2>
     <h3 class="c-resume__title">Associate Instructor</h3>
-    <p><a href="http://informatics.indiana.edu/" rel="external">Indiana University</a>, Bloomington, IN<br>
-      September 2008 – May 2010</p>
+    <p>
+      <a href="http://informatics.indiana.edu/" rel="external">Indiana University</a>, Bloomington, IN<br>
+      September 2008 – May 2010
+    </p>
     <h3 class="c-resume__title">Wilderness Guide</h3>
-    <p><a href="https://www.campmenogyn.org/" rel="external">YMCA Camp Menogyn</a>, Grand Marais, MN<br>
+    <p>
+      <a href="https://www.campmenogyn.org/" rel="external">YMCA Camp Menogyn</a>, Grand Marais, MN<br>
       June 2006 – August 2006<br>
-      June 2005 – September 2005</p>
+      June 2005 – September 2005
+    </p>
     <h3 class="c-resume__title">Snowboard Instructor</h3>
-    <p><a href="https://www.mtbachelor.com/" rel="external">Mount Bachelor</a>, Bend, OR<br>
-      November 2003 – March 2004</p>
+    <p>
+      <a href="https://www.mtbachelor.com/" rel="external">Mount Bachelor</a>, Bend, OR<br>
+      November 2003 – March 2004
+    </p>
     <h3 class="c-resume__title">Windsurfing Technician</h3>
-    <p><a href="https://www.bigwinds.com/" rel="external">Big Winds</a>, Hood River, OR<br>
-      May 2003 – November 2003</p>
+    <p>
+      <a href="https://www.bigwinds.com/" rel="external">Big Winds</a>, Hood River, OR<br>
+      May 2003 – November 2003
+    </p>
     <h3 class="c-resume__title">Senior Counselor, Windsurfing Director</h3>
-    <p><a href="https://www.campihduhapi.org/" rel="external">YMCA Camp Ihduhapi</a>, Loretto, MN<br>
-      June 2002 – August 2002</p>
+    <p>
+      <a href="https://www.campihduhapi.org/" rel="external">YMCA Camp Ihduhapi</a>, Loretto, MN<br>
+      June 2002 – August 2002
+    </p>
   </div>
 </div>
