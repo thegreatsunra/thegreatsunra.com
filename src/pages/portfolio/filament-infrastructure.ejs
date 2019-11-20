@@ -6,7 +6,7 @@ portfolioIsActive: true
 
 <h1 class="c-page-title--large c-page-title--huge@lg">Filament Cloud Infrastructure</h1>
 
-<h3 class="c-page-title">While working remotely at Filament, I built an end-to-end cloud infrastructure using AWS, Terraform, Node and Vue to help us test, validate and deploy our industrial-strength GPS tracking&nbsp;hardware.</h3>
+<h3 class="c-page-title">While working remotely at Filament, I built an end-to-end cloud infrastructure using AWS, Terraform, Node.js and Vue to help us test, validate and deploy our industrial-strength GPS tracking&nbsp;hardware.</h3>
 <hr class="o-separator">
 <div class="o-layout">
   <div class="o-layout__item u-6/12@md u-push-6/12@md">
@@ -42,7 +42,7 @@ portfolioIsActive: true
     <p>The infrastructure I built for Filament was hosted on AWS using Amazon’s cloud-native services, and consisted of four main pieces:</p>
 
     <ul>
-      <li>A NodeJS gateway app, running on a computer connected to a Filament bridge device, which receives sensor readings from all remote devices on a Filament mesh network, and securely sends that data to the cloud via AWS IoT.</li>
+      <li>A Node.js gateway app, running on a computer connected to a Filament bridge device, which receives sensor readings from all remote devices on a Filament mesh network, and securely sends that data to the cloud via AWS IoT.</li>
 
       <li>A cloud infrastructure, built using AWS services, which receives sensor data from any number of authorized gateways, parses and stores that data, and makes it available via a secured API to authorized agents.</li>
 
@@ -74,10 +74,10 @@ portfolioIsActive: true
     <p>With our cloud infrastructure we assume that the gateway has internet connectivity, either through Ethernet, Wi-Fi, a cellular modem, or a MiFi hotspot. The Filament SDK and a corresponding gateway app are necessary for shepherding sensor data from a Filament bridge device to some form of storage via the gateway hardware.</p>
   </div>
   <div class="o-layout__item u-clear-both u-3/12@md u-push-9/12@md">
-    <p><a href="https://nodejs.org/" rel="external"><img src="/images/filamentinfrastructure/node.png" alt="NodeJS logo, sketched"></a></p>
+    <p><a href="https://nodejs.org/" rel="external"><img src="/images/filamentinfrastructure/node.png" alt="Node.js logo, sketched"></a></p>
   </div>
   <div class="o-layout__item u-8/12@md u-pull-3/12@md">
-    <p>Written in JavaScript, the SDK runs anywhere we can run <a href="https://nodejs.org/" rel="external">NodeJS</a>, which means I’ve built gateway apps that run inside a native macOS/Windows app built with <a href="https://electronjs.org/" rel="external">Electron</a>, execute directly on a Raspberry Pi, or deploy to multiple hardware platforms via BalenaCloud (née Resin.io).</p>
+    <p>Written in JavaScript, the SDK runs anywhere we can run <a href="https://nodejs.org/" rel="external">Node.js</a>, which means I’ve built gateway apps that run inside a native macOS/Windows app built with <a href="https://electronjs.org/" rel="external">Electron</a>, execute directly on a Raspberry Pi, or deploy to multiple hardware platforms via BalenaCloud (née Resin.io).</p>
   </div>
   <div class="o-layout__item u-clear-both u-4/12@md u-push-8/12@md">
     <p><a href="https://www.balena.io/" rel="external"><img src="/images/filamentinfrastructure/balena.png" alt="Balena (formerly Resin.io) logo, sketched"></a></p>
@@ -95,7 +95,7 @@ portfolioIsActive: true
       </p>
     </div>
     <div class="o-layout__item u-8/12@md u-pull-4/12@md">
-      <p>For our cloud infrastructure, I used <a href="https://aws.amazon.com/iot/" rel="external">AWS IoT</a> to “bless” every authorized gateway device with a certificate so it could send up sensor data via a secure connection. When a device message arrives at AWS, a rule sends it along to an <a href="https://aws.amazon.com/lambda/" rel="external">AWS Lambda</a> function written in Node that parses and acts on it, adding a record to the events table at <a href="https://aws.amazon.com/dynamodb/" rel="external">AWS DynamoDB</a>, and adding/updating the device’s corresponding status in the devices table as necessary.</p>
+      <p>For our cloud infrastructure, I used <a href="https://aws.amazon.com/iot/" rel="external">AWS IoT</a> to “bless” every authorized gateway device with a certificate so it could send up sensor data via a secure connection. When a device message arrives at AWS, a rule sends it along to an <a href="https://aws.amazon.com/lambda/" rel="external">AWS Lambda</a> function written in Node.js that parses and acts on it, adding a record to the events table at <a href="https://aws.amazon.com/dynamodb/" rel="external">AWS DynamoDB</a>, and adding/updating the device’s corresponding status in the devices table as necessary.</p>
 
       <p>I used <a href="https://aws.amazon.com/api-gateway/" rel="external">AWS API Gateway</a> to expose an API that allows us to interface with the data stored in AWS DynamoDB, taking inspiration from the <a href="https://api.slack.com/" rel="external">Slack API</a> for the format and structure of our own endpoints. Each API request maps to a Lambda function that does the heavy-lifting of handling input, executing the query, and returning the results.</p>
 
@@ -176,7 +176,7 @@ portfolioIsActive: true
     <p>Infrastructure Strategy, Architecture, Development, Testing, Documentation and Deployment</p>
 
     <h3 class="c-project-metadata__title">Project Technologies</h3>
-    <p>Terraform, Node, BalenaCloud, AWS IoT, Lambda, DynamoDB, API Gateway, Cognito, S3, Vue, Mapbox</p>
+    <p>Terraform, Node.js, BalenaCloud, AWS IoT, Lambda, DynamoDB, API Gateway, Cognito, S3, Vue, Mapbox</p>
 
     <h3 class="c-project-metadata__title">Project Team</h3>
     <p>
