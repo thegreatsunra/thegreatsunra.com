@@ -2,7 +2,7 @@ const config = {
   site: {
     title: 'Dane Petersen',
     author: 'Dane Petersen',
-    year: '2019',
+    year: '2020',
     basePath: ''
   },
   build: {
