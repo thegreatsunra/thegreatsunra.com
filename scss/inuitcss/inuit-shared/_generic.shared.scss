@@ -16,7 +16,7 @@ fieldset, figure,
 pre,
 %margin-bottom {
     margin-bottom: $inuit-base-spacing-unit;
-    margin-bottom: ($inuit-base-spacing-unit / $inuit-base-font-size) * 1rem;
+    margin-bottom: calc(calc($inuit-base-spacing-unit / $inuit-base-font-size) * 1rem);
 }
 
 
@@ -30,5 +30,5 @@ pre,
 ul, ol, dd,
 %margin-left {
     margin-left: 2 * $inuit-base-spacing-unit;
-    margin-left: (2 * $inuit-base-spacing-unit / $inuit-base-font-size) * 1rem;
+    margin-left: calc(calc(2 * $inuit-base-spacing-unit / $inuit-base-font-size) * 1rem);
 }
