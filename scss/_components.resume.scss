@@ -4,12 +4,12 @@
 
 .c-resume__title {
   line-height: 1.25;
-  margin-bottom: $inuit-base-spacing-unit / 8;
+  margin-bottom: calc($inuit-base-spacing-unit / 8);
 }
 
 .c-resume__metadata {
   color: $base-text-color-medium;
   font-size: 14px;
   line-height: 1.25;
-  margin-bottom: $inuit-base-spacing-unit / 2;
+  margin-bottom: calc($inuit-base-spacing-unit / 2);
 }

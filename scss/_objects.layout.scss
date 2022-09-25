@@ -14,7 +14,7 @@
 // Predefine the variables below in order to alter and enable specific features.
 
 $layout-column-count:       12 !default;
-$layout-width-multiplier:   100% / $layout-column-count !default;
+$layout-width-multiplier:   calc(100% / $layout-column-count) !default;
 $layout-max-width:          100% !default;
 $layout-max-width--xs:      $layout-max-width !default;
 $layout-max-width--s:       $layout-max-width !default;
@@ -22,7 +22,7 @@ $layout-max-width--md:      $layout-max-width !default;
 $layout-max-width--lg:      $layout-max-width !default;
 $layout-max-width--xl:      $layout-max-width !default;
 
-$layout-gutter:         ($inuit-base-spacing-unit / 2) !default;
+$layout-gutter:         calc($inuit-base-spacing-unit / 2) !default;
 $layout-gutter--tiny:          quarter($layout-gutter) !default;
 $layout-gutter--small:           halve($layout-gutter) !default;
 $layout-gutter--large:          double($layout-gutter) !default;

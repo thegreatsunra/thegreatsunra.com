@@ -6,7 +6,7 @@
  * Image styling
  */
 
-$image-base-padding: ($inuit-base-spacing-unit / 6) !default; // likely 24px / 6 = 4px
+$image-base-padding: calc($inuit-base-spacing-unit / 6) !default; // likely 24px / 6 = 4px
 
 .c-img {
   margin-bottom: $inuit-base-spacing-unit;
@@ -25,7 +25,7 @@ $image-base-padding: ($inuit-base-spacing-unit / 6) !default; // likely 24px / 6
 }
 
 .c-img__caption {
-  margin-top: (-$inuit-base-spacing-unit) + $inuit-base-spacing-unit / 4;
+  margin-top: (-$inuit-base-spacing-unit) + calc($inuit-base-spacing-unit / 4);
   margin-bottom: $inuit-base-spacing-unit;
   font-size: 13px;
   color: $base-text-color-medium;

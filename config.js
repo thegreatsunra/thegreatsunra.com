@@ -3,11 +3,11 @@ const config = {
     title: 'Dane Petersen',
     author: 'Dane Petersen',
     year: '2020',
-    basePath: ''
+    basePath: '',
   },
   build: {
-    outputPath: './dist'
-  }
-}
+    outputPath: './dist',
+  },
+};
 
-module.exports = config
+module.exports = config;

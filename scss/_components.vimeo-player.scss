@@ -19,7 +19,7 @@
 }
 
 .c-vimeo-player__caption {
-  margin-top: (-$inuit-base-spacing-unit) + $inuit-base-spacing-unit / 4;
+  margin-top: (-$inuit-base-spacing-unit) + calc($inuit-base-spacing-unit / 4);
   margin-bottom: $inuit-base-spacing-unit;
   font-size: 13px;
   color: $base-text-color-medium;
