@@ -4,7 +4,7 @@
 
 .c-copyright {
   font-size: 14px;
-  padding-top: ($inuit-base-spacing-unit / 2);
+  padding-top: calc($inuit-base-spacing-unit / 2);
   @include mq($from: md) {
     text-align: right;
   }

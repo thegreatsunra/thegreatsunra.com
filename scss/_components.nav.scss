@@ -15,10 +15,10 @@
 .c-nav__item {
   // font-weight: bold; // looks awful on iOS
   float: left;
-  margin-right: $inuit-base-spacing-unit / 8;
-  margin-bottom: $inuit-base-spacing-unit / 4;
+  margin-right: calc($inuit-base-spacing-unit / 8);
+  margin-bottom: calc($inuit-base-spacing-unit / 4);
   @include mq($from: sm) {
-  margin-right: $inuit-base-spacing-unit / 3;
+  margin-right: calc($inuit-base-spacing-unit / 3);
   }
   @include mq($from: md) {
     margin-right: $inuit-base-spacing-unit * 2;
@@ -39,12 +39,12 @@
 .c-nav__link {
   display: inline-block;
     padding-top: $inuit-base-spacing-unit;
-    padding-right: $inuit-base-spacing-unit / 3;
+    padding-right: calc($inuit-base-spacing-unit / 3);
     padding-bottom: $inuit-base-spacing-unit;
-    padding-left: $inuit-base-spacing-unit / 3;
+    padding-left: calc($inuit-base-spacing-unit / 3);
 
   @include mq($from: sm) {
-    padding: $inuit-base-spacing-unit ($inuit-base-spacing-unit / 2) $inuit-base-spacing-unit ($inuit-base-spacing-unit / 2);
+    padding: $inuit-base-spacing-unit calc($inuit-base-spacing-unit / 2) $inuit-base-spacing-unit calc($inuit-base-spacing-unit / 2);
   }
   color: $base-accent-color;
   text-decoration: none;
