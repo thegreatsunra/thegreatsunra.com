@@ -146,6 +146,7 @@ dist
 ### thegreatsunra.com ###
 
 !.gitkeep
+.DS_Store
 
 # all images
 /static/images/**
