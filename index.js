@@ -4,11 +4,11 @@ const fse = require('fs-extra');
 const path = require('path');
 const { promisify } = require('util');
 const sass = require('sass');
+const globP = require('glob-promise');
 
 const config = require('./config');
 
 const ejsRenderFile = promisify(ejs.renderFile);
-const globP = promisify(require('glob'));
 
 const srcPath = './src';
 const distPath = config.build.outputPath;
