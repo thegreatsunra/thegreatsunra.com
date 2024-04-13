@@ -9,11 +9,11 @@
     "lint": "eslint --ext .js index.js config.js --fix"
   },
   "dependencies": {
-    "ejs": "^3.1.8",
+    "ejs": "^3.1.10",
     "front-matter": "^4.0.2",
-    "fs-extra": "^11.1.0",
     "glob": "^8.1.0",
-    "sass": "^1.58.3",
+    "fs-extra": "^11.2.0",
+    "sass": "^1.75.0",
     "sass-mq": "^6.0.0"
   },
   "devDependencies": {
