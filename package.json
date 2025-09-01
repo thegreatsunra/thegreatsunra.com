@@ -11,14 +11,14 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "front-matter": "^4.0.2",
-    "fs-extra": "^11.3.0",
-    "glob": "^11.0.2",
-    "sass": "^1.89.0",
+    "fs-extra": "^11.3.1",
+    "glob": "^11.0.3",
+    "sass": "^1.91.0",
     "sass-mq": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.31.0"
+    "eslint-plugin-import": "^2.32.0"
   }
 }
