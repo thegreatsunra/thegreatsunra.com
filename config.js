@@ -6,7 +6,7 @@ const config = {
     basePath: '',
   },
   build: {
-    outputPath: './dist',
+    outputPath: './public',
   },
 };
 
