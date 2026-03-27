@@ -79,9 +79,9 @@ const buildSass = () => {
     outputStyle: 'compressed',
   }, (buildSassErr, result) => {
     if (!buildSassErr) {
-      fse.mkdirs(path.resolve(__dirname, './dist/styles/')).then(() => {
+      fse.mkdirs(path.resolve(__dirname, './public/styles/')).then(() => {
         // No errors during the compilation, write this result on the disk
-        fse.writeFile(path.resolve(__dirname, './dist/styles/main.css'), result.css, (writeFileErr) => {
+        fse.writeFile(path.resolve(__dirname, './public/styles/main.css'), result.css, (writeFileErr) => {
           if (!writeFileErr) {
             console.log('\nGenerated main.css\n');
           } else {
